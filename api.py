@@ -1,5 +1,6 @@
 import json
-class API:
+
+class Blueprint:
     defs = {
         
     }
@@ -11,8 +12,13 @@ class API:
             return wrapper
         return decorator
 
+class API(Blueprint):
+    def register_blueprint(self, blueprint: Blueprint):
+        self.defs = blueprint.defs
     def call(self, route, value):
         if route in self.defs.keys():
             return json.dumps({"responce": self.defs[route](value)})
         else:
             return json.dumps({"responce": "invalid"})
+
+

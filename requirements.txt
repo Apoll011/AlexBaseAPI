@@ -1,0 +1,4 @@
+lingua-franca==0.4.3
+networkx==3.3
+python-dateutil==2.6.1
+six==1.16.0

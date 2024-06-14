@@ -3,6 +3,7 @@ from features.intent_recognition import *
 from kit import *
 from api import Blueprint
 from config import __version__
+import time
 
 alex_blueprint = Blueprint("alex")
 intent_blueprint = Blueprint("intent_recognition")

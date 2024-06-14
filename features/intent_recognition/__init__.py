@@ -132,7 +132,7 @@ def train(lang):
 def recog(lang, text):
     Recognizer = IntentRecognizer()
 
-    graph_path = f"graph_{lang}.json"
+    graph_path = f"./features/intent_recognition/intents/graphs/graph_{lang}.json"
     with open(graph_path, "r", encoding="utf-8") as graph_file:
         Recognizer.start(graph_file)
         result = Recognizer.recognize(IntentRequest(text=text.lower()))

@@ -8,7 +8,6 @@ api.register_blueprint(alex_blueprint)
 api.register_blueprint(users_blueprint)
 api.register_blueprint(intent_blueprint)
 api.register_blueprint(sound_blueprint)
-print(api.defs)
 
 def main():
     try:
@@ -35,6 +34,7 @@ def main():
                         conn.close()
                         closed = True
                         break
+                    print(received_json)
                     response = api.call(received_json["route"], received_json["value"])
                     print(response)
                     conn.send(response.encode("utf-8"))

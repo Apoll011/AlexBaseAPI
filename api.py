@@ -24,9 +24,12 @@ class API:
         self.defs = blueprint.defs | self.defs
 
     def call(self, route, value):
-        if route in self.defs.keys():
-            return json.dumps({"responce": self.defs[route](value)})
-        else:
-            return json.dumps({"responce": "invalid"})
+        try:
+            if route in self.defs.keys():
+                return json.dumps({"responce": self.defs[route](value)})
+            else:
+                return json.dumps({"responce": "invalid"})
+        except Exception as e:
+            return json.dumps({"responce": "error", "value": e})
 
 

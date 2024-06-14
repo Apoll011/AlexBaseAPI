@@ -16,9 +16,9 @@ class SearchUsers:
             if query in user["name"]:
                 result.append(user["id"])
         return result if(len(result) > 0) else None
-    def by_tags(self, query, value = ">:0", exclue = []):
+    def by_tags(self, query, conditon = ">:0", exclue = []):
         result = []
-        v = value.split(":")
+        v = conditon.split(":")
         v[1] = int(v[1])
         for user in self.users:
             if user["id"] in exclue:

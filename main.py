@@ -1,10 +1,14 @@
 import json
 import socket
 from api import API
-from routes import main
+from routes import users_blueprint, alex_blueprint, intent_blueprint, sound_blueprint
 
 api = API()
-
+api.register_blueprint(alex_blueprint)
+api.register_blueprint(users_blueprint)
+api.register_blueprint(intent_blueprint)
+api.register_blueprint(sound_blueprint)
+print(api.defs)
 
 def main():
     try:

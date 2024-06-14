@@ -4,11 +4,14 @@ from kit import *
 from api import Blueprint
 from config import __version__
 
-main = Blueprint()
+alex_blueprint = Blueprint("alex")
+intent_blueprint = Blueprint("intent_recognition")
+users_blueprint = Blueprint("users")
+sound_blueprint = Blueprint("sound")
 
 userKit = UserKit()
 
-@main.route("alex/alive")
+@alex_blueprint.route("alive")
 def alive(value):
     return {
         "on": True,
@@ -20,42 +23,42 @@ def alive(value):
         "version": __version__
         }
 
-@main.route("intent_recognition/train")
+@intent_blueprint.route("train")
 def intent_train(value):
     return train(value)
 
-@main.route("intent_recognition/recoginze")
+@intent_blueprint.route("recoginze")
 def intent_reconize(value):
     return recog(value["lang"], value["intent"])
 
-@main.route("users/search/name")
+@users_blueprint.route("search/name")
 def user_search_name(value):
     return {"users": userKit.searchUser.by_name(value["query"])}
 
-@main.route("users/search/tags")
+@users_blueprint.route("search/tags")
 def user_serach(value):
     return {"users": userKit.searchUser.by_tags(value["query"], value["condition"], value["exclude"])}
 
-@main.route("users/get")
+@users_blueprint.route("get")
 def user_get(value):
     return userKit.getUser.by_id(value)
 
-@main.route("users/create")
+@users_blueprint.route("create")
 def user_create(value):
     return userKit.createUser(value)
 
-@main.route("sound/pt-pt/tts")
+@sound_blueprint.route("pt-pt/tts")
 def ttsPT(value):
     return AudioKit.audio_pt.tts(value["text"])
 
-@main.route("sound/en-us/tts")
+@sound_blueprint.route("en-us/tts")
 def ttsEN(value):
     return AudioKit.audio_en.tts(value["text"])
 
-@main.route("sound/pt-pt/stt")
+@sound_blueprint.route("pt-pt/stt")
 def sttPT(value):
     return AudioKit.audio_pt.stt()
 
-@main.route("sound/en-us/stt")
+@sound_blueprint.route("en-us/stt")
 def sttEN(value):
     return AudioKit.audio_en.stt()

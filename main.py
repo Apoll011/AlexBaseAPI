@@ -34,9 +34,7 @@ def main():
                         conn.close()
                         closed = True
                         break
-                    print(received_json)
                     response = api.call(received_json["route"], received_json["value"])
-                    print(response)
                     conn.send(response.encode("utf-8"))
                     conn.close()
                     break

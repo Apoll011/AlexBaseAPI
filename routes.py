@@ -37,13 +37,15 @@ def user_search_name(value):
     return {"users": userKit.searchUser.by_name(value["query"])}
 
 @users_blueprint.route("search/tags")
-def user_serach(value: dict):
+def user_search(value: dict):
     if "condition" in value.keys() and "exclude" in value.keys():
         return {"users": userKit.searchUser.by_tags(value["query"], value["condition"], value["exclude"])}
     elif "condition" in value.keys():
         return {"users": userKit.searchUser.by_tags(value["query"], value["condition"])}
     elif "exclude" in value.keys():
         return {"users": userKit.searchUser.by_tags(value["query"], exclue=value["exclude"])}
+    elif  "query" not in value.keys():
+        raise "QueryIsNecessary"
     else:
         return {"users": userKit.searchUser.by_tags(value["query"])}
 

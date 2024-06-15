@@ -1,4 +1,5 @@
 import json
+import time
 
 class Blueprint:
     defs = {
@@ -24,12 +25,13 @@ class API:
         self.defs = blueprint.defs | self.defs
 
     def call(self, route, value):
+        time_s = time.time()
         try:
             if route in self.defs.keys():
-                return json.dumps({"responce": self.defs[route](value)})
+                return json.dumps({"responce": self.defs[route](value),"code": 200, "time": time.time() - time_s})
             else:
-                return json.dumps({"responce": "invalid"})
+                return json.dumps({"responce": "invalid", "code": 404, "time":  time.time() - time_s})
         except Exception as e:
-            return json.dumps({"responce": "error", "value": e})
+            return json.dumps({"responce": e.__str__(), "code": 400, "time":  time.time() - time_s})
 
 

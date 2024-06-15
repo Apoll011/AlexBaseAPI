@@ -1,48 +1,6 @@
 import json
 import socket
-import threading
-
-class Promise:
-    def __init__(self):
-        self.resolved = False
-        self.rejected = False
-        self.value = None
-        self.error = None
-        self.then_callback = None
-        self.catch_callback = None
-
-    def then(self, callback):
-        if self.resolved:
-            callback(self.value)
-        else:
-            self.then_callback = callback
-        return self
-
-    def catch(self, callback):
-        if self.rejected:
-            callback(self.error)
-        else:
-            self.catch_callback = callback
-        return self
-
-    def resolve(self, value):
-        threading.Thread(target=self.do_resolve, args=(value,)).start()
-
-    def do_resolve(self, value):
-        if not self.resolved and not self.rejected:
-            v = value()
-            if v:
-                self.value = v
-                self.resolved = True
-                if self.then_callback:
-                    self.then_callback(v)
-
-    def reject(self, error):
-        if not self.rejected and not self.resolved:
-            self.rejected = True
-            self.error = error
-            if self.catch_callback:
-                self.catch_callback(error)
+from promise import Promise
 
 class ApiCall:
     HOST = "127.0.0.1"
@@ -73,7 +31,7 @@ class ApiCall:
             s.close()  # Close the socket object
 
 api = ApiCall()
-p = api.call_route("intent_recognition/recoginze", {"lang": "pt-pt", "text": "aumentar volume"})
+p = api.call_route("intent_recognition/recognize", {"lang": "pt-pt", "text": "aumentar volume"})
 
 p.then(lambda data: print("Success:", data))
 p.catch(lambda error: print("Error:", error))

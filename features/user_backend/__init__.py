@@ -1,10 +1,5 @@
-import sys
 import os
-import io
 import json
-import typing
-import socket
-from os import makedirs
 
 class SearchUsers:
     """Let You serche trought a list of users"""

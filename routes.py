@@ -28,7 +28,7 @@ def alive(value):
 def intent_train(value):
     return train(value)
 
-@intent_blueprint.route("recoginze")
+@intent_blueprint.route("recognize")
 def intent_reconize(value):
     return recog(value["lang"], value["text"])
 

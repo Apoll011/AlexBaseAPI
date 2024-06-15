@@ -31,7 +31,7 @@ class ApiCall:
             s.close()  # Close the socket object
 
 api = ApiCall()
-p = api.call_route("intent_recognition/recognize", {"lang": "pt-pt", "text": "aumentar volume"})
+p = api.call_route("intent_recognition/recognize", {"lang": "pt-pt", "text": "ativar o modo silêncio"})
 
 p.then(lambda data: print("Success:", data))
 p.catch(lambda error: print("Error:", error))

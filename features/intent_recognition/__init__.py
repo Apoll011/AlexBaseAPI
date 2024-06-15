@@ -1,15 +1,12 @@
-import os
-import io
 import json
 import typing
-import socket
 from pathlib import Path
 import lingua_franca
 
 from features.intent_recognition.intent_fsticuffs.ini_jsgf import Expression, Word, parse_ini, split_rules
 from features.intent_recognition.intent_fsticuffs.jsgf import walk_expression
 from features.intent_recognition.intent_fsticuffs.jsgf_graph import graph_to_json, sentences_to_graph
-from features.intent_recognition.intent_fsticuffs.number_utils import number_range_transform, number_transform
+from features.intent_recognition.intent_fsticuffs.number_utils import number_range_transform, number_transform, number_to_words
 from features.intent_recognition.intent_fsticuffs.slots import add_slot_replacements
 from features.intent_recognition.intent_fsticuffs import IntentRecognizer, IntentRequest, IntentResult
 
@@ -38,7 +35,6 @@ class Train:
                 ini_text = sentences_file.read()
             
             intents = parse_ini(ini_text)
-            print(len(intents))
             sentences, replacements = split_rules(intents)
 
             # Transform words
@@ -93,6 +89,7 @@ class Train:
                 slot_visitor=word_visitor,
             )
 
+            print(number_to_words(75))
             if replace_numbers:
                 # Do single number transformations
                 for intent_sentences in sentences.values():

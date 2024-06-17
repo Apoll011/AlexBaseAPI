@@ -89,7 +89,7 @@ class Train:
                 slot_visitor=word_visitor,
             )
 
-            print(number_to_words(75))
+            
             if replace_numbers:
                 # Do single number transformations
                 for intent_sentences in sentences.values():
@@ -99,10 +99,11 @@ class Train:
                             number_transform,
                             replacements,
                         )
-
+            
             # Convert to directed graph
             graph = sentences_to_graph(sentences, replacements=replacements)
 
+            print(graph)
             # Write JSON graph
             new_json = graph_to_json(graph)
             with open(output_graph_path, "w", encoding="utf-8") as graph_file:

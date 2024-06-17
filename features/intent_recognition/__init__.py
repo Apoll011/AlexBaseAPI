@@ -107,7 +107,7 @@ class Train:
             new_json = graph_to_json(graph)
             with open(output_graph_path, "w", encoding="utf-8") as graph_file:
                 json.dump(new_json, graph_file)
-
+        return True
 
 def train(lang):
     def number_range(*args):

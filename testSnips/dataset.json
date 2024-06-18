@@ -27,6 +27,21 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
+    "entityName": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "Alex"
+        },
+        {
+          "synonyms": [],
+          "value": "Yourself"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": false
+    },
     "room": {
       "automatically_extensible": false,
       "data": [
@@ -53,10 +68,118 @@
       "use_synonyms": true
     },
     "snips/datetime": {},
-    "snips/temperature": {}
+    "snips/temperature": {},
+    "timeOfDay": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "Morning"
+        },
+        {
+          "synonyms": [],
+          "value": "Affternoon"
+        },
+        {
+          "synonyms": [],
+          "value": "Night"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    }
   },
   "intents": {
-    "searchFlight": {
+    "close@something": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Please, close "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "Alex"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Close "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "Yourself"
+            },
+            {
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    "saudation@hi": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Hi Alex."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How are you."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Hello Alex."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Good "
+            },
+            {
+              "entity": "timeOfDay",
+              "slot_name": "timeOfDay",
+              "text": "Morning"
+            },
+            {
+              "text": " Alex."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Good "
+            },
+            {
+              "entity": "timeOfDay",
+              "slot_name": "timeOfDay",
+              "text": "Affternoon"
+            },
+            {
+              "text": "."
+            }
+          ]
+        }
+      ]
+    },
+    "search@flight": {
       "utterances": [
         {
           "data": [
@@ -120,7 +243,7 @@
         }
       ]
     },
-    "setTemperature": {
+    "ste@temperature": {
       "utterances": [
         {
           "data": [
@@ -202,7 +325,7 @@
         }
       ]
     },
-    "turnLightOff": {
+    "turnOff@light": {
       "utterances": [
         {
           "data": [
@@ -263,7 +386,7 @@
         }
       ]
     },
-    "turnLightOn": {
+    "turnOn@light": {
       "utterances": [
         {
           "data": [

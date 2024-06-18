@@ -1,7 +1,7 @@
 # searchFlight Intent
 ---
 type: intent
-name: searchFlight
+name: search@flight
 slots:
   - name: origin
     entity: city
@@ -14,10 +14,27 @@ utterances:
   - I need a flight leaving [date] to [destination]
   - show me flights to go to [destination] leaving [date]
 
+---
+type: intent
+name: saudation@hi
+utterances:
+  - Hi Alex.
+  - How are you.
+  - Hello Alex.
+  - Good [timeOfDay] Alex.
+  - Good [timeOfDay].
+
+---
+type: intent
+name: close@something
+utterances:
+  - Please, close [entityName].
+  - Close [entityName].
+
 # turnLightOn intent
 ---
 type: intent
-name: turnLightOn
+name: turnOn@light
 slots:
   - name: room
     entity: room
@@ -30,7 +47,7 @@ utterances:
 # turnLightOff intent
 ---
 type: intent
-name: turnLightOff
+name: turnOff@light
 slots:
   - name: room
     entity: room
@@ -43,7 +60,7 @@ utterances:
 # setTemperature intent
 ---
 type: intent
-name: setTemperature
+name: ste@temperature
 slots:
   - name: room
     entity: room
@@ -65,6 +82,15 @@ values:
 - [living room, main room, lounge]
 - [garden, yard, backyard]
 
+---
+type: entity
+name: timeOfDay
+automatically_extensible: no
+values:
+- Morning
+- Affternoon
+- Night
+
 # City Entity
 ---
 type: entity
@@ -77,3 +103,13 @@ values:
   - Berlin
   - [new york, big apple]
   - [paris, city of lights]
+
+---
+type: entity
+name: entityName
+automatically_extensible: true # default value is true
+use_synonyms: false # default value is true
+matching_strictness: 0.8 # default value is 1.0
+values:
+  - Alex
+  - Yourself

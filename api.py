@@ -22,7 +22,7 @@ class API:
         
     }
     def register_blueprint(self, blueprint: Blueprint):
-        self.defs = blueprint.defs | self.defs
+        blueprint.defs.update(self.defs)
 
     def call(self, route, value):
         time_s = time.time()

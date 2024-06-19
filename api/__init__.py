@@ -32,6 +32,6 @@ class API:
             else:
                 return json.dumps({"responce": "invalid", "code": 404, "time":  time.time() - time_s})
         except Exception as e:
-            return json.dumps({"responce": e.__str__(), "code": 400, "time":  time.time() - time_s})
+            return json.dumps({"responce": e.__str__(), "code": 500, "time":  time.time() - time_s})
 
 

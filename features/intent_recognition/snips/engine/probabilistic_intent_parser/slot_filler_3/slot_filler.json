@@ -100,9 +100,7 @@
       },
       {
         "args": {
-          "entities": [
-            "room"
-          ],
+          "entities": [],
           "entity_filter": {
             "automatically_extensible": false
           },
@@ -118,7 +116,10 @@
       },
       {
         "args": {
-          "entities": [],
+          "entities": [
+            "action",
+            "person"
+          ],
           "entity_filter": {
             "automatically_extensible": true
           },
@@ -176,10 +177,11 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "ste@temperature",
+  "intent": "set@timer",
   "language_code": "en",
   "slot_name_mapping": {
-    "room": "room",
-    "roomTemperature": "snips/temperature"
+    "action": "action",
+    "person": "person",
+    "snips/duration": "snips/duration"
   }
 }

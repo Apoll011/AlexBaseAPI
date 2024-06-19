@@ -197,10 +197,19 @@
   "custom_entity_parser": "custom_entity_parser",
   "dataset_metadata": {
     "entities": {
+      "action": {
+        "automatically_extensible": true
+      },
       "city": {
         "automatically_extensible": true
       },
       "entityName": {
+        "automatically_extensible": true
+      },
+      "mood": {
+        "automatically_extensible": false
+      },
+      "person": {
         "automatically_extensible": true
       },
       "room": {
@@ -215,13 +224,18 @@
       "close@something": {
         "entityName": "entityName"
       },
-      "saudation@hi": {
-        "timeOfDay": "timeOfDay"
+      "saudation@how.are.u": {
+        "mood": "mood"
       },
       "search@flight": {
         "date": "snips/datetime",
         "destination": "city",
         "origin": "city"
+      },
+      "set@timer": {
+        "action": "action",
+        "person": "person",
+        "snips/duration": "snips/duration"
       },
       "ste@temperature": {
         "room": "room",

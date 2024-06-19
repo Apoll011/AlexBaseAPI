@@ -1,20 +1,32 @@
 {
   "parsers_metadata": [
     {
-      "entity_identifier": "city",
+      "entity_identifier": "action",
       "entity_parser": "parser_1"
     },
     {
-      "entity_identifier": "entityName",
+      "entity_identifier": "city",
       "entity_parser": "parser_2"
     },
     {
-      "entity_identifier": "room",
+      "entity_identifier": "entityName",
       "entity_parser": "parser_3"
     },
     {
-      "entity_identifier": "timeOfDay",
+      "entity_identifier": "mood",
       "entity_parser": "parser_4"
+    },
+    {
+      "entity_identifier": "person",
+      "entity_parser": "parser_5"
+    },
+    {
+      "entity_identifier": "room",
+      "entity_parser": "parser_6"
+    },
+    {
+      "entity_identifier": "timeOfDay",
+      "entity_parser": "parser_7"
     }
   ]
 }

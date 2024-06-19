@@ -176,7 +176,7 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "turnOn@light",
+  "intent": "turnOff@light",
   "language_code": "en",
   "slot_name_mapping": {
     "room": "room"

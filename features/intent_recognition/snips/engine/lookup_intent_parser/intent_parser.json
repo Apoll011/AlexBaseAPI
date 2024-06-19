@@ -19,11 +19,11 @@
       "entity_scope": {
         "builtin": [],
         "custom": [
-          "timeOfDay"
+          "mood"
         ]
       },
       "intent_group": [
-        "saudation@hi"
+        "saudation@how.are.u"
       ]
     },
     {
@@ -37,6 +37,20 @@
       },
       "intent_group": [
         "search@flight"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [
+          "snips/duration"
+        ],
+        "custom": [
+          "action",
+          "person"
+        ]
+      },
+      "intent_group": [
+        "set@timer"
       ]
     },
     {
@@ -67,54 +81,59 @@
   ],
   "intents_names": [
     "close@something",
-    "saudation@hi",
+    "saudation@how.are.u",
     "search@flight",
+    "set@timer",
     "ste@temperature",
     "turnOff@light",
     "turnOn@light"
   ],
   "language_code": "en",
   "map": {
-    "-1428530139": [
-      1,
-      []
-    ],
     "-887841468": [
-      3,
+      4,
       [
-        5,
-        6
+        8,
+        9
       ]
     ],
     "-838971212": [
-      4,
+      5,
       [
-        6
+        9
       ]
     ],
-    "-370776895": [
+    "-511652780": [
       3,
       [
         5,
-        6
+        6,
+        7
+      ]
+    ],
+    "-370776895": [
+      4,
+      [
+        8,
+        9
       ]
     ],
     "-241165242": [
-      4,
+      5,
       [
-        6
+        9
       ]
     ],
     "-196823244": [
-      5,
+      6,
       [
-        6
+        9
       ]
     ],
     "-171639413": [
-      4,
+      5,
       [
-        6
+        9
       ]
     ],
     "-171375104": [
@@ -131,32 +150,36 @@
         3
       ]
     ],
-    "75693826": [
+    "-62157507": [
+      1,
+      []
+    ],
+    "76480680": [
+      3,
+      [
+        5
+      ]
+    ],
+    "506578550": [
       1,
       [
         1
       ]
     ],
     "641679088": [
-      5,
+      6,
       [
-        6
+        9
       ]
     ],
     "848724943": [
       1,
       []
     ],
-    "995799654": [
-      1,
-      [
-        1
-      ]
-    ],
     "1040610241": [
-      5,
+      6,
       [
-        6
+        9
       ]
     ],
     "1279991791": [
@@ -173,37 +196,47 @@
       ]
     ],
     "1653377737": [
-      5,
+      6,
       [
-        6
+        9
       ]
     ],
     "1663017382": [
-      3,
+      4,
       [
-        6,
-        5
+        9,
+        8
       ]
     ],
     "1961251813": [
-      4,
+      5,
       [
+        9
+      ]
+    ],
+    "2025578204": [
+      3,
+      [
+        5,
         6
       ]
     ],
     "2032381002": [
-      3,
+      4,
       [
-        5
+        8
       ]
     ]
   },
   "slots_names": [
     "entityName",
-    "timeOfDay",
+    "mood",
     "origin",
     "destination",
     "date",
+    "snips/duration",
+    "action",
+    "person",
     "roomTemperature",
     "room"
   ],

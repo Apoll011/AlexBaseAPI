@@ -190,7 +190,7 @@
       "slot_filler_name": "slot_filler_0"
     },
     {
-      "intent": "saudation@hi",
+      "intent": "saudation@how.are.u",
       "slot_filler_name": "slot_filler_1"
     },
     {
@@ -198,16 +198,20 @@
       "slot_filler_name": "slot_filler_2"
     },
     {
-      "intent": "ste@temperature",
+      "intent": "set@timer",
       "slot_filler_name": "slot_filler_3"
     },
     {
-      "intent": "turnOff@light",
+      "intent": "ste@temperature",
       "slot_filler_name": "slot_filler_4"
     },
     {
-      "intent": "turnOn@light",
+      "intent": "turnOff@light",
       "slot_filler_name": "slot_filler_5"
+    },
+    {
+      "intent": "turnOn@light",
+      "slot_filler_name": "slot_filler_6"
     }
   ]
 }

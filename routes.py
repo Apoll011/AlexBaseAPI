@@ -1,5 +1,5 @@
 import os
-from features.intent_recognition import *
+from features.intent_recognition.snips import IntentKit
 from kit import *
 from api import Blueprint
 from config import __version__
@@ -11,6 +11,7 @@ users_blueprint = Blueprint("users")
 sound_blueprint = Blueprint("sound")
 
 userKit = UserKit()
+intentKit = IntentKit()
 
 @alex_blueprint.route("alive")
 def alive(value):
@@ -24,13 +25,18 @@ def alive(value):
         "version": __version__
         }
 
-@intent_blueprint.route("train")
+@intent_blueprint.route("get/train")
 def intent_train(value):
-    return train(value)
+    return intentKit.train()
 
-@intent_blueprint.route("recognize")
+@intent_blueprint.route("get/reuse")
+def intent_train(value):
+    return intentKit.reuse()
+
+
+@intent_blueprint.route("parse")
 def intent_reconize(value):
-    return recog(value["lang"], value["text"])
+    return intentKit.parse(value)
 
 @users_blueprint.route("search/name")
 def user_search_name(value):

@@ -17,6 +17,43 @@
     },
     {
       "entity_scope": {
+        "builtin": [
+          "snips/number"
+        ],
+        "custom": [
+          "mathoperation"
+        ]
+      },
+      "intent_group": [
+        "math@simple"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [
+          "snips/amountOfMoney"
+        ],
+        "custom": [
+          "person"
+        ]
+      },
+      "intent_group": [
+        "money@tranfer"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [],
+        "custom": [
+          "timeOfDay"
+        ]
+      },
+      "intent_group": [
+        "saudation@hi"
+      ]
+    },
+    {
+      "entity_scope": {
         "builtin": [],
         "custom": [
           "mood"
@@ -42,15 +79,15 @@
     {
       "entity_scope": {
         "builtin": [
-          "snips/duration"
+          "snips/datetime"
         ],
         "custom": [
-          "action",
-          "person"
+          "person",
+          "action"
         ]
       },
       "intent_group": [
-        "set@timer"
+        "set@reminder"
       ]
     },
     {
@@ -63,7 +100,18 @@
         ]
       },
       "intent_group": [
-        "ste@temperature"
+        "set@temperature"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [
+          "snips/duration"
+        ],
+        "custom": []
+      },
+      "intent_group": [
+        "set@timer"
       ]
     },
     {
@@ -81,112 +129,150 @@
   ],
   "intents_names": [
     "close@something",
+    "math@simple",
+    "money@tranfer",
+    "saudation@hi",
     "saudation@how.are.u",
     "search@flight",
+    "set@reminder",
+    "set@temperature",
     "set@timer",
-    "ste@temperature",
     "turnOff@light",
     "turnOn@light"
   ],
   "language_code": "en",
   "map": {
-    "-887841468": [
-      4,
+    "-1675507287": [
+      1,
       [
-        8,
-        9
-      ]
-    ],
-    "-838971212": [
-      5,
-      [
-        9
-      ]
-    ],
-    "-511652780": [
-      3,
-      [
-        5,
-        6,
-        7
-      ]
-    ],
-    "-370776895": [
-      4,
-      [
-        8,
-        9
-      ]
-    ],
-    "-241165242": [
-      5,
-      [
-        9
-      ]
-    ],
-    "-196823244": [
-      6,
-      [
-        9
-      ]
-    ],
-    "-171639413": [
-      5,
-      [
-        9
-      ]
-    ],
-    "-171375104": [
-      2,
-      [
-        3,
+        2,
         4
       ]
     ],
-    "-75025826": [
-      2,
+    "-1428530139": [
+      3,
+      []
+    ],
+    "-1058025966": [
+      1,
       [
+        1,
         2,
         3
       ]
     ],
+    "-887841468": [
+      7,
+      [
+        14,
+        15
+      ]
+    ],
+    "-838971212": [
+      9,
+      [
+        15
+      ]
+    ],
+    "-370776895": [
+      7,
+      [
+        14,
+        15
+      ]
+    ],
+    "-241165242": [
+      9,
+      [
+        15
+      ]
+    ],
+    "-196823244": [
+      10,
+      [
+        15
+      ]
+    ],
+    "-171639413": [
+      9,
+      [
+        15
+      ]
+    ],
+    "-171375104": [
+      5,
+      [
+        10,
+        11
+      ]
+    ],
+    "-75025826": [
+      5,
+      [
+        9,
+        10
+      ]
+    ],
     "-62157507": [
-      1,
+      4,
       []
     ],
-    "76480680": [
-      3,
+    "-60603184": [
+      6,
       [
+        12,
+        13,
         5
       ]
     ],
-    "506578550": [
-      1,
+    "75693826": [
+      3,
       [
-        1
+        7
+      ]
+    ],
+    "76480680": [
+      8,
+      [
+        16
+      ]
+    ],
+    "506578550": [
+      4,
+      [
+        8
       ]
     ],
     "641679088": [
-      6,
+      10,
       [
-        9
+        15
       ]
     ],
-    "848724943": [
-      1,
-      []
+    "995799654": [
+      3,
+      [
+        7
+      ]
     ],
     "1040610241": [
-      6,
+      10,
       [
-        9
+        15
+      ]
+    ],
+    "1108497180": [
+      2,
+      [
+        5,
+        6
       ]
     ],
     "1279991791": [
-      2,
+      5,
       [
-        4,
-        3
+        11,
+        10
       ]
     ],
     "1310328971": [
@@ -195,54 +281,82 @@
         0
       ]
     ],
-    "1653377737": [
-      6,
-      [
-        9
-      ]
-    ],
-    "1663017382": [
-      4,
-      [
-        9,
-        8
-      ]
-    ],
-    "1961251813": [
-      5,
-      [
-        9
-      ]
-    ],
-    "2025578204": [
-      3,
+    "1406629266": [
+      2,
       [
         5,
         6
       ]
     ],
-    "2032381002": [
-      4,
+    "1592552592": [
+      6,
       [
-        8
+        12,
+        13
+      ]
+    ],
+    "1653377737": [
+      10,
+      [
+        15
+      ]
+    ],
+    "1663017382": [
+      7,
+      [
+        15,
+        14
+      ]
+    ],
+    "1919173317": [
+      1,
+      [
+        1,
+        2,
+        3
+      ]
+    ],
+    "1961251813": [
+      9,
+      [
+        15
+      ]
+    ],
+    "2032381002": [
+      7,
+      [
+        14
       ]
     ]
   },
   "slots_names": [
     "entityName",
+    "first_number",
+    "mathoperation",
+    "second_number",
+    "number",
+    "person",
+    "snips/amountOfMoney",
+    "timeOfDay",
     "mood",
     "origin",
     "destination",
     "date",
-    "snips/duration",
+    "time",
     "action",
-    "person",
     "roomTemperature",
-    "room"
+    "room",
+    "duration"
   ],
   "stop_words_whitelist": {
     "close@something": [
       "yourself"
+    ],
+    "money@tranfer": [
+      "me"
+    ],
+    "set@reminder": [
+      "me"
     ]
   }
 }

@@ -16,6 +16,16 @@ utterances:
 
 ---
 type: intent
+name: saudation@hi
+utterances:
+  - Hi Alex.
+  - How are you.
+  - Hello Alex.
+  - Good [timeOfDay] Alex.
+  - Good [timeOfDay].
+
+---
+type: intent
 name: saudation@how.are.u
 utterances:
   - How are you
@@ -27,19 +37,50 @@ utterances:
 type: intent
 name: close@something
 utterances:
-  - Please, close [entityName].
-  - Close [entityName].
+  - Please, close [entityName]
+  - Close [entityName]
+
+---
+type: intent
+name: money@tranfer
+utterances:
+  - Send [person] [snips/amountOfMoney]
+  - Pay [person] [snips/amountOfMoney]
+
+---
+type: intent
+name: math@simple
+slots:
+  - name: first_number
+    entity: snips/number
+  - name: second_number
+    entity: snips/number
+  - name: number
+    entity: snips/number
+utterances:
+  - How much is [first_number] [mathoperation] [second_number]
+  - How much is [first_number] [mathoperation] by [second_number]
+  - \[mathoperation] by [number]
 
 ---
 type: intent
 name: set@timer
 slots:
-  -name: duration
-  entity: snips/duration
+  - name: duration
+    entity: snips/duration
 utterances:
-  - Set a timer for [duration].
-  - Remeber me in [duration] to do [action].
-  - Remeber me in [duration] to [action] my [person].
+  - Set a timer for [duration]
+
+---
+type: intent
+name: set@reminder
+slots:
+  - name: time
+    entity: snips/datetime
+utterances:
+  - Remeber me [time] to do [action]
+  - Remeber me [time] to [action] my [person]
+
 
 # turnLightOn intent
 ---
@@ -70,7 +111,7 @@ utterances:
 # setTemperature intent
 ---
 type: intent
-name: ste@temperature
+name: set@temperature
 slots:
   - name: room
     entity: room
@@ -131,12 +172,26 @@ automatically_extensible: true # default value is true
 use_synonyms: false # default value is true
 matching_strictness: 0.8 # default value is 1.0
 values:
+  - me
   - Mom
   - Dad
   - Sister
   - Cat
   - Dog
   - Fibi
+
+---
+type: entity
+name: mathoperation
+automatically_extensible: false # default value is true
+use_synonyms: false # default value is true
+matching_strictness: 0.8 # default value is 1.0
+values:
+  - times
+  - over
+  - plus
+  - minus
+  - elavated
 
 ---
 type: entity
@@ -148,6 +203,17 @@ values:
   - call
   - buy
   - register
+
+---
+type: entity
+name: playMode
+automatically_extensible: false # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.8 # default value is 1.0
+values:
+  - random
+  - line
+  - order
 
 
 ---

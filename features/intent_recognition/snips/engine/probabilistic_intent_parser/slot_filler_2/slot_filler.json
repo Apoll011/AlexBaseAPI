@@ -117,7 +117,7 @@
       {
         "args": {
           "entities": [
-            "city"
+            "person"
           ],
           "entity_filter": {
             "automatically_extensible": true
@@ -176,11 +176,10 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "search@flight",
+  "intent": "money@tranfer",
   "language_code": "en",
   "slot_name_mapping": {
-    "date": "snips/datetime",
-    "destination": "city",
-    "origin": "city"
+    "person": "person",
+    "snips/amountOfMoney": "snips/amountOfMoney"
   }
 }

@@ -100,9 +100,7 @@
       },
       {
         "args": {
-          "entities": [
-            "room"
-          ],
+          "entities": [],
           "entity_filter": {
             "automatically_extensible": false
           },
@@ -118,7 +116,9 @@
       },
       {
         "args": {
-          "entities": [],
+          "entities": [
+            "city"
+          ],
           "entity_filter": {
             "automatically_extensible": true
           },
@@ -176,9 +176,11 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "turnOff@light",
+  "intent": "search@flight",
   "language_code": "en",
   "slot_name_mapping": {
-    "room": "room"
+    "date": "snips/datetime",
+    "destination": "city",
+    "origin": "city"
   }
 }

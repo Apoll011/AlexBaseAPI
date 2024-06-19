@@ -101,7 +101,7 @@
       {
         "args": {
           "entities": [
-            "room"
+            "mood"
           ],
           "entity_filter": {
             "automatically_extensible": false
@@ -176,10 +176,9 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "ste@temperature",
+  "intent": "saudation@how.are.u",
   "language_code": "en",
   "slot_name_mapping": {
-    "room": "room",
-    "roomTemperature": "snips/temperature"
+    "mood": "mood"
   }
 }

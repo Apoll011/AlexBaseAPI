@@ -206,11 +206,17 @@
       "entityName": {
         "automatically_extensible": true
       },
+      "mathoperation": {
+        "automatically_extensible": false
+      },
       "mood": {
         "automatically_extensible": false
       },
       "person": {
         "automatically_extensible": true
+      },
+      "playMode": {
+        "automatically_extensible": false
       },
       "room": {
         "automatically_extensible": false
@@ -224,6 +230,19 @@
       "close@something": {
         "entityName": "entityName"
       },
+      "math@simple": {
+        "first_number": "snips/number",
+        "mathoperation": "mathoperation",
+        "number": "snips/number",
+        "second_number": "snips/number"
+      },
+      "money@tranfer": {
+        "person": "person",
+        "snips/amountOfMoney": "snips/amountOfMoney"
+      },
+      "saudation@hi": {
+        "timeOfDay": "timeOfDay"
+      },
       "saudation@how.are.u": {
         "mood": "mood"
       },
@@ -232,14 +251,17 @@
         "destination": "city",
         "origin": "city"
       },
-      "set@timer": {
+      "set@reminder": {
         "action": "action",
         "person": "person",
-        "snips/duration": "snips/duration"
+        "time": "snips/datetime"
       },
-      "ste@temperature": {
+      "set@temperature": {
         "room": "room",
         "roomTemperature": "snips/temperature"
+      },
+      "set@timer": {
+        "duration": "snips/duration"
       },
       "turnOff@light": {
         "room": "room"

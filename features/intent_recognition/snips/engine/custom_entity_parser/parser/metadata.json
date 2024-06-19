@@ -13,20 +13,28 @@
       "entity_parser": "parser_3"
     },
     {
-      "entity_identifier": "mood",
+      "entity_identifier": "mathoperation",
       "entity_parser": "parser_4"
     },
     {
-      "entity_identifier": "person",
+      "entity_identifier": "mood",
       "entity_parser": "parser_5"
     },
     {
-      "entity_identifier": "room",
+      "entity_identifier": "person",
       "entity_parser": "parser_6"
     },
     {
-      "entity_identifier": "timeOfDay",
+      "entity_identifier": "playMode",
       "entity_parser": "parser_7"
+    },
+    {
+      "entity_identifier": "room",
+      "entity_parser": "parser_8"
+    },
+    {
+      "entity_identifier": "timeOfDay",
+      "entity_parser": "parser_9"
     }
   ]
 }

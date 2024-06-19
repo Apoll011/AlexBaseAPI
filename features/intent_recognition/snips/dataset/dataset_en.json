@@ -61,6 +61,33 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
+    "mathoperation": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "times"
+        },
+        {
+          "synonyms": [],
+          "value": "over"
+        },
+        {
+          "synonyms": [],
+          "value": "plus"
+        },
+        {
+          "synonyms": [],
+          "value": "minus"
+        },
+        {
+          "synonyms": [],
+          "value": "elavated"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": false
+    },
     "mood": {
       "automatically_extensible": false,
       "data": [
@@ -289,6 +316,10 @@
       "data": [
         {
           "synonyms": [],
+          "value": "me"
+        },
+        {
+          "synonyms": [],
           "value": "Mom"
         },
         {
@@ -315,6 +346,25 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
+    "playMode": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "random"
+        },
+        {
+          "synonyms": [],
+          "value": "line"
+        },
+        {
+          "synonyms": [],
+          "value": "order"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": true
+    },
     "room": {
       "automatically_extensible": false,
       "data": [
@@ -340,8 +390,10 @@
       "matching_strictness": 1.0,
       "use_synonyms": true
     },
+    "snips/amountOfMoney": {},
     "snips/datetime": {},
     "snips/duration": {},
+    "snips/number": {},
     "snips/temperature": {},
     "timeOfDay": {
       "automatically_extensible": false,
@@ -375,9 +427,6 @@
               "entity": "entityName",
               "slot_name": "entityName",
               "text": "Alex"
-            },
-            {
-              "text": "."
             }
           ]
         },
@@ -390,6 +439,182 @@
               "entity": "entityName",
               "slot_name": "entityName",
               "text": "Yourself"
+            }
+          ]
+        }
+      ]
+    },
+    "math@simple": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "How much is "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "first_number",
+              "text": "2001"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "times"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "second_number",
+              "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How much is "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "first_number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "over"
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "second_number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "plus"
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "twenty one"
+            }
+          ]
+        }
+      ]
+    },
+    "money@tranfer": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Send "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "me"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "snips/amountOfMoney",
+              "slot_name": "snips/amountOfMoney",
+              "text": "$10"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Pay "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Mom"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "snips/amountOfMoney",
+              "slot_name": "snips/amountOfMoney",
+              "text": "six euros"
+            }
+          ]
+        }
+      ]
+    },
+    "saudation@hi": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Hi Alex."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How are you."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Hello Alex."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Good "
+            },
+            {
+              "entity": "timeOfDay",
+              "slot_name": "timeOfDay",
+              "text": "Morning"
+            },
+            {
+              "text": " Alex."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Good "
+            },
+            {
+              "entity": "timeOfDay",
+              "slot_name": "timeOfDay",
+              "text": "Affternoon"
             },
             {
               "text": "."
@@ -492,32 +717,17 @@
         }
       ]
     },
-    "set@timer": {
+    "set@reminder": {
       "utterances": [
         {
           "data": [
             {
-              "text": "Set a timer for "
+              "text": "Remeber me "
             },
             {
-              "entity": "snips/duration",
-              "slot_name": "snips/duration",
-              "text": "1h"
-            },
-            {
-              "text": "."
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Remeber me in "
-            },
-            {
-              "entity": "snips/duration",
-              "slot_name": "snips/duration",
-              "text": "during two minutes"
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "on october 1st at 10am"
             },
             {
               "text": " to do "
@@ -526,21 +736,18 @@
               "entity": "action",
               "slot_name": "action",
               "text": "call"
-            },
-            {
-              "text": "."
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Remeber me in "
+              "text": "Remeber me "
             },
             {
-              "entity": "snips/duration",
-              "slot_name": "snips/duration",
-              "text": "for 20 seconds"
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "at 8 a.m."
             },
             {
               "text": " to "
@@ -556,16 +763,13 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Mom"
-            },
-            {
-              "text": "."
+              "text": "Dad"
             }
           ]
         }
       ]
     },
-    "ste@temperature": {
+    "set@temperature": {
       "utterances": [
         {
           "data": [
@@ -642,6 +846,22 @@
             },
             {
               "text": " ?"
+            }
+          ]
+        }
+      ]
+    },
+    "set@timer": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Set a timer for "
+            },
+            {
+              "entity": "snips/duration",
+              "slot_name": "duration",
+              "text": "1h"
             }
           ]
         }

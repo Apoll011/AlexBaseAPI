@@ -101,7 +101,7 @@
       {
         "args": {
           "entities": [
-            "mood"
+            "mathoperation"
           ],
           "entity_filter": {
             "automatically_extensible": false
@@ -176,9 +176,12 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "saudation@how.are.u",
+  "intent": "math@simple",
   "language_code": "en",
   "slot_name_mapping": {
-    "mood": "mood"
+    "first_number": "snips/number",
+    "mathoperation": "mathoperation",
+    "number": "snips/number",
+    "second_number": "snips/number"
   }
 }

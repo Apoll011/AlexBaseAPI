@@ -1,5 +1,24 @@
 {
   "entities": {
+    "action": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "call"
+        },
+        {
+          "synonyms": [],
+          "value": "buy"
+        },
+        {
+          "synonyms": [],
+          "value": "register"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": false
+    },
     "city": {
       "automatically_extensible": true,
       "data": [
@@ -42,6 +61,260 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
+    "mood": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "Neutral"
+        },
+        {
+          "synonyms": [],
+          "value": "Afraid"
+        },
+        {
+          "synonyms": [],
+          "value": "Aggravated"
+        },
+        {
+          "synonyms": [],
+          "value": "Angry"
+        },
+        {
+          "synonyms": [],
+          "value": "Anxious"
+        },
+        {
+          "synonyms": [],
+          "value": "Ashamed"
+        },
+        {
+          "synonyms": [],
+          "value": "Assertive"
+        },
+        {
+          "synonyms": [],
+          "value": "Burdened"
+        },
+        {
+          "synonyms": [],
+          "value": "Brave"
+        },
+        {
+          "synonyms": [],
+          "value": "Calm"
+        },
+        {
+          "synonyms": [],
+          "value": "Cautious"
+        },
+        {
+          "synonyms": [],
+          "value": "Challenged"
+        },
+        {
+          "synonyms": [],
+          "value": "Cheerful"
+        },
+        {
+          "synonyms": [],
+          "value": "Cherished"
+        },
+        {
+          "synonyms": [],
+          "value": "Comforted"
+        },
+        {
+          "synonyms": [],
+          "value": "Contented"
+        },
+        {
+          "synonyms": [],
+          "value": "Creative"
+        },
+        {
+          "synonyms": [],
+          "value": "Curious"
+        },
+        {
+          "synonyms": [],
+          "value": "Depressed"
+        },
+        {
+          "synonyms": [],
+          "value": "Embarrassed"
+        },
+        {
+          "synonyms": [],
+          "value": "Energized"
+        },
+        {
+          "synonyms": [],
+          "value": "Envious"
+        },
+        {
+          "synonyms": [],
+          "value": "Excited"
+        },
+        {
+          "synonyms": [],
+          "value": "Furious"
+        },
+        {
+          "synonyms": [],
+          "value": "Guilty"
+        },
+        {
+          "synonyms": [],
+          "value": "Grumpy"
+        },
+        {
+          "synonyms": [],
+          "value": "Happy"
+        },
+        {
+          "synonyms": [],
+          "value": "Hopeful"
+        },
+        {
+          "synonyms": [],
+          "value": "Humiliated"
+        },
+        {
+          "synonyms": [],
+          "value": "Hurt"
+        },
+        {
+          "synonyms": [],
+          "value": "Indifferent"
+        },
+        {
+          "synonyms": [],
+          "value": "Day-dreaming"
+        },
+        {
+          "synonyms": [],
+          "value": "Insecure"
+        },
+        {
+          "synonyms": [],
+          "value": "Irritated"
+        },
+        {
+          "synonyms": [],
+          "value": "Lonely"
+        },
+        {
+          "synonyms": [],
+          "value": "Loved"
+        },
+        {
+          "synonyms": [],
+          "value": "Mad"
+        },
+        {
+          "synonyms": [],
+          "value": "Optimistic"
+        },
+        {
+          "synonyms": [],
+          "value": "Overwhelmed"
+        },
+        {
+          "synonyms": [],
+          "value": "Panicked"
+        },
+        {
+          "synonyms": [],
+          "value": "Peaceful"
+        },
+        {
+          "synonyms": [],
+          "value": "Positive"
+        },
+        {
+          "synonyms": [],
+          "value": "Pessimistic"
+        },
+        {
+          "synonyms": [],
+          "value": "Shameful"
+        },
+        {
+          "synonyms": [],
+          "value": "Prepared"
+        },
+        {
+          "synonyms": [],
+          "value": "Skeptical"
+        },
+        {
+          "synonyms": [],
+          "value": "Proud"
+        },
+        {
+          "synonyms": [],
+          "value": "Sorrowful"
+        },
+        {
+          "synonyms": [],
+          "value": "Suicidal"
+        },
+        {
+          "synonyms": [],
+          "value": "Ready forchange"
+        },
+        {
+          "synonyms": [],
+          "value": "Relieved"
+        },
+        {
+          "synonyms": [],
+          "value": "Renewed"
+        },
+        {
+          "synonyms": [],
+          "value": "Sad"
+        },
+        {
+          "synonyms": [],
+          "value": "Self-confident"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": false
+    },
+    "person": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "Mom"
+        },
+        {
+          "synonyms": [],
+          "value": "Dad"
+        },
+        {
+          "synonyms": [],
+          "value": "Sister"
+        },
+        {
+          "synonyms": [],
+          "value": "Cat"
+        },
+        {
+          "synonyms": [],
+          "value": "Dog"
+        },
+        {
+          "synonyms": [],
+          "value": "Fibi"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": false
+    },
     "room": {
       "automatically_extensible": false,
       "data": [
@@ -68,6 +341,7 @@
       "use_synonyms": true
     },
     "snips/datetime": {},
+    "snips/duration": {},
     "snips/temperature": {},
     "timeOfDay": {
       "automatically_extensible": false,
@@ -124,56 +398,31 @@
         }
       ]
     },
-    "saudation@hi": {
+    "saudation@how.are.u": {
       "utterances": [
         {
           "data": [
             {
-              "text": "Hi Alex."
+              "text": "How are you"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "How are you."
+              "text": "How are you Alex"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Hello Alex."
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Good "
+              "text": "Are you "
             },
             {
-              "entity": "timeOfDay",
-              "slot_name": "timeOfDay",
-              "text": "Morning"
-            },
-            {
-              "text": " Alex."
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Good "
-            },
-            {
-              "entity": "timeOfDay",
-              "slot_name": "timeOfDay",
-              "text": "Affternoon"
-            },
-            {
-              "text": "."
+              "entity": "mood",
+              "slot_name": "mood",
+              "text": "Neutral"
             }
           ]
         }
@@ -238,6 +487,79 @@
               "entity": "snips/datetime",
               "slot_name": "date",
               "text": "today"
+            }
+          ]
+        }
+      ]
+    },
+    "set@timer": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Set a timer for "
+            },
+            {
+              "entity": "snips/duration",
+              "slot_name": "snips/duration",
+              "text": "1h"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me in "
+            },
+            {
+              "entity": "snips/duration",
+              "slot_name": "snips/duration",
+              "text": "during two minutes"
+            },
+            {
+              "text": " to do "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "call"
+            },
+            {
+              "text": "."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me in "
+            },
+            {
+              "entity": "snips/duration",
+              "slot_name": "snips/duration",
+              "text": "for 20 seconds"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "buy"
+            },
+            {
+              "text": " my "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Mom"
+            },
+            {
+              "text": "."
             }
           ]
         }

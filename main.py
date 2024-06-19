@@ -1,7 +1,7 @@
 import json
 import socket
 from api import API
-from routes import users_blueprint, alex_blueprint, intent_blueprint, sound_blueprint
+from api.routes import users_blueprint, alex_blueprint, intent_blueprint, sound_blueprint
 
 api = API()
 api.register_blueprint(alex_blueprint)

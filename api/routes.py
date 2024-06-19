@@ -1,6 +1,6 @@
 import os
 from features.intent_recognition.snips import IntentKit
-from kit import *
+from features.kit import *
 from api import Blueprint
 from config import __version__
 import time

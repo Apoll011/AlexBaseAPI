@@ -1,9 +1,12 @@
 import sys
 import yaml
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QListBox, QLabel, QLineEdit, QHBoxLayout, QFileDialog, QMessageBox, QTabWidget, QToolTip
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QListWidget, QLabel, QLineEdit, QHBoxLayout, QFileDialog, QMessageBox, QTabWidget, QToolTip, QInputDialog, QCheckBox
 from PyQt5.QtCore import Qt
 
 class YAMLGenerator(QWidget):
+    save_button = None
+    intents = []
+    entities = []
     def __init__(self):
         super().__init__()
 
@@ -25,7 +28,6 @@ class YAMLGenerator(QWidget):
 
         layout = QVBoxLayout()
         layout.addWidget(self.notebook)
-        layout.addWidget(self.save_button)
 
         self.setLayout(layout)
 
@@ -34,7 +36,7 @@ class YAMLGenerator(QWidget):
     def create_intents_tab(self):
         layout = QVBoxLayout()
 
-        self.intent_listbox = QListBox()
+        self.intent_listbox = QListWidget()
         self.intent_add_button = QPushButton("Add Intent", self)
         self.intent_edit_button = QPushButton("Edit Intent", self)
         self.intent_delete_button = QPushButton("Delete Intent", self)
@@ -53,7 +55,7 @@ class YAMLGenerator(QWidget):
     def create_entities_tab(self):
         layout = QVBoxLayout()
 
-        self.entity_listbox = QListBox()
+        self.entity_listbox = QListWidget()
         self.entity_add_button = QPushButton("Add Entity", self)
         self.entity_edit_button = QPushButton("Edit Entity", self)
         self.entity_delete_button = QPushButton("Delete Entity", self)
@@ -105,6 +107,29 @@ class YAMLGenerator(QWidget):
             del self.entities[selected_entity]
             self.entity_listbox.takeItem(selected_entity)
 
+    def add_slot(self, slots_listbox):
+        slot_name, ok = QInputDialog.getText(self, "Slot Name", "Enter slot name:")
+        if ok and slot_name:
+            slot_entity, ok = QInputDialog.getText(self, "Slot Entity", "Enter slot entity:")
+            if ok and slot_entity:
+                slots_listbox.addItem(f"{slot_name}: {slot_entity}")
+
+    def remove_slot(self, slots_listbox):
+        selected_slot = slots_listbox.currentRow()
+        if selected_slot >= 0:
+            slots_listbox.takeItem(selected_slot)
+
+    def add_utterance(self, utterances_listbox):
+        utterance, ok = QInputDialog.getText(self, "Utterance", "Enter utterance:")
+        if ok and utterance:
+            utterances_listbox.addItem(utterance)
+
+    def remove_utterance(self, utterances_listbox):
+        selected_utterance = utterances_listbox.currentRow()
+        if selected_utterance >= 0:
+            utterances_listbox.takeItem(selected_utterance)
+
+
     def edit_intent_dialog(self, intent_data):
         dialog = QWidget()
         dialog.setWindowTitle("Edit Intent")
@@ -117,25 +142,41 @@ class YAMLGenerator(QWidget):
         layout.addWidget(name_entry)
 
         slots_label = QLabel("Slots:")
-        slots_listbox = QListBox()
+        slots_listbox = QListWidget()
         for slot in intent_data["slots"]:
             slots_listbox.addItem(f"{slot['name']}: {slot['entity']}")
         layout.addWidget(slots_label)
         layout.addWidget(slots_listbox)
 
+        add_slot_button = QPushButton("Add Slot", dialog)
+        add_slot_button.clicked.connect(lambda: self.add_slot(slots_listbox))
+        layout.addWidget(add_slot_button)
+
+        remove_slot_button = QPushButton("Remove Slot", dialog)
+        remove_slot_button.clicked.connect(lambda: self.remove_slot(slots_listbox))
+        layout.addWidget(remove_slot_button)
+
         utterances_label = QLabel("Utterances:")
-        utterances_listbox = QListBox()
+        utterances_listbox = QListWidget()
         for utterance in intent_data["utterances"]:
             utterances_listbox.addItem(utterance)
         layout.addWidget(utterances_label)
         layout.addWidget(utterances_listbox)
+        
+        add_utterance_button = QPushButton("Add Utterance", dialog)
+        add_utterance_button.clicked.connect(lambda: self.add_utterance(utterances_listbox))
+        layout.addWidget(add_utterance_button)
+
+        remove_utterance_button = QPushButton("Remove Utterance", dialog)
+        remove_utterance_button.clicked.connect(lambda: self.remove_utterance(utterances_listbox))
+        layout.addWidget(remove_utterance_button)
 
         save_button = QPushButton("Save", dialog)
         save_button.clicked.connect(lambda: self.save_intent_dialog(dialog, intent_data, name_entry, slots_listbox, utterances_listbox))
         layout.addWidget(save_button)
 
         dialog.setLayout(layout)
-        dialog.exec_()
+        dialog.show()
 
     def edit_entity_dialog(self, entity_data):
         dialog = QWidget()
@@ -143,24 +184,82 @@ class YAMLGenerator(QWidget):
 
         layout = QVBoxLayout()
 
+        type_label = QLabel("Type:")
+        type_entry = QLineEdit(entity_data["type"])
+        layout.addWidget(type_label)
+        layout.addWidget(type_entry)
+
         name_label = QLabel("Name:")
         name_entry = QLineEdit(entity_data["name"])
         layout.addWidget(name_label)
         layout.addWidget(name_entry)
 
+        automatically_extensible_label = QLabel("Automatically Extensible:")
+        automatically_extensible_checkbox = QCheckBox()
+        automatically_extensible_checkbox.setChecked(not entity_data.get("automatically_extensible", True))
+        layout.addWidget(automatically_extensible_label)
+        layout.addWidget(automatically_extensible_checkbox)
+
+        use_synonyms_label = QLabel("Use Synonyms:")
+        use_synonyms_checkbox = QCheckBox()
+        use_synonyms_checkbox.setChecked(entity_data.get("use_synonyms", True))
+        layout.addWidget(use_synonyms_label)
+        layout.addWidget(use_synonyms_checkbox)
+
+        matching_strictness_label = QLabel("Matching Strictness:")
+        matching_strictness_entry = QLineEdit(str(entity_data.get("matching_strictness", 1.0)))
+        layout.addWidget(matching_strictness_label)
+        layout.addWidget(matching_strictness_entry)
+
         values_label = QLabel("Values:")
-        values_listbox = QListBox()
+        values_listbox = QListWidget()
         for value in entity_data["values"]:
-            values_listbox.addItem(value)
+            if isinstance(value, list):
+                values_listbox.addItem(", ".join(value))
+            else:
+                values_listbox.addItem(value)
         layout.addWidget(values_label)
         layout.addWidget(values_listbox)
 
+        add_value_button = QPushButton("Add Value", dialog)
+        add_value_button.clicked.connect(lambda: self.add_value(values_listbox))
+        layout.addWidget(add_value_button)
+
+        remove_value_button = QPushButton("Remove Value", dialog)
+        remove_value_button.clicked.connect(lambda: self.remove_value(values_listbox))
+        layout.addWidget(remove_value_button)
+
         save_button = QPushButton("Save", dialog)
-        save_button.clicked.connect(lambda: self.save_entity_dialog(dialog, entity_data, name_entry, values_listbox))
+        save_button.clicked.connect(lambda: self.save_entity_dialog(dialog, entity_data, type_entry, name_entry, automatically_extensible_checkbox, use_synonyms_checkbox, matching_strictness_entry, values_listbox))
         layout.addWidget(save_button)
 
         dialog.setLayout(layout)
-        dialog.exec_()
+        dialog.show()
+
+    def add_value(self, values_listbox):
+        value, ok = QInputDialog.getText(self, "Value", "Enter value:")
+        if ok and value:
+            values_listbox.addItem(value)
+
+    def remove_value(self, values_listbox):
+        selected_value = values_listbox.currentRow()
+        if selected_value >= 0:
+            values_listbox.takeItem(selected_value)
+
+    def save_entity_dialog(self, dialog, entity_data, type_entry, name_entry, automatically_extensible_checkbox, use_synonyms_checkbox, matching_strictness_entry, values_listbox):
+        entity_data["type"] = type_entry.text()
+        entity_data["name"] = name_entry.text()
+        entity_data["automatically_extensible"] = not automatically_extensible_checkbox.isChecked()
+        entity_data["use_synonyms"] = use_synonyms_checkbox.isChecked()
+        entity_data["matching_strictness"] = float(matching_strictness_entry.text())
+        entity_data["values"] = []
+        for i in range(values_listbox.count()):
+            value = values_listbox.item(i).text()
+            if ", " in value:
+                entity_data["values"].append([x.strip() for x in value.split(", ")])
+            else:
+                entity_data["values"].append(value)
+        dialog.close()
 
     def save_intent_dialog(self, dialog, intent_data, name_entry, slots_listbox, utterances_listbox):
         intent_data["name"] = name_entry.text()
@@ -173,25 +272,30 @@ class YAMLGenerator(QWidget):
             intent_data["utterances"].append(utterances_listbox.item(i).text())
         dialog.close()
 
-    def save_entity_dialog(self, dialog, entity_data, name_entry, values_listbox):
-        entity_data["name"] = name_entry.text()
-        entity_data["values"] = []
-        for i in range(values_listbox.count()):
-            entity_data["values"].append(values_listbox.item(i).text())
-        dialog.close()
-
     def save_to_yaml(self):
-        yaml_data = []
+        data = []
         for intent in self.intents:
-            yaml_data.append(intent)
+            intent_data = {
+                "type": "intent",
+                "name": intent["name"],
+                "slots": intent["slots"],
+                "utterances": intent["utterances"]
+            }
+            data.append(intent_data)
         for entity in self.entities:
-            yaml_data.append(entity)
+            entity_data = {
+                "type": "entity",
+                "name": entity["name"],
+                "automatically_extensible": entity.get("automatically_extensible", True),
+                "use_synonyms": entity.get("use_synonyms", True),
+                "matching_strictness": entity.get("matching_strictness", 1.0),
+                "values": entity["values"]
+            }
+            data.append(entity_data)
 
-        file_path, _ = QFileDialog.getSaveFileName(self, "Save YAML file", "", "YAML files (*.yaml)")
-        if file_path:
-            with open(file_path, "w") as f:
-                yaml.dump(yaml_data, f, default_flow_style=False)
-            QMessageBox.information(self, "Success", "YAML file saved successfully!")
+        with open("data.yaml", "w") as f:
+            yaml.dump(data, f, default_flow_style=False)
+        QMessageBox.information(self, "Success", "YAML file saved successfully!")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -8,4 +8,4 @@ vosk*/
 .vscode/
 **/.DS_Store
 share/
-engine/
+**/engine/

@@ -100,9 +100,7 @@
       },
       {
         "args": {
-          "entities": [
-            "city"
-          ],
+          "entities": [],
           "entity_filter": {
             "automatically_extensible": false
           },
@@ -118,7 +116,9 @@
       },
       {
         "args": {
-          "entities": [],
+          "entities": [
+            "city"
+          ],
           "entity_filter": {
             "automatically_extensible": true
           },

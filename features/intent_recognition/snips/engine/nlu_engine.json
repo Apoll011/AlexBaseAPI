@@ -198,7 +198,7 @@
   "dataset_metadata": {
     "entities": {
       "city": {
-        "automatically_extensible": false
+        "automatically_extensible": true
       },
       "entityName": {
         "automatically_extensible": true

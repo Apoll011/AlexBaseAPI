@@ -31,7 +31,8 @@ def intent_train(value):
 
 @intent_blueprint.route("get/reuse")
 def intent_train(value):
-    return intentKit.reuse()
+    intentKit.reuse()
+    return True
 
 
 @intent_blueprint.route("parse")

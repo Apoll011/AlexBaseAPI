@@ -1,0 +1,215 @@
+{
+  "config": {
+    "ignore_stop_words": true,
+    "unit_name": "lookup_intent_parser"
+  },
+  "entity_scopes": [
+    {
+      "entity_scope": {
+        "builtin": [],
+        "custom": [
+          "entityName"
+        ]
+      },
+      "intent_group": [
+        "close@something"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [],
+        "custom": [
+          "timeOfDay"
+        ]
+      },
+      "intent_group": [
+        "saudation@hi"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [
+          "snips/datetime"
+        ],
+        "custom": [
+          "city"
+        ]
+      },
+      "intent_group": [
+        "search@flight"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [
+          "snips/temperature"
+        ],
+        "custom": [
+          "room"
+        ]
+      },
+      "intent_group": [
+        "ste@temperature"
+      ]
+    },
+    {
+      "entity_scope": {
+        "builtin": [],
+        "custom": [
+          "room"
+        ]
+      },
+      "intent_group": [
+        "turnOff@light",
+        "turnOn@light"
+      ]
+    }
+  ],
+  "intents_names": [
+    "close@something",
+    "saudation@hi",
+    "search@flight",
+    "ste@temperature",
+    "turnOff@light",
+    "turnOn@light"
+  ],
+  "language_code": "en",
+  "map": {
+    "-1428530139": [
+      1,
+      []
+    ],
+    "-887841468": [
+      3,
+      [
+        5,
+        6
+      ]
+    ],
+    "-838971212": [
+      4,
+      [
+        6
+      ]
+    ],
+    "-370776895": [
+      3,
+      [
+        5,
+        6
+      ]
+    ],
+    "-241165242": [
+      4,
+      [
+        6
+      ]
+    ],
+    "-196823244": [
+      5,
+      [
+        6
+      ]
+    ],
+    "-171639413": [
+      4,
+      [
+        6
+      ]
+    ],
+    "-171375104": [
+      2,
+      [
+        3,
+        4
+      ]
+    ],
+    "-75025826": [
+      2,
+      [
+        2,
+        3
+      ]
+    ],
+    "75693826": [
+      1,
+      [
+        1
+      ]
+    ],
+    "641679088": [
+      5,
+      [
+        6
+      ]
+    ],
+    "848724943": [
+      1,
+      []
+    ],
+    "995799654": [
+      1,
+      [
+        1
+      ]
+    ],
+    "1040610241": [
+      5,
+      [
+        6
+      ]
+    ],
+    "1279991791": [
+      2,
+      [
+        4,
+        3
+      ]
+    ],
+    "1310328971": [
+      0,
+      [
+        0
+      ]
+    ],
+    "1653377737": [
+      5,
+      [
+        6
+      ]
+    ],
+    "1663017382": [
+      3,
+      [
+        6,
+        5
+      ]
+    ],
+    "1961251813": [
+      4,
+      [
+        6
+      ]
+    ],
+    "2032381002": [
+      3,
+      [
+        5
+      ]
+    ]
+  },
+  "slots_names": [
+    "entityName",
+    "timeOfDay",
+    "origin",
+    "destination",
+    "date",
+    "roomTemperature",
+    "room"
+  ],
+  "stop_words_whitelist": {
+    "close@something": [
+      "yourself"
+    ]
+  }
+}

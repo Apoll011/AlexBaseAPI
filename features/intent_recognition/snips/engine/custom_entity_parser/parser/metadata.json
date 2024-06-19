@@ -1,0 +1,20 @@
+{
+  "parsers_metadata": [
+    {
+      "entity_identifier": "city",
+      "entity_parser": "parser_1"
+    },
+    {
+      "entity_identifier": "entityName",
+      "entity_parser": "parser_2"
+    },
+    {
+      "entity_identifier": "room",
+      "entity_parser": "parser_3"
+    },
+    {
+      "entity_identifier": "timeOfDay",
+      "entity_parser": "parser_4"
+    }
+  ]
+}

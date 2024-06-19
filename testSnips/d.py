@@ -1,7 +1,7 @@
 import sys
 import yaml
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QListWidget, QLabel, QLineEdit, QHBoxLayout, QFileDialog, QMessageBox, QTabWidget, QToolTip, QInputDialog, QCheckBox
-from PyQt5.QtCore import Qt
+from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QPushButton, QListWidget, QLabel, QLineEdit, QMessageBox, QTabWidget, QInputDialog, QCheckBox
+
 
 class YAMLGenerator(QWidget):
     save_button = None

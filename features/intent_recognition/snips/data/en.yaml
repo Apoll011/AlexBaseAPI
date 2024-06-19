@@ -95,7 +95,7 @@ values:
 ---
 type: entity
 name: city
-automatically_extensible: false # default value is true
+automatically_extensible: true # default value is true
 use_synonyms: false # default value is true
 matching_strictness: 0.8 # default value is 1.0
 values:

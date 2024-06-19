@@ -24,7 +24,7 @@ def main():
             conn, addr = server_socket.accept()
             
             with conn:
-                print(f"Alex of host {addr} connected")
+                print(f"Conection from alex. Host {addr} connected")
                 while True:
                     data = conn.recv(1024)
                     if not data:

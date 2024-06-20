@@ -200,9 +200,6 @@
       "action": {
         "automatically_extensible": true
       },
-      "city": {
-        "automatically_extensible": true
-      },
       "entityName": {
         "automatically_extensible": true
       },
@@ -212,11 +209,23 @@
       "mood": {
         "automatically_extensible": false
       },
+      "musicAlbum": {
+        "automatically_extensible": true
+      },
+      "musicArtist": {
+        "automatically_extensible": true
+      },
+      "musicTrack": {
+        "automatically_extensible": true
+      },
       "person": {
         "automatically_extensible": true
       },
       "playMode": {
         "automatically_extensible": false
+      },
+      "region": {
+        "automatically_extensible": true
       },
       "room": {
         "automatically_extensible": false
@@ -240,6 +249,12 @@
         "person": "person",
         "snips/amountOfMoney": "snips/amountOfMoney"
       },
+      "play@music": {
+        "album": "musicAlbum",
+        "artist": "musicArtist",
+        "playMode": "playMode",
+        "track": "musicTrack"
+      },
       "saudation@hi": {
         "timeOfDay": "timeOfDay"
       },
@@ -248,8 +263,8 @@
       },
       "search@flight": {
         "date": "snips/datetime",
-        "destination": "city",
-        "origin": "city"
+        "destination": "region",
+        "origin": "region"
       },
       "set@reminder": {
         "action": "action",

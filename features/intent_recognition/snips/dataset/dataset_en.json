@@ -19,33 +19,6 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
-    "city": {
-      "automatically_extensible": true,
-      "data": [
-        {
-          "synonyms": [],
-          "value": "london"
-        },
-        {
-          "synonyms": [],
-          "value": "Berlin"
-        },
-        {
-          "synonyms": [
-            "big apple"
-          ],
-          "value": "new york"
-        },
-        {
-          "synonyms": [
-            "city of lights"
-          ],
-          "value": "paris"
-        }
-      ],
-      "matching_strictness": 0.8,
-      "use_synonyms": false
-    },
     "entityName": {
       "automatically_extensible": true,
       "data": [
@@ -311,6 +284,103 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
+    "musicAlbum": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "This is what ____ feels like"
+        },
+        {
+          "synonyms": [],
+          "value": "Mi Amor"
+        },
+        {
+          "synonyms": [],
+          "value": "Home"
+        },
+        {
+          "synonyms": [],
+          "value": "Clouds"
+        },
+        {
+          "synonyms": [],
+          "value": "Forever"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": true
+    },
+    "musicArtist": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "Barak"
+        },
+        {
+          "synonyms": [],
+          "value": "JVKE"
+        },
+        {
+          "synonyms": [],
+          "value": "MHRAP"
+        },
+        {
+          "synonyms": [],
+          "value": "Michel W. Smith"
+        },
+        {
+          "synonyms": [],
+          "value": "IEBM"
+        },
+        {
+          "synonyms": [],
+          "value": "7 minutoz"
+        },
+        {
+          "synonyms": [],
+          "value": "DaftPunk"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": true
+    },
+    "musicTrack": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "Forever"
+        },
+        {
+          "synonyms": [],
+          "value": "Mi Amor"
+        },
+        {
+          "synonyms": [],
+          "value": "Goldem Hour"
+        },
+        {
+          "synonyms": [],
+          "value": "Rei das maldi\u00e7\u00f5es"
+        },
+        {
+          "synonyms": [],
+          "value": "Faded"
+        },
+        {
+          "synonyms": [],
+          "value": "Where are U now"
+        },
+        {
+          "synonyms": [],
+          "value": "DaftPunk"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": true
+    },
     "person": {
       "automatically_extensible": true,
       "data": [
@@ -364,6 +434,57 @@
       ],
       "matching_strictness": 0.8,
       "use_synonyms": true
+    },
+    "region": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "london"
+        },
+        {
+          "synonyms": [],
+          "value": "Berlin"
+        },
+        {
+          "synonyms": [
+            "big apple"
+          ],
+          "value": "new york"
+        },
+        {
+          "synonyms": [
+            "city of lights"
+          ],
+          "value": "paris"
+        },
+        {
+          "synonyms": [],
+          "value": "Mindelo"
+        },
+        {
+          "synonyms": [],
+          "value": "Cabo verde"
+        },
+        {
+          "synonyms": [],
+          "value": "S\u00e3o Vicente"
+        },
+        {
+          "synonyms": [],
+          "value": "House"
+        },
+        {
+          "synonyms": [],
+          "value": "Church"
+        },
+        {
+          "synonyms": [],
+          "value": "School"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": false
     },
     "room": {
       "automatically_extensible": false,
@@ -568,6 +689,105 @@
         }
       ]
     },
+    "play@music": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Play "
+            },
+            {
+              "entity": "musicTrack",
+              "slot_name": "track",
+              "text": "Forever"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play "
+            },
+            {
+              "entity": "musicTrack",
+              "slot_name": "track",
+              "text": "Mi Amor"
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "musicArtist",
+              "slot_name": "artist",
+              "text": "Barak"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play "
+            },
+            {
+              "entity": "musicAlbum",
+              "slot_name": "album",
+              "text": "This is what ____ feels like"
+            },
+            {
+              "text": " in "
+            },
+            {
+              "entity": "playMode",
+              "slot_name": "playMode",
+              "text": "random"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play album "
+            },
+            {
+              "entity": "musicAlbum",
+              "slot_name": "album",
+              "text": "Mi Amor"
+            },
+            {
+              "text": " in "
+            },
+            {
+              "entity": "playMode",
+              "slot_name": "playMode",
+              "text": "line"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play album "
+            },
+            {
+              "entity": "musicAlbum",
+              "slot_name": "album",
+              "text": "Home"
+            },
+            {
+              "text": " in "
+            },
+            {
+              "entity": "playMode",
+              "slot_name": "playMode",
+              "text": "order"
+            },
+            {
+              "text": " mode"
+            }
+          ]
+        }
+      ]
+    },
     "saudation@hi": {
       "utterances": [
         {
@@ -661,7 +881,7 @@
               "text": "find me a flight from "
             },
             {
-              "entity": "city",
+              "entity": "region",
               "slot_name": "origin",
               "text": "london"
             },
@@ -669,7 +889,7 @@
               "text": " to "
             },
             {
-              "entity": "city",
+              "entity": "region",
               "slot_name": "destination",
               "text": "Berlin"
             }
@@ -689,7 +909,7 @@
               "text": " to "
             },
             {
-              "entity": "city",
+              "entity": "region",
               "slot_name": "destination",
               "text": "new york"
             }
@@ -701,7 +921,7 @@
               "text": "show me flights to go to "
             },
             {
-              "entity": "city",
+              "entity": "region",
               "slot_name": "destination",
               "text": "big apple"
             },

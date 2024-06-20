@@ -9,3 +9,4 @@ vosk*/
 **/.DS_Store
 share/
 **/engine/
+t/

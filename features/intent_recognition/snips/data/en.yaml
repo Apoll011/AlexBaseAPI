@@ -4,9 +4,9 @@ type: intent
 name: search@flight
 slots:
   - name: origin
-    entity: city
+    entity: region
   - name: destination
-    entity: city
+    entity: region
   - name: date
     entity: snips/datetime
 utterances:
@@ -81,6 +81,22 @@ utterances:
   - Remeber me [time] to do [action]
   - Remeber me [time] to [action] my [person]
 
+---
+type: intent
+name: play@music
+slots:
+  - name: track
+    entity: musicTrack
+  - name: artist
+    entity: musicArtist
+  - name: album
+    entity: musicAlbum
+utterances:
+  - Play [track]
+  - Play [track] by [artist]
+  - Play [album] in [playMode]
+  - Play album [album] in [playMode]
+  - Play album [album] in [playMode] mode
 
 # turnLightOn intent
 ---
@@ -145,7 +161,7 @@ values:
 # City Entity
 ---
 type: entity
-name: city
+name: region
 automatically_extensible: true # default value is true
 use_synonyms: false # default value is true
 matching_strictness: 0.8 # default value is 1.0
@@ -154,6 +170,12 @@ values:
   - Berlin
   - [new york, big apple]
   - [paris, city of lights]
+  - Mindelo
+  - Cabo verde
+  - São Vicente
+  - House
+  - Church
+  - School
 
 ---
 type: entity
@@ -215,6 +237,48 @@ values:
   - line
   - order
 
+---
+type: entity
+name: musicTrack
+automatically_extensible: true # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.8 # default value is 1.0
+values:
+  - Forever
+  - Mi Amor
+  - Goldem Hour
+  - Rei das maldições
+  - Faded
+  - Where are U now
+  - DaftPunk
+
+---
+type: entity
+name: musicArtist
+automatically_extensible: true # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.8 # default value is 1.0
+values:
+  - Barak
+  - JVKE
+  - MHRAP
+  - Michel W. Smith
+  - IEBM
+  - 7 minutoz
+  - DaftPunk
+
+---
+type: entity
+name: musicAlbum
+automatically_extensible: true # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.8 # default value is 1.0
+values:
+  - This is what ____ feels like
+  - Mi Amor
+  - Home
+  - Clouds
+  - Forever
 
 ---
 type: entity

@@ -16,12 +16,12 @@ class IntentKit:
         os.system("snips-nlu generate-dataset en ./features/intent_recognition/snips/data/en.yaml > ./features/intent_recognition/snips/dataset/dataset_en.json")
         with io.open("./features/intent_recognition/snips/dataset/dataset_en.json") as f:
             dataset = json.load(f)
-        print(dataset)
+        #print(dataset)
         self.engine = SnipsNLUEngine(config=CONFIG_EN)
-        print("ddd")
+        #print("ddd")
         self.engine.fit(dataset)
-        print("dd")
-        print(self.engine.parse("Hi"))
+        #print("dd")
+        #print(self.engine.parse("Hi"))
         os.system("rm -rf ./features/intent_recognition/snips/engine")
         self.engine.persist("./features/intent_recognition/snips/engine/")
 

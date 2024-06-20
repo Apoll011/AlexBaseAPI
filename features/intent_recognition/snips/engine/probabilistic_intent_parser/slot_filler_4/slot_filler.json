@@ -101,7 +101,7 @@
       {
         "args": {
           "entities": [
-            "mood"
+            "timeOfDay"
           ],
           "entity_filter": {
             "automatically_extensible": false
@@ -176,9 +176,9 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "saudation@how.are.u",
+  "intent": "saudation@hi",
   "language_code": "en",
   "slot_name_mapping": {
-    "mood": "mood"
+    "timeOfDay": "timeOfDay"
   }
 }

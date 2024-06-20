@@ -34,6 +34,25 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
+    "mathNumberType": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "even"
+        },
+        {
+          "synonyms": [],
+          "value": "odd"
+        },
+        {
+          "synonyms": [],
+          "value": "prime"
+        }
+      ],
+      "matching_strictness": 0.95,
+      "use_synonyms": true
+    },
     "mathoperation": {
       "automatically_extensible": false,
       "data": [
@@ -593,22 +612,12 @@
               "text": "2001"
             },
             {
-              "text": " even"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Is "
+              "text": " "
             },
             {
-              "entity": "snips/number",
-              "slot_name": "number",
-              "text": "twenty one"
-            },
-            {
-              "text": " odd"
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "even"
             }
           ]
         },
@@ -620,7 +629,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "twenty one"
             },
             {
               "text": " is even or odd"
@@ -635,25 +644,15 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "three hundred and four"
             },
             {
-              "text": " is even"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "\\"
+              "text": " is "
             },
             {
-              "entity": "snips/number",
-              "slot_name": "number",
-              "text": "twenty one"
-            },
-            {
-              "text": " is odd"
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "odd"
             }
           ]
         }
@@ -882,26 +881,51 @@
         }
       ]
     },
+    "saudation@are.u.sure": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Are you sure"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Are u sure"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Really"
+            }
+          ]
+        }
+      ]
+    },
     "saudation@hi": {
       "utterances": [
         {
           "data": [
             {
-              "text": "Hi Alex."
+              "text": "Hi Alex"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "How are you."
+              "text": "How are you"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Hello Alex."
+              "text": "Hello Alex"
             }
           ]
         },
@@ -916,7 +940,7 @@
               "text": "Morning"
             },
             {
-              "text": " Alex."
+              "text": " Alex"
             }
           ]
         },
@@ -929,9 +953,6 @@
               "entity": "timeOfDay",
               "slot_name": "timeOfDay",
               "text": "Affternoon"
-            },
-            {
-              "text": "."
             }
           ]
         }

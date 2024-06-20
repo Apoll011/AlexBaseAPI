@@ -203,6 +203,9 @@
       "entityName": {
         "automatically_extensible": true
       },
+      "mathNumberType": {
+        "automatically_extensible": false
+      },
       "mathoperation": {
         "automatically_extensible": false
       },
@@ -240,7 +243,8 @@
         "entityName": "entityName"
       },
       "math@even_or_odd": {
-        "number": "snips/number"
+        "number": "snips/number",
+        "type": "mathNumberType"
       },
       "math@simple": {
         "first_number": "snips/number",
@@ -258,6 +262,7 @@
         "playMode": "playMode",
         "track": "musicTrack"
       },
+      "saudation@are.u.sure": {},
       "saudation@hi": {
         "timeOfDay": "timeOfDay"
       },

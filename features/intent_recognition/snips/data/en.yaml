@@ -18,11 +18,11 @@ utterances:
 type: intent
 name: saudation@hi
 utterances:
-  - Hi Alex.
-  - How are you.
-  - Hello Alex.
-  - Good [timeOfDay] Alex.
-  - Good [timeOfDay].
+  - Hi Alex
+  - How are you
+  - Hello Alex
+  - Good [timeOfDay] Alex
+  - Good [timeOfDay]
 
 ---
 type: intent
@@ -32,6 +32,13 @@ utterances:
   - How are you Alex
   - Are you [mood]
 
+---
+type: intent
+name: saudation@are.u.sure
+utterances:
+  - Are you sure
+  - Are u sure
+  - Really
 
 ---
 type: intent
@@ -87,13 +94,13 @@ name: math@even_or_odd
 slots:
   - name: number
     entity: snips/number
+  - name: type
+    entity: mathNumberType
 utterances:
   - Is [number] even or odd
-  - Is [number] even
-  - Is [number] odd
+  - Is [number] [type]
   - \[number] is even or odd
-  - \[number] is even
-  - \[number] is odd
+  - \[number] is [type]
 
 ---
 type: intent
@@ -293,6 +300,17 @@ values:
   - Home
   - Clouds
   - Forever
+
+---
+type: entity
+name: mathNumberType
+automatically_extensible: false # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.95 # default value is 1.0
+values:
+  - even
+  - odd
+  - prime
 
 ---
 type: entity

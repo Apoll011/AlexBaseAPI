@@ -206,36 +206,40 @@
       "slot_filler_name": "slot_filler_4"
     },
     {
-      "intent": "saudation@hi",
+      "intent": "saudation@are.u.sure",
       "slot_filler_name": "slot_filler_5"
     },
     {
-      "intent": "saudation@how.are.u",
+      "intent": "saudation@hi",
       "slot_filler_name": "slot_filler_6"
     },
     {
-      "intent": "search@flight",
+      "intent": "saudation@how.are.u",
       "slot_filler_name": "slot_filler_7"
     },
     {
-      "intent": "set@reminder",
+      "intent": "search@flight",
       "slot_filler_name": "slot_filler_8"
     },
     {
-      "intent": "set@temperature",
+      "intent": "set@reminder",
       "slot_filler_name": "slot_filler_9"
     },
     {
-      "intent": "set@timer",
+      "intent": "set@temperature",
       "slot_filler_name": "slot_filler_10"
     },
     {
-      "intent": "turnOff@light",
+      "intent": "set@timer",
       "slot_filler_name": "slot_filler_11"
     },
     {
-      "intent": "turnOn@light",
+      "intent": "turnOff@light",
       "slot_filler_name": "slot_filler_12"
+    },
+    {
+      "intent": "turnOn@light",
+      "slot_filler_name": "slot_filler_13"
     }
   ]
 }

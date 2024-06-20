@@ -33,7 +33,7 @@ def main():
             conn, addr = server_socket.accept()
             
             with conn:
-                print(f"\33[34mConection from alex. Host \33[93m{addr}\33[34m connected\33[0m")
+                print(f"\33[32mConection from alex. Host \33[93m{addr}\33[32m connected\33[0m")
                 while True:
                     data = conn.recv(1024)
                     if not data:

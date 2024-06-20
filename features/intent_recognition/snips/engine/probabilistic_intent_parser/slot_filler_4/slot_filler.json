@@ -101,7 +101,7 @@
       {
         "args": {
           "entities": [
-            "timeOfDay"
+            "playMode"
           ],
           "entity_filter": {
             "automatically_extensible": false
@@ -118,7 +118,11 @@
       },
       {
         "args": {
-          "entities": [],
+          "entities": [
+            "musicTrack",
+            "musicArtist",
+            "musicAlbum"
+          ],
           "entity_filter": {
             "automatically_extensible": true
           },
@@ -176,9 +180,12 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "saudation@hi",
+  "intent": "play@music",
   "language_code": "en",
   "slot_name_mapping": {
-    "timeOfDay": "timeOfDay"
+    "album": "musicAlbum",
+    "artist": "musicArtist",
+    "playMode": "playMode",
+    "track": "musicTrack"
   }
 }

@@ -100,9 +100,7 @@
       },
       {
         "args": {
-          "entities": [
-            "playMode"
-          ],
+          "entities": [],
           "entity_filter": {
             "automatically_extensible": false
           },
@@ -119,9 +117,7 @@
       {
         "args": {
           "entities": [
-            "musicTrack",
-            "musicAlbum",
-            "musicArtist"
+            "person"
           ],
           "entity_filter": {
             "automatically_extensible": true
@@ -180,12 +176,10 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "play@music",
+  "intent": "money@tranfer",
   "language_code": "en",
   "slot_name_mapping": {
-    "album": "musicAlbum",
-    "artist": "musicArtist",
-    "playMode": "playMode",
-    "track": "musicTrack"
+    "person": "person",
+    "snips/amountOfMoney": "snips/amountOfMoney"
   }
 }

@@ -565,6 +565,100 @@
         }
       ]
     },
+    "math@even_or_odd": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Is "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " even or odd"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "2001"
+            },
+            {
+              "text": " even"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "twenty one"
+            },
+            {
+              "text": " odd"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " is even or odd"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "2001"
+            },
+            {
+              "text": " is even"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "twenty one"
+            },
+            {
+              "text": " is odd"
+            }
+          ]
+        }
+      ]
+    },
     "math@simple": {
       "utterances": [
         {

@@ -100,9 +100,7 @@
       },
       {
         "args": {
-          "entities": [
-            "mathoperation"
-          ],
+          "entities": [],
           "entity_filter": {
             "automatically_extensible": false
           },
@@ -176,12 +174,9 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "math@simple",
+  "intent": "math@even_or_odd",
   "language_code": "en",
   "slot_name_mapping": {
-    "first_number": "snips/number",
-    "mathoperation": "mathoperation",
-    "number": "snips/number",
-    "second_number": "snips/number"
+    "number": "snips/number"
   }
 }

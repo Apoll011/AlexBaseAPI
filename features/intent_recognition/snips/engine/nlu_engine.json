@@ -239,6 +239,9 @@
       "close@something": {
         "entityName": "entityName"
       },
+      "math@even_or_odd": {
+        "number": "snips/number"
+      },
       "math@simple": {
         "first_number": "snips/number",
         "mathoperation": "mathoperation",

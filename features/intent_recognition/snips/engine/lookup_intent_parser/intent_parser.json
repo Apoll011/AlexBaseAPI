@@ -25,7 +25,7 @@
         ]
       },
       "intent_group": [
-        "math@even_or_odd"
+        "math@even.or.odd"
       ]
     },
     {
@@ -58,10 +58,10 @@
       "entity_scope": {
         "builtin": [],
         "custom": [
+          "musicArtist",
           "musicAlbum",
           "musicTrack",
-          "playMode",
-          "musicArtist"
+          "playMode"
         ]
       },
       "intent_group": [
@@ -118,8 +118,8 @@
           "snips/datetime"
         ],
         "custom": [
-          "action",
-          "person"
+          "person",
+          "action"
         ]
       },
       "intent_group": [
@@ -165,7 +165,7 @@
   ],
   "intents_names": [
     "close@something",
-    "math@even_or_odd",
+    "math@even.or.odd",
     "math@simple",
     "money@tranfer",
     "play@music",

@@ -176,7 +176,7 @@
     "unit_name": "crf_slot_filler"
   },
   "crf_model_file": "model.crfsuite",
-  "intent": "math@even_or_odd",
+  "intent": "math@even.or.odd",
   "language_code": "en",
   "slot_name_mapping": {
     "number": "snips/number",

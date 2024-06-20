@@ -190,7 +190,7 @@
       "slot_filler_name": "slot_filler_0"
     },
     {
-      "intent": "math@even_or_odd",
+      "intent": "math@even.or.odd",
       "slot_filler_name": "slot_filler_1"
     },
     {

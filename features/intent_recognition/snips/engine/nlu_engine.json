@@ -242,7 +242,7 @@
       "close@something": {
         "entityName": "entityName"
       },
-      "math@even_or_odd": {
+      "math@even.or.odd": {
         "number": "snips/number",
         "type": "mathNumberType"
       },

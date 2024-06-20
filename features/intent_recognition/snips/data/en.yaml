@@ -90,7 +90,7 @@ utterances:
 
 ---
 type: intent
-name: math@even_or_odd
+name: math@even.or.odd
 slots:
   - name: number
     entity: snips/number

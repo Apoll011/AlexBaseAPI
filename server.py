@@ -3,6 +3,7 @@ import json
 import shutil
 import socket
 from api import API
+from config import api
 from api.routes import users_blueprint, alex_blueprint, intent_blueprint, sound_blueprint
 
 
@@ -23,8 +24,8 @@ class ApiServer:
         self.closed = False
 
     def define_route(self):
-        self.HOST = "127.0.0.1"
-        self.PORT = 1178
+        self.HOST = api["HOST"]
+        self.PORT = api["PORT"]
 
     def start_api(self):
         self.api = API()

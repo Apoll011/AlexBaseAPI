@@ -58,10 +58,17 @@
       "entity_scope": {
         "builtin": [],
         "custom": [
+<<<<<<< HEAD
           "musicArtist",
           "musicTrack",
           "playMode",
           "musicAlbum"
+=======
+          "playMode",
+          "musicTrack",
+          "musicAlbum",
+          "musicArtist"
+>>>>>>> f0b25fb0dbf3ca22f2ee56aaac35d99f04254297
         ]
       },
       "intent_group": [
@@ -118,8 +125,8 @@
           "snips/datetime"
         ],
         "custom": [
-          "person",
-          "action"
+          "action",
+          "person"
         ]
       },
       "intent_group": [

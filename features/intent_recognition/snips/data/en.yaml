@@ -19,7 +19,6 @@ type: intent
 name: saudation@hi
 utterances:
   - Hi Alex
-  - How are you
   - Hello Alex
   - Good [timeOfDay] Alex
   - Good [timeOfDay]

@@ -594,7 +594,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "twenty one"
             },
             {
               "text": " even or odd"
@@ -609,7 +609,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "three hundred and four"
             },
             {
               "text": " "
@@ -629,7 +629,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "twenty one"
+              "text": "2001"
             },
             {
               "text": " is even or odd"
@@ -644,7 +644,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "twenty one"
             },
             {
               "text": " is "
@@ -733,6 +733,46 @@
               "entity": "snips/number",
               "slot_name": "number",
               "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "minus"
+            },
+            {
+              "text": " with "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "elavated"
+            },
+            {
+              "text": " that with "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "2001"
             }
           ]
         }
@@ -912,13 +952,6 @@
           "data": [
             {
               "text": "Hi Alex"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "How are you"
             }
           ]
         },

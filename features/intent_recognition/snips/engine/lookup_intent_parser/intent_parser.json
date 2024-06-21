@@ -59,9 +59,9 @@
         "builtin": [],
         "custom": [
           "musicArtist",
-          "musicAlbum",
           "musicTrack",
-          "playMode"
+          "playMode",
+          "musicAlbum"
         ]
       },
       "intent_group": [
@@ -266,6 +266,13 @@
         20
       ]
     ],
+    "-492063412": [
+      2,
+      [
+        4,
+        1
+      ]
+    ],
     "-455260748": [
       8,
       [
@@ -351,6 +358,10 @@
         10,
         11
       ]
+    ],
+    "848724943": [
+      7,
+      []
     ],
     "995799654": [
       6,

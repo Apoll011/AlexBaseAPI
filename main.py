@@ -27,6 +27,6 @@ if args.list_routes or args.start:
 
 elif args.train:
     time_stared = time.time()
-    print("\33[34mRe-trainig everyting. This process take around 1 to 10 minutes please wait...\33[0m")
+    print("\33[34mRe-trainig everyting. This process take around 1 minute please wait...\33[0m")
     IntentKit().train()
     print("\33[93mTime Took:", time.time() - time_stared, "seconds")

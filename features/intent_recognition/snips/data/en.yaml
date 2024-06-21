@@ -68,6 +68,8 @@ utterances:
   - How much is [first_number] [mathoperation] [second_number]
   - How much is [first_number] [mathoperation] by [second_number]
   - \[mathoperation] by [number]
+  - \[mathoperation] with [number]
+  - \[mathoperation] that with [number]
 
 ---
 type: intent

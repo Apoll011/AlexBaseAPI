@@ -17,10 +17,14 @@ class Blueprint:
             return wrapper
         return decorator
 
-class API:
-    defs = {
-        
-    }
+class API(Blueprint):
+    def __init__(self) -> None:
+        self.defs = {}
+
+    def register_blueprint_list(self, list_blueprint):
+        for blueprint in list_blueprint:
+            self.register_blueprint(blueprint)
+
     def register_blueprint(self, blueprint: Blueprint):
         self.defs.update(blueprint.defs)
 

@@ -22,7 +22,7 @@ class API:
         
     }
 
-    def register_blueprint_list(self, list_blueprint: list[Blueprint]):
+    def register_blueprint_list(self, list_blueprint):
         for blueprint in list_blueprint:
             self.register_blueprint(blueprint)
 

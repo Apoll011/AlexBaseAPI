@@ -10,6 +10,8 @@ intent_blueprint = Blueprint("intent_recognition")
 users_blueprint = Blueprint("users")
 sound_blueprint = Blueprint("sound")
 
+blueprint_list = [alex_blueprint, intent_blueprint, users_blueprint, sound_blueprint]
+
 userKit = UserKit()
 intentKit = IntentKit()
 

@@ -21,6 +21,11 @@ class API:
     defs = {
         
     }
+
+    def register_blueprint_list(self, list_blueprint: list[Blueprint]):
+        for blueprint in list_blueprint:
+            self.register_blueprint(blueprint)
+
     def register_blueprint(self, blueprint: Blueprint):
         self.defs.update(blueprint.defs)
 

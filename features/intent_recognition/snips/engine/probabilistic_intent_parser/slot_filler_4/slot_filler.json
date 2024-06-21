@@ -119,9 +119,9 @@
       {
         "args": {
           "entities": [
+            "musicArtist",
             "musicAlbum",
-            "musicTrack",
-            "musicArtist"
+            "musicTrack"
           ],
           "entity_filter": {
             "automatically_extensible": true

@@ -3,9 +3,7 @@ import json
 import shutil
 import socket
 from api import API
-from api.routes import users_blueprint, alex_blueprint, intent_blueprint, sound_blueprint
-
-
+from api.routes import blueprint_list
 
 class ApiServer:
     
@@ -28,13 +26,7 @@ class ApiServer:
 
     def start_api(self):
         self.api = API()
-        self.register_api_blueprints()
-
-    def register_api_blueprints(self):
-        self.api.register_blueprint(alex_blueprint)
-        self.api.register_blueprint(users_blueprint)
-        self.api.register_blueprint(intent_blueprint)
-        self.api.register_blueprint(sound_blueprint)
+        self.api.register_blueprint_list(blueprint_list)
 
     def print_header_text(self, text, size = 2):
         s = (size + 1)

@@ -1,5 +1,20 @@
 {
   "entities": {
+    "TrueOrFalse": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "\\true"
+        },
+        {
+          "synonyms": [],
+          "value": "\\false"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
     "action": {
       "automatically_extensible": true,
       "data": [
@@ -335,19 +350,55 @@
       "data": [
         {
           "synonyms": [],
+          "value": "4HIM With Jon Anderson"
+        },
+        {
+          "synonyms": [],
+          "value": "7 Minutoz"
+        },
+        {
+          "synonyms": [],
+          "value": "Adele"
+        },
+        {
+          "synonyms": [],
+          "value": "Alan Walker"
+        },
+        {
+          "synonyms": [],
+          "value": "Ali Gatie"
+        },
+        {
+          "synonyms": [],
           "value": "Barak"
         },
         {
           "synonyms": [],
-          "value": "JVKE"
+          "value": "Bethel Music Kids"
         },
         {
           "synonyms": [],
-          "value": "MHRAP"
+          "value": "Better is one Day"
         },
         {
           "synonyms": [],
-          "value": "Michel W. Smith"
+          "value": "Burlap To Cashmere"
+        },
+        {
+          "synonyms": [],
+          "value": "Chris Rodrigues"
+        },
+        {
+          "synonyms": [],
+          "value": "Cindy Morgan"
+        },
+        {
+          "synonyms": [],
+          "value": "Colde"
+        },
+        {
+          "synonyms": [],
+          "value": "Delirious With Amy Grace"
         },
         {
           "synonyms": [],
@@ -355,7 +406,105 @@
         },
         {
           "synonyms": [],
-          "value": "7 minutoz"
+          "value": "Imagine Dragons"
+        },
+        {
+          "synonyms": [
+            "JAKE"
+          ],
+          "value": "JVKE"
+        },
+        {
+          "synonyms": [],
+          "value": "Jaci Velasquez"
+        },
+        {
+          "synonyms": [],
+          "value": "KALEO"
+        },
+        {
+          "synonyms": [],
+          "value": "Lewis Capaldi"
+        },
+        {
+          "synonyms": [],
+          "value": "MHRAP"
+        },
+        {
+          "synonyms": [],
+          "value": "Marcela Gandara"
+        },
+        {
+          "synonyms": [],
+          "value": "Metro Boomin"
+        },
+        {
+          "synonyms": [],
+          "value": "Micah Palace"
+        },
+        {
+          "synonyms": [],
+          "value": "Michael W. Smith"
+        },
+        {
+          "synonyms": [],
+          "value": "Michelle Tumes"
+        },
+        {
+          "synonyms": [],
+          "value": "Myles Smith"
+        },
+        {
+          "synonyms": [],
+          "value": "M\u00e1ire Brennan"
+        },
+        {
+          "synonyms": [],
+          "value": "M\u00e5neskin"
+        },
+        {
+          "synonyms": [],
+          "value": "Park Eun Bin"
+        },
+        {
+          "synonyms": [],
+          "value": "Paulo Cesar Baruk"
+        },
+        {
+          "synonyms": [],
+          "value": "Pentatonix"
+        },
+        {
+          "synonyms": [],
+          "value": "Point Of Grace"
+        },
+        {
+          "synonyms": [],
+          "value": "Post Malone"
+        },
+        {
+          "synonyms": [],
+          "value": "Rita Rocha"
+        },
+        {
+          "synonyms": [],
+          "value": "Sia"
+        },
+        {
+          "synonyms": [],
+          "value": "Sixpence None The Rich"
+        },
+        {
+          "synonyms": [],
+          "value": "Suno Ai"
+        },
+        {
+          "synonyms": [],
+          "value": "TobyMac"
+        },
+        {
+          "synonyms": [],
+          "value": "Adele"
         },
         {
           "synonyms": [],
@@ -364,6 +513,81 @@
       ],
       "matching_strictness": 0.8,
       "use_synonyms": true
+    },
+    "musicDo": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "resume"
+        },
+        {
+          "synonyms": [
+            "play",
+            "pause"
+          ],
+          "value": "playpause"
+        },
+        {
+          "synonyms": [],
+          "value": "fast forward"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "musicGenre": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [
+            "gospel",
+            "christian"
+          ],
+          "value": "Christian/Gospel"
+        },
+        {
+          "synonyms": [],
+          "value": "Music"
+        },
+        {
+          "synonyms": [],
+          "value": "Pop"
+        },
+        {
+          "synonyms": [],
+          "value": "Praise & Worship"
+        },
+        {
+          "synonyms": [],
+          "value": "Rap"
+        },
+        {
+          "synonyms": [],
+          "value": "Worship"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
+    "musicReapeatOptions": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "One"
+        },
+        {
+          "synonyms": [],
+          "value": "All"
+        },
+        {
+          "synonyms": [],
+          "value": "\\Off"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": false
     },
     "musicTrack": {
       "automatically_extensible": true,
@@ -399,6 +623,21 @@
       ],
       "matching_strictness": 0.8,
       "use_synonyms": true
+    },
+    "musicTrackAction": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "next"
+        },
+        {
+          "synonyms": [],
+          "value": "back"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": false
     },
     "person": {
       "automatically_extensible": true,
@@ -594,7 +833,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "twenty one"
             },
             {
               "text": " even or odd"
@@ -609,7 +848,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "three hundred and four"
             },
             {
               "text": " "
@@ -629,7 +868,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "twenty one"
+              "text": "2001"
             },
             {
               "text": " is even or odd"
@@ -644,7 +883,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "twenty one"
             },
             {
               "text": " is "
@@ -735,6 +974,46 @@
               "text": "twenty one"
             }
           ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "minus"
+            },
+            {
+              "text": " with "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "elavated"
+            },
+            {
+              "text": " that with "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "2001"
+            }
+          ]
         }
       ]
     },
@@ -799,83 +1078,155 @@
         {
           "data": [
             {
-              "text": "Play "
-            },
-            {
-              "entity": "musicTrack",
-              "slot_name": "track",
-              "text": "Mi Amor"
-            },
-            {
-              "text": " by "
-            },
-            {
-              "entity": "musicArtist",
-              "slot_name": "artist",
-              "text": "Barak"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Play "
+              "text": "Play the album "
             },
             {
               "entity": "musicAlbum",
               "slot_name": "album",
               "text": "This is what ____ feels like"
-            },
-            {
-              "text": " in "
-            },
-            {
-              "entity": "playMode",
-              "slot_name": "playMode",
-              "text": "random"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Play album "
+              "text": "Play the playlist "
             },
             {
               "entity": "musicAlbum",
-              "slot_name": "album",
+              "slot_name": "playlist",
               "text": "Mi Amor"
-            },
-            {
-              "text": " in "
-            },
-            {
-              "entity": "playMode",
-              "slot_name": "playMode",
-              "text": "line"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Play album "
+              "text": "Play all the "
             },
             {
-              "entity": "musicAlbum",
-              "slot_name": "album",
-              "text": "Home"
+              "entity": "musicGenre",
+              "slot_name": "genre",
+              "text": "Christian/Gospel"
             },
             {
-              "text": " in "
+              "text": " music"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play all the songs"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play the entire library"
+            }
+          ]
+        }
+      ]
+    },
+    "play@music.do": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Please "
             },
             {
-              "entity": "playMode",
-              "slot_name": "playMode",
-              "text": "order"
+              "entity": "musicDo",
+              "slot_name": "musicDo",
+              "text": "resume"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please "
             },
             {
-              "text": " mode"
+              "entity": "musicDo",
+              "slot_name": "musicDo",
+              "text": "playpause"
+            },
+            {
+              "text": " the music"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "musicTrackAction",
+              "slot_name": "musicTrackAction",
+              "text": "next"
+            },
+            {
+              "text": " track"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set song repeat to "
+            },
+            {
+              "entity": "musicReapeatOptions",
+              "slot_name": "musicReapeatOptions",
+              "text": "One"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set shuffle enabled to "
+            },
+            {
+              "entity": "TrueOrFalse",
+              "slot_name": "shuffleEnabled",
+              "text": "\\true"
+            }
+          ]
+        }
+      ]
+    },
+    "play@music.whats.playing": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "What this song"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "This song"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Whats the name of this song"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is playing"
             }
           ]
         }
@@ -983,6 +1334,31 @@
               "entity": "mood",
               "slot_name": "mood",
               "text": "Neutral"
+            }
+          ]
+        }
+      ]
+    },
+    "saudation@tanks": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Tanks"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tanks you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Apreciated"
             }
           ]
         }

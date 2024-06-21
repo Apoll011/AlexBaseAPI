@@ -26,6 +26,14 @@ utterances:
 
 ---
 type: intent
+name: saudation@tanks
+utterances:
+  - Tanks
+  - Tanks you
+  - Apreciated
+
+---
+type: intent
 name: saudation@how.are.u
 utterances:
   - How are you
@@ -114,12 +122,39 @@ slots:
     entity: musicArtist
   - name: album
     entity: musicAlbum
+  - name: playlist
+    entity: musicAlbum
+  - name: genre
+    entity: musicGenre
 utterances:
   - Play [track]
-  - Play [track] by [artist]
-  - Play [album] in [playMode]
-  - Play album [album] in [playMode]
-  - Play album [album] in [playMode] mode
+  - Play the album [album]
+  - Play the playlist [playlist]
+  - Play all the [genre] music
+  - Play all the songs
+  - Play the entire library
+
+---
+type: intent
+name: play@music.do
+slots:
+  - name: shuffleEnabled
+    entity: TrueOrFalse
+utterances:
+  - Please [musicDo]
+  - Please [musicDo] the music
+  - \[musicTrackAction] track
+  - Set song repeat to [musicReapeatOptions]
+  - Set shuffle enabled to [shuffleEnabled]
+
+---
+type: intent
+name: play@music.whats.playing
+utterances:
+  - What this song
+  - This song
+  - Whats the name of this song
+  - What is playing
 
 # turnLightOn intent
 ---
@@ -171,6 +206,49 @@ values:
 - bedroom
 - [living room, main room, lounge]
 - [garden, yard, backyard]
+
+---
+type: entity
+name: musicDo
+automatically_extensible: false
+values:
+- resume
+- [playpause, play, pause]
+- fast forward
+
+---
+type: entity
+name: musicGenre
+automatically_extensible: false
+values:
+- [Christian/Gospel, gospel, christian]
+- Music
+- Pop
+- Praise & Worship
+- Rap
+- Worship
+
+
+---
+type: entity
+name: musicTrackAction
+automatically_extensible: false
+use_synonyms: false # default value is true
+values:
+- next
+- back
+
+
+---
+type: entity
+name: musicReapeatOptions
+automatically_extensible: false
+use_synonyms: false # default value is true
+values:
+- One
+- All
+- \Off
+
 
 ---
 type: entity
@@ -262,6 +340,14 @@ values:
 
 ---
 type: entity
+name: TrueOrFalse
+automatically_extensible: false # default value is true
+values:
+  - \true
+  - \false
+
+---
+type: entity
 name: musicTrack
 automatically_extensible: true # default value is true
 use_synonyms: true # default value is true
@@ -282,12 +368,45 @@ automatically_extensible: true # default value is true
 use_synonyms: true # default value is true
 matching_strictness: 0.8 # default value is 1.0
 values:
+  - 4HIM With Jon Anderson
+  - 7 Minutoz
+  - Adele
+  - Alan Walker
+  - Ali Gatie
   - Barak
-  - JVKE
-  - MHRAP
-  - Michel W. Smith
+  - Bethel Music Kids
+  - Better is one Day
+  - Burlap To Cashmere
+  - Chris Rodrigues
+  - Cindy Morgan
+  - Colde
+  - Delirious With Amy Grace
   - IEBM
-  - 7 minutoz
+  - Imagine Dragons
+  - [JVKE, JAKE]
+  - Jaci Velasquez
+  - KALEO
+  - Lewis Capaldi
+  - MHRAP
+  - Marcela Gandara
+  - Metro Boomin
+  - Micah Palace
+  - Michael W. Smith
+  - Michelle Tumes
+  - Myles Smith
+  - Máire Brennan
+  - Måneskin
+  - Park Eun Bin
+  - Paulo Cesar Baruk
+  - Pentatonix
+  - Point Of Grace
+  - Post Malone
+  - Rita Rocha
+  - Sia
+  - Sixpence None The Rich
+  - Suno Ai
+  - TobyMac
+  - Adele
   - DaftPunk
 
 ---

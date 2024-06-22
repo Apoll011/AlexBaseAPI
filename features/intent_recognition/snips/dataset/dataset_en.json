@@ -1090,6 +1090,18 @@
         {
           "data": [
             {
+              "text": "Play the music "
+            },
+            {
+              "entity": "musicArtist",
+              "slot_name": "artist",
+              "text": "4HIM With Jon Anderson"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
               "text": "Play the playlist "
             },
             {

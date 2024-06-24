@@ -1,10 +1,15 @@
-from server import ApiServer
-from features.intent_recognition.snips import IntentKit
-from config import __version__
-import argparse
 import time
+import argparse
+from api import API
+from config import __version__
+from api.routes import blueprint_list
+from features.intent_recognition.snips import IntentKit
 
-server = ApiServer()
+server = API()
+server.register_blueprint_list(blueprint_list)
+
+server.connected_client_text = "Conection from alex. Host \33[93m#addr#\33[32m connected"
+server.disconnected_client_text = "Conection with alex. Host \33[93m#addr#\33[31m closed"
 
 parser = argparse.ArgumentParser()
 

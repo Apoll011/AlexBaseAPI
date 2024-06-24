@@ -66,19 +66,3 @@ def user_get(value):
 @users_blueprint.route("create")
 def user_create(value):
     return userKit.createUser(value)
-
-@sound_blueprint.route("pt-pt/tts")
-def ttsPT(value):
-    return AudioKit.audio_pt.tts(value["text"])
-
-@sound_blueprint.route("en-us/tts")
-def ttsEN(value):
-    return AudioKit.audio_en.tts(value["text"])
-
-@sound_blueprint.route("pt-pt/stt")
-def sttPT(value):
-    return AudioKit.audio_pt.stt()
-
-@sound_blueprint.route("en-us/stt")
-def sttEN(value):
-    return AudioKit.audio_en.stt()

@@ -1,5 +1,4 @@
 from features.user_backend import SearchUsers, CreateUsers, GetUsers
-from features.audio_processing import Audio
 import json
 import os
 
@@ -13,8 +12,4 @@ class UserKit:
         self.searchUser = SearchUsers(self.users)
         self.getUser = GetUsers(self.users)
         self.createUser = CreateUsers
-
-class AudioKit:
-    audio_pt = Audio("pt-pt")
-    audio_en = Audio("en-us")
   

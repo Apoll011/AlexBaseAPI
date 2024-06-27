@@ -90,7 +90,6 @@ class GetUsers:
             return uu
         else:
             return None
-
 class CreateUsers:
     def __init__(self, user_data):
         try:

@@ -1,8 +1,8 @@
 import time
 import argparse
 from api import API
-from config import __version__
-from api.routes import blueprint_list
+from config import __version__, api
+from routes import blueprint_list
 from features.intent_recognition.snips import IntentKit
 
 server = API(api['HOST'], api['PORT'])

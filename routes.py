@@ -21,8 +21,8 @@ def alive(value):
         "on": True,
         "users": len(userKit.users), 
         "lang": {
-            "trained": list(map(lambda e: e[6:-5], list(filter(lambda e: e.endswith(".json"),os.listdir("./features/intent_recognition/intents/graphs/"))))), 
-            "instaled": list(map(lambda e: e[9:-4], list(filter(lambda e: e.endswith(".ini"),os.listdir("./features/intent_recognition/intents/sentences/"))))), 
+            "trained": list(map(lambda e: e[6:-5], list(filter(lambda e: e.endswith(".yaml"),os.listdir("./features/intent_recognition/snips/data/"))))), 
+            "instaled": list(map(lambda e: e[9:-4], list(filter(lambda e: e.endswith(".json"),os.listdir("./features/intent_recognition/snips/dataset/"))))), 
         },
         "version": __version__
         }

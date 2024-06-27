@@ -81,6 +81,18 @@ utterances:
 
 ---
 type: intent
+name: math@geometry
+slots:
+  - name: func
+    entity: mathFunctions
+  - name: number
+    entity: snips/number
+utterances:
+  - What is the [func] of [number]
+  - \[func] of [number] is what
+
+---
+type: intent
 name: set@timer
 slots:
   - name: duration
@@ -229,6 +241,26 @@ values:
 - Rap
 - Worship
 
+
+---
+type: entity
+name: musicTrackAction
+automatically_extensible: false
+use_synonyms: false # default value is true
+values:
+- next
+- back
+
+---
+type: entity
+name: mathFunctions
+automatically_extensible: false
+use_synonyms: false # default value is true
+values:
+- [sen, seno, sin]
+- [sinh, senh, arch-sen, arch-sin]
+- [cosh, arch-cos]
+- [cos, cosen, coseno]
 
 ---
 type: entity

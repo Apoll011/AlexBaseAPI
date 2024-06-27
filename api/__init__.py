@@ -95,11 +95,11 @@ class API(Blueprint):
         time_s = time.time()
         try:
             if route in self.defs.keys():
-                return json.dumps({"response": self.defs[route](value), "code": 200, "time": time.time() - time_s})
+                return json.dumps({"responce": self.defs[route](value), "code": 200, "time": time.time() - time_s})
             else:
-                return json.dumps({"response": "invalid", "code": 404, "time": time.time() - time_s})
+                return json.dumps({"responce": "invalid", "code": 404, "time": time.time() - time_s})
         except Exception as e:
-            return json.dumps({"response": str(e), "code": 500, "time": time.time() - time_s})
+            return json.dumps({"responce": str(e), "code": 500, "time": time.time() - time_s})
 
     def define_route(self, host: str, port: int):
         """

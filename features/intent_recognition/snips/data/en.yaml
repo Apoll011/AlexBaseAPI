@@ -261,6 +261,8 @@ values:
 - [sinh, senh, arch-sen, arch-sin]
 - [cosh, arch-cos]
 - [cos, cosen, coseno]
+- [tan, tangen, tangente]
+- [sqrt, square root, square-root]
 
 ---
 type: entity

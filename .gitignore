@@ -2,11 +2,8 @@ pyvenv.cfg
 **/bin/
 **/lib/
 **/include/
-piper/
-vosk*/
 **/__pycache__
 .vscode/
 **/.DS_Store
-share/
 **/engine/
 t/

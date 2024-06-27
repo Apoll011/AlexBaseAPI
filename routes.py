@@ -1,9 +1,8 @@
 import os
-from features.intent_recognition.snips import IntentKit
-from features.kit import *
-from api import Blueprint
-from config import __version__
 import time
+from api import Blueprint
+from features.kit import *
+from config import __version__
 
 alex_blueprint = Blueprint("alex")
 intent_blueprint = Blueprint("intent_recognition")

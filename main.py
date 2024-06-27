@@ -23,7 +23,7 @@ args = parser.parse_args()
 
 if args.list_routes or args.start:
     if args.list_routes:
-        for route in server.api.defs:
+        for route in server.defs:
             print("\33[36mRoute:\33[32m", route, " \33[36mUp and running\33[0m")
     if args.start:
         if args.list_routes:

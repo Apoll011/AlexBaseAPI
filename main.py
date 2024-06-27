@@ -5,7 +5,7 @@ from config import __version__
 from api.routes import blueprint_list
 from features.intent_recognition.snips import IntentKit
 
-server = API()
+server = API(api['HOST'], api['PORT'])
 server.register_blueprint_list(blueprint_list)
 
 server.connected_client_text = "Conection from alex. Host \33[93m#addr#\33[32m connected"

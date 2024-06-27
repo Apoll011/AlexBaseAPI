@@ -6,11 +6,13 @@ from snips_nlu import SnipsNLUEngine
 from snips_nlu.default_configs import CONFIG_EN
 
 class IntentKit:
+    engine = None
     def __init__(self):
         pass
     
     def reuse(self):
-        self.engine = SnipsNLUEngine.from_path("./features/intent_recognition/snips/engine/")
+        if self.engine == None:
+            self.engine = SnipsNLUEngine.from_path("./features/intent_recognition/snips/engine/")
 
     def train(self):
         os.system("snips-nlu generate-dataset en ./features/intent_recognition/snips/data/en.yaml > ./features/intent_recognition/snips/dataset/dataset_en.json")

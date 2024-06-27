@@ -1,6 +1,6 @@
 import os
 import time
-from api import Blueprint
+from api.server import Blueprint
 from features.kit import *
 from config import __version__
 

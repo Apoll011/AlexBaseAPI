@@ -1,0 +1,39 @@
+{
+    "people": [
+        {
+            "id": "a3f587d0-71bd-41c7-9e0b-aa36b998828d",
+            "name": "John Doe",
+            "age": 30,
+            "citizenship": "USA",
+            "body_structure": {
+                "height": 180,
+                "weight": 70
+            },
+            "face_metadata": {
+                "face_id": "123456"
+            },
+            "tags": [],
+            "relationships": []
+        },
+        {
+            "id": "3ca50276-86f9-45e0-b510-50d25d5ddb19",
+            "name": "Jane Doe",
+            "age": 25,
+            "citizenship": "Canada",
+            "body_structure": {
+                "height": 165,
+                "weight": 55
+            },
+            "face_metadata": {
+                "face_id": "789012"
+            },
+            "tags": [],
+            "relationships": []
+        }
+    ],
+    "relationships": [
+        {
+            "id": "b5204233-af38-4164-9d29-39e9a01df9f0",
+            "person_id": "a3f587d0-71bd-41c7-9e0b-aa36b998828d",
+            "related_person_id": "3ca50276-86f9-45e0-b510-50d25d5ddb19",
+            "relationship_type": 

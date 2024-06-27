@@ -3,7 +3,7 @@ import argparse
 from api.server import API
 from config import __version__, api
 from routes import blueprint_list
-from features.intent_recognition.snips import IntentKit
+from features.kit import IntentKit
 
 server = API(api['HOST'], api['PORT'])
 server.register_blueprint_list(blueprint_list)
@@ -23,7 +23,7 @@ args = parser.parse_args()
 
 if args.list_routes or args.start:
     if args.list_routes:
-        for route in server.defs:
+        for route in server.route_functions:
             print("\33[36mRoute:\33[32m", route, " \33[36mUp and running\33[0m")
     if args.start:
         if args.list_routes:

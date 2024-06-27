@@ -255,12 +255,14 @@ values:
 type: entity
 name: mathFunctions
 automatically_extensible: false
-use_synonyms: false # default value is true
+use_synonyms: true # default value is true
 values:
 - [sen, seno, sin]
 - [sinh, senh, arch-sen, arch-sin]
 - [cosh, arch-cos]
 - [cos, cosen, coseno]
+- [tan, tangen, tangente]
+- [sqrt, square root, square-root]
 
 ---
 type: entity

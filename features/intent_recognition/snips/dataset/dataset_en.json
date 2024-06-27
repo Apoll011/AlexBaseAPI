@@ -79,10 +79,24 @@
             "coseno"
           ],
           "value": "cos"
+        },
+        {
+          "synonyms": [
+            "tangen",
+            "tangente"
+          ],
+          "value": "tan"
+        },
+        {
+          "synonyms": [
+            "square root",
+            "square-root"
+          ],
+          "value": "sqrt"
         }
       ],
       "matching_strictness": 1.0,
-      "use_synonyms": false
+      "use_synonyms": true
     },
     "mathNumberType": {
       "automatically_extensible": false,

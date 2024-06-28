@@ -54,6 +54,7 @@ name: close@something
 utterances:
   - Please, close [entityName]
   - Close [entityName]
+  - Quit [entityName]
 
 ---
 type: intent
@@ -328,7 +329,7 @@ type: entity
 name: person
 automatically_extensible: true # default value is true
 use_synonyms: false # default value is true
-matching_strictness: 0.8 # default value is 1.0
+matching_strictness: 0.6 # default value is 1.0
 values:
   - me
   - Mom
@@ -342,12 +343,12 @@ values:
 type: entity
 name: mathoperation
 automatically_extensible: false # default value is true
-use_synonyms: false # default value is true
+use_synonyms: true # default value is true
 matching_strictness: 0.8 # default value is 1.0
 values:
-  - times
-  - over
-  - plus
+  - [times, multiplied, timed by]
+  - [over, divided, over it by]
+  - [plus, and, added to, add, with]
   - minus
   - elavated
 

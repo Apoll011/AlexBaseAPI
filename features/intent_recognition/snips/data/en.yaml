@@ -16,6 +16,35 @@ utterances:
 
 ---
 type: intent
+name: alex@skills
+slots:
+  - name: major_skill
+    entity: skillMajor
+  - name: minor_skill
+    entity: skillMinor
+utterances:
+  - Can you [major_skill] [minor_skill]
+  - Can you [major_skill] a [minor_skill]
+  - Can you [major_skill] one [minor_skill]
+  - Can you do [major_skill] and tell if [minor_skill]
+  - Can you do [major_skill] and tell if is [minor_skill]
+  - Can you do [major_skill] [minor_skill]
+  - Can you [major_skill] some [minor_skill]
+  - Can you do [major_skill] some [minor_skill]
+  - Can you [major_skill]
+  - Can you do [major_skill]
+  - Do you [major_skill]
+  - Do you [major_skill] [minor_skill]
+  - Do you [major_skill] some [minor_skill]
+  - Are you capable of doing [major_skill] [minor_skill]
+  - Are you capable of doing [major_skill]
+  - Are you capable of doing [major_skill] some [minor_skill]
+  - Is the [major_skill] installed
+  - Is the [major_skill] skill installed
+  - Is the [major_skill] [minor_skill] installed
+  - Is the [major_skill] [minor_skill] skill installed
+---
+type: intent
 name: saudation@hi
 utterances:
   - Hi Alex
@@ -457,6 +486,45 @@ values:
   - Home
   - Clouds
   - Forever
+
+---
+type: entity
+name: skillMajor
+automatically_extensible: true # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.6 # default value is 1.0
+values:
+  - math
+  - play
+  - [saudation, greet, greeting]
+  - set
+  - learn
+  - define
+  - translate
+  - generate
+  - make
+  - send
+  - call
+  - search
+
+---
+type: entity
+name: skillMinor
+automatically_extensible: true # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.6 # default value is 1.0
+values:
+  - music
+  - simple
+  - geometry
+  - [even_or_odd, even, odd, prime]
+  - [music_whats_playing, what is playing, currently playing]
+  - [music_do, do actions]
+  - timer
+  - reminder
+  - skills
+  - [hi, someone]
+  - tanks
 
 ---
 type: entity

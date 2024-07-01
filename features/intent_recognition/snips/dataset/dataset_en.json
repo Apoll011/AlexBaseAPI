@@ -121,15 +121,26 @@
       "automatically_extensible": false,
       "data": [
         {
-          "synonyms": [],
+          "synonyms": [
+            "multiplied",
+            "timed by"
+          ],
           "value": "times"
         },
         {
-          "synonyms": [],
+          "synonyms": [
+            "divided",
+            "over it by"
+          ],
           "value": "over"
         },
         {
-          "synonyms": [],
+          "synonyms": [
+            "and",
+            "added to",
+            "add",
+            "with"
+          ],
           "value": "plus"
         },
         {
@@ -142,7 +153,7 @@
         }
       ],
       "matching_strictness": 0.8,
-      "use_synonyms": false
+      "use_synonyms": true
     },
     "mood": {
       "automatically_extensible": false,
@@ -720,7 +731,7 @@
           "value": "Fibi"
         }
       ],
-      "matching_strictness": 0.8,
+      "matching_strictness": 0.6,
       "use_synonyms": false
     },
     "playMode": {
@@ -818,6 +829,126 @@
       "matching_strictness": 1.0,
       "use_synonyms": true
     },
+    "skillMajor": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "math"
+        },
+        {
+          "synonyms": [],
+          "value": "play"
+        },
+        {
+          "synonyms": [
+            "greet",
+            "greeting"
+          ],
+          "value": "saudation"
+        },
+        {
+          "synonyms": [],
+          "value": "set"
+        },
+        {
+          "synonyms": [],
+          "value": "learn"
+        },
+        {
+          "synonyms": [],
+          "value": "define"
+        },
+        {
+          "synonyms": [],
+          "value": "translate"
+        },
+        {
+          "synonyms": [],
+          "value": "generate"
+        },
+        {
+          "synonyms": [],
+          "value": "make"
+        },
+        {
+          "synonyms": [],
+          "value": "send"
+        },
+        {
+          "synonyms": [],
+          "value": "call"
+        },
+        {
+          "synonyms": [],
+          "value": "search"
+        }
+      ],
+      "matching_strictness": 0.6,
+      "use_synonyms": true
+    },
+    "skillMinor": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "music"
+        },
+        {
+          "synonyms": [],
+          "value": "simple"
+        },
+        {
+          "synonyms": [],
+          "value": "geometry"
+        },
+        {
+          "synonyms": [
+            "even",
+            "odd",
+            "prime"
+          ],
+          "value": "even_or_odd"
+        },
+        {
+          "synonyms": [
+            "what is playing",
+            "currently playing"
+          ],
+          "value": "music_whats_playing"
+        },
+        {
+          "synonyms": [
+            "do actions"
+          ],
+          "value": "music_do"
+        },
+        {
+          "synonyms": [],
+          "value": "timer"
+        },
+        {
+          "synonyms": [],
+          "value": "reminder"
+        },
+        {
+          "synonyms": [],
+          "value": "skills"
+        },
+        {
+          "synonyms": [
+            "someone"
+          ],
+          "value": "hi"
+        },
+        {
+          "synonyms": [],
+          "value": "tanks"
+        }
+      ],
+      "matching_strictness": 0.6,
+      "use_synonyms": true
+    },
     "snips/amountOfMoney": {},
     "snips/datetime": {},
     "snips/duration": {},
@@ -844,6 +975,374 @@
     }
   },
   "intents": {
+    "alex@skills": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Can you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "math"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "music"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "play"
+            },
+            {
+              "text": " a "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "simple"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "saudation"
+            },
+            {
+              "text": " one "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "geometry"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you do "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "greet"
+            },
+            {
+              "text": " and tell if "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "even_or_odd"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you do "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "greeting"
+            },
+            {
+              "text": " and tell if is "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "even"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you do "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "set"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "odd"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "learn"
+            },
+            {
+              "text": " some "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "prime"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you do "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "define"
+            },
+            {
+              "text": " some "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "music_whats_playing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "translate"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you do "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "generate"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Do you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "make"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Do you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "send"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "what is playing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Do you "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "call"
+            },
+            {
+              "text": " some "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "currently playing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Are you capable of doing "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "search"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "music_do"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Are you capable of doing "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "math"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Are you capable of doing "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "play"
+            },
+            {
+              "text": " some "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "do actions"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is the "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "saudation"
+            },
+            {
+              "text": " installed"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is the "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "greet"
+            },
+            {
+              "text": " skill installed"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is the "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "greeting"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "timer"
+            },
+            {
+              "text": " installed"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is the "
+            },
+            {
+              "entity": "skillMajor",
+              "slot_name": "major_skill",
+              "text": "set"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "skillMinor",
+              "slot_name": "minor_skill",
+              "text": "reminder"
+            },
+            {
+              "text": " skill installed"
+            }
+          ]
+        }
+      ]
+    },
     "close@something": {
       "utterances": [
         {
@@ -867,6 +1366,18 @@
               "entity": "entityName",
               "slot_name": "entityName",
               "text": "Yourself"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Quit "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "Alex"
             }
           ]
         }
@@ -1039,7 +1550,7 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "over"
+              "text": "multiplied"
             },
             {
               "text": " by "
@@ -1059,7 +1570,7 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "plus"
+              "text": "timed by"
             },
             {
               "text": " by "
@@ -1079,7 +1590,7 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "minus"
+              "text": "over"
             },
             {
               "text": " with "
@@ -1099,7 +1610,7 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "elavated"
+              "text": "divided"
             },
             {
               "text": " that with "

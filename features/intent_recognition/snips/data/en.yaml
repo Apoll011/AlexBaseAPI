@@ -59,6 +59,7 @@ name: saudation@tanks
 utterances:
   - Tanks
   - Tanks you
+  - tank you
   - Apreciated
 
 ---
@@ -84,6 +85,16 @@ utterances:
   - Please, close [entityName]
   - Close [entityName]
   - Quit [entityName]
+
+---
+type: intent
+name: close@alex
+utterances:
+  - Please, close Alex
+  - Please, close Yourself
+  - Close Alex
+  - Close Yourself
+  - Quit
 
 ---
 type: intent
@@ -172,10 +183,15 @@ utterances:
   - Play [track]
   - Play the album [album]
   - Play the music by [artist]
+  - Play all the music of [artist]
+  - Play all the songs of [artist]
   - Play the [track] by [artist]
   - Play the playlist [playlist]
   - Play all the [genre] music
+  - Play all the [genre] songs
   - Play all the songs
+  - Play all my songs
+  - Play all my music
   - Play the entire library
 
 ---
@@ -351,8 +367,8 @@ automatically_extensible: true # default value is true
 use_synonyms: false # default value is true
 matching_strictness: 0.8 # default value is 1.0
 values:
-  - Alex
-  - Yourself
+  - Youtube
+  - [pc, computer]
 
 ---
 type: entity

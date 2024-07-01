@@ -172,6 +172,7 @@ utterances:
   - Play [track]
   - Play the album [album]
   - Play the music by [artist]
+  - Play the [track] by [artist]
   - Play the playlist [playlist]
   - Play all the [genre] music
   - Play all the songs
@@ -420,7 +421,9 @@ matching_strictness: 0.8 # default value is 1.0
 values:
   - Forever
   - Mi Amor
-  - Goldem Hour
+  - Golden Hour
+  - Home
+  - Clouds
   - Rei das maldições
   - Faded
   - Where are U now

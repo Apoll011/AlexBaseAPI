@@ -662,7 +662,15 @@
         },
         {
           "synonyms": [],
-          "value": "Goldem Hour"
+          "value": "Golden Hour"
+        },
+        {
+          "synonyms": [],
+          "value": "Home"
+        },
+        {
+          "synonyms": [],
+          "value": "Clouds"
         },
         {
           "synonyms": [],
@@ -1703,6 +1711,26 @@
               "entity": "musicArtist",
               "slot_name": "artist",
               "text": "4HIM With Jon Anderson"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Play the "
+            },
+            {
+              "entity": "musicTrack",
+              "slot_name": "track",
+              "text": "Mi Amor"
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "musicArtist",
+              "slot_name": "artist",
+              "text": "7 Minutoz"
             }
           ]
         },

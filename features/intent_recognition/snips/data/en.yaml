@@ -58,6 +58,9 @@ type: intent
 name: dictionary@get
 utterances:
   - What is the meaning of [word]
+  - What is [word]
+  - What is a [word]
+  - What is the [word]
   - What is the signification of [word]
   - Who is [word]
   - What is [word]
@@ -535,6 +538,10 @@ values:
   - music
   - Computer
   - Etc
+  - Apollo 1
+  - Apoll0 11
+  - Apollo 13
+  - Apollo 9
 
 ---
 type: entity

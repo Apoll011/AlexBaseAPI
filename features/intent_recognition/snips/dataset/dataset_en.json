@@ -1034,6 +1034,22 @@
         {
           "synonyms": [],
           "value": "Etc"
+        },
+        {
+          "synonyms": [],
+          "value": "Apollo 1"
+        },
+        {
+          "synonyms": [],
+          "value": "Apoll0 11"
+        },
+        {
+          "synonyms": [],
+          "value": "Apollo 13"
+        },
+        {
+          "synonyms": [],
+          "value": "Apollo 9"
         }
       ],
       "matching_strictness": 0.6,
@@ -1505,7 +1521,7 @@
         {
           "data": [
             {
-              "text": "What is the signification of "
+              "text": "What is "
             },
             {
               "entity": "word",
@@ -1517,7 +1533,7 @@
         {
           "data": [
             {
-              "text": "Who is "
+              "text": "What is a "
             },
             {
               "entity": "word",
@@ -1529,7 +1545,7 @@
         {
           "data": [
             {
-              "text": "What is "
+              "text": "What is the "
             },
             {
               "entity": "word",
@@ -1541,7 +1557,7 @@
         {
           "data": [
             {
-              "text": "Can you tell me the definition of "
+              "text": "What is the signification of "
             },
             {
               "entity": "word",
@@ -1553,12 +1569,48 @@
         {
           "data": [
             {
-              "text": "Do you know the definition of "
+              "text": "Who is "
             },
             {
               "entity": "word",
               "slot_name": "word",
               "text": "Over dose"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Testing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you tell me the definition of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Apple"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Do you know the definition of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "music"
             }
           ]
         }

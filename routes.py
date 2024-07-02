@@ -8,11 +8,13 @@ alex_blueprint = Blueprint("alex")
 intent_blueprint = Blueprint("intent_recognition")
 users_blueprint = Blueprint("users")
 sound_blueprint = Blueprint("sound")
+dict_blueprint = Blueprint("dictionary")
 
 blueprint_list = [alex_blueprint, intent_blueprint, users_blueprint, sound_blueprint]
 
 userKit = UserKit()
 intentKit = IntentKit()
+dictionaryKit = DictionaryKit()
 
 @alex_blueprint.route("alive")
 def alive(value):
@@ -65,3 +67,15 @@ def user_get(value):
 @users_blueprint.route("create")
 def user_create(value):
     return userKit.createUser(value)
+
+@dict_blueprint.route("get")
+def user_get(value):
+    return dictionaryKit.get(value)
+
+@dict_blueprint.route("get/closest")
+def user_get(value):
+    return dictionaryKit.get(value)
+
+@dict_blueprint.route("load")
+def user_create(value):
+    return dictionaryKit.load(value)

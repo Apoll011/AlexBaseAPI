@@ -987,6 +987,57 @@
       ],
       "matching_strictness": 1.0,
       "use_synonyms": true
+    },
+    "word": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "water"
+        },
+        {
+          "synonyms": [],
+          "value": "zip code"
+        },
+        {
+          "synonyms": [],
+          "value": "test"
+        },
+        {
+          "synonyms": [],
+          "value": "user"
+        },
+        {
+          "synonyms": [],
+          "value": "Alex"
+        },
+        {
+          "synonyms": [],
+          "value": "Over dose"
+        },
+        {
+          "synonyms": [],
+          "value": "Testing"
+        },
+        {
+          "synonyms": [],
+          "value": "Apple"
+        },
+        {
+          "synonyms": [],
+          "value": "music"
+        },
+        {
+          "synonyms": [],
+          "value": "Computer"
+        },
+        {
+          "synonyms": [],
+          "value": "Etc"
+        }
+      ],
+      "matching_strictness": 0.6,
+      "use_synonyms": true
     }
   },
   "intents": {
@@ -1432,6 +1483,82 @@
               "entity": "entityName",
               "slot_name": "entityName",
               "text": "computer"
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary@get": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "What is the meaning of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "water"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is the signification of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "zip code"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Who is "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "test"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "user"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you tell me the definition of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Alex"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Do you know the definition of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Over dose"
             }
           ]
         }

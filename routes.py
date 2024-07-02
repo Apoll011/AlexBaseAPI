@@ -69,13 +69,14 @@ def user_create(value):
     return userKit.createUser(value)
 
 @dict_blueprint.route("get")
-def user_get(value):
+def dict_get(value):
     return dictionaryKit.get(value)
 
 @dict_blueprint.route("get/closest")
-def user_get(value):
-    return dictionaryKit.get(value)
+def dict_get_cosest(value):
+    return dictionaryKit.get_closest(value)
 
 @dict_blueprint.route("load")
-def user_create(value):
-    return dictionaryKit.load(value)
+def load_dic(value):
+    dictionaryKit.load(value)
+    return None

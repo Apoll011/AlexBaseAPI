@@ -32,14 +32,15 @@ class DictionaryKit:
 
         print(f"Loaded {len(self.dictionary)} elements")
 
-        return self
-    
     def get(self, name):
-        h = hash(name.lower())
-        return self.dictionary[h]
-    
+        try:
+            h = hash(name.lower())
+            return self.dictionary[h]
+        except Exception as e:
+            return {"name": None}
+
     def get_closest(self, name, confidence_threshold=0.5):
-        closest_match = None
+        closest_match = {"name": None}
         closest_confidence = 0
         for h, entry in self.dictionary.items():
             sm = SequenceMatcher(None, name.lower(), entry["small_name"].lower())

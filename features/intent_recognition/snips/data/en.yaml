@@ -273,7 +273,7 @@ name: musicDo
 automatically_extensible: false
 values:
 - resume
-- [playpause, play, pause]
+- [playpause, play, pause, pause it, play it, stop the song, stop it, start the song]
 - fast forward
 
 ---

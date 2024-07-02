@@ -586,7 +586,12 @@
         {
           "synonyms": [
             "play",
-            "pause"
+            "pause",
+            "pause it",
+            "play it",
+            "stop the song",
+            "stop it",
+            "start the song"
           ],
           "value": "playpause"
         },

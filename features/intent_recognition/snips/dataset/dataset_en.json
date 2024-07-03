@@ -987,6 +987,73 @@
       ],
       "matching_strictness": 1.0,
       "use_synonyms": true
+    },
+    "word": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "water"
+        },
+        {
+          "synonyms": [],
+          "value": "zip code"
+        },
+        {
+          "synonyms": [],
+          "value": "test"
+        },
+        {
+          "synonyms": [],
+          "value": "user"
+        },
+        {
+          "synonyms": [],
+          "value": "Alex"
+        },
+        {
+          "synonyms": [],
+          "value": "Over dose"
+        },
+        {
+          "synonyms": [],
+          "value": "Testing"
+        },
+        {
+          "synonyms": [],
+          "value": "Apple"
+        },
+        {
+          "synonyms": [],
+          "value": "music"
+        },
+        {
+          "synonyms": [],
+          "value": "Computer"
+        },
+        {
+          "synonyms": [],
+          "value": "Etc"
+        },
+        {
+          "synonyms": [],
+          "value": "Apollo 1"
+        },
+        {
+          "synonyms": [],
+          "value": "Apoll0 11"
+        },
+        {
+          "synonyms": [],
+          "value": "Apollo 13"
+        },
+        {
+          "synonyms": [],
+          "value": "Apollo 9"
+        }
+      ],
+      "matching_strictness": 0.6,
+      "use_synonyms": true
     }
   },
   "intents": {
@@ -1432,6 +1499,118 @@
               "entity": "entityName",
               "slot_name": "entityName",
               "text": "computer"
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary@get": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "What is the meaning of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "water"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "zip code"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is a "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "test"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is the "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "user"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is the signification of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Alex"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Who is "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Over dose"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Testing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you tell me the definition of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "Apple"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Do you know the definition of "
+            },
+            {
+              "entity": "word",
+              "slot_name": "word",
+              "text": "music"
             }
           ]
         }

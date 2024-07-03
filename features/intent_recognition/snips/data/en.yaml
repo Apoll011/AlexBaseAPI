@@ -55,6 +55,20 @@ utterances:
 
 ---
 type: intent
+name: dictionary@get
+utterances:
+  - What is the meaning of [word]
+  - What is [word]
+  - What is a [word]
+  - What is the [word]
+  - What is the signification of [word]
+  - Who is [word]
+  - What is [word]
+  - Can you tell me the definition of [word]
+  - Do you know the definition of [word]
+
+---
+type: intent
 name: saudation@tanks
 utterances:
   - Tanks
@@ -505,6 +519,29 @@ values:
   - Home
   - Clouds
   - Forever
+
+---
+type: entity
+name: word
+automatically_extensible: true # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.6 # default value is 1.0
+values:
+  - water
+  - zip code
+  - test
+  - user
+  - Alex
+  - Over dose
+  - Testing
+  - Apple
+  - music
+  - Computer
+  - Etc
+  - Apollo 1
+  - Apoll0 11
+  - Apollo 13
+  - Apollo 9
 
 ---
 type: entity

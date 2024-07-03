@@ -21,17 +21,18 @@ parser.add_argument("-v", "--version", action="version", version=f"Alex Base Api
 
 args = parser.parse_args()
 
-if args.list_routes or args.start:
+if args.list_routes or args.start or args.train:
+    if args.train:
+        time_stared = time.time()
+        print("\33[34mRe-trainig everyting. This process take around 1 to 2 minutes please wait...\33[0m")
+        IntentKit().train()
+        print("\33[93mTime Took:", time.time() - time_stared, "seconds")
+
     if args.list_routes:
         for route in server.route_functions:
-            print("\33[36mRoute:\33[32m", route, " \33[36mUp and running\33[0m")
+            print("\33[36mRoute:\33[32m", route, "\33[36mUp and running\33[0m")
+            
     if args.start:
         if args.list_routes:
             time.sleep(2)
         server.serve()
-
-elif args.train:
-    time_stared = time.time()
-    print("\33[34mRe-trainig everyting. This process take around 1 minute please wait...\33[0m")
-    IntentKit().train()
-    print("\33[93mTime Took:", time.time() - time_stared, "seconds")

@@ -34,6 +34,1165 @@
       "matching_strictness": 0.8,
       "use_synonyms": false
     },
+    "contry": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "Abkhazia"
+        },
+        {
+          "synonyms": [],
+          "value": "Afghanistan"
+        },
+        {
+          "synonyms": [],
+          "value": "Akrotiri"
+        },
+        {
+          "synonyms": [],
+          "value": "Aland"
+        },
+        {
+          "synonyms": [],
+          "value": "Aland Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Albania"
+        },
+        {
+          "synonyms": [],
+          "value": "Algeria"
+        },
+        {
+          "synonyms": [],
+          "value": "America"
+        },
+        {
+          "synonyms": [],
+          "value": "American Samoa"
+        },
+        {
+          "synonyms": [],
+          "value": "Andorra"
+        },
+        {
+          "synonyms": [],
+          "value": "Angola"
+        },
+        {
+          "synonyms": [],
+          "value": "Anguilla"
+        },
+        {
+          "synonyms": [],
+          "value": "Antigua"
+        },
+        {
+          "synonyms": [],
+          "value": "Antigua and Barbuda"
+        },
+        {
+          "synonyms": [],
+          "value": "Argentina"
+        },
+        {
+          "synonyms": [],
+          "value": "Armenia"
+        },
+        {
+          "synonyms": [],
+          "value": "Aruba"
+        },
+        {
+          "synonyms": [],
+          "value": "Ascension Island"
+        },
+        {
+          "synonyms": [],
+          "value": "Australia"
+        },
+        {
+          "synonyms": [],
+          "value": "Austria"
+        },
+        {
+          "synonyms": [],
+          "value": "Azerbaijan"
+        },
+        {
+          "synonyms": [],
+          "value": "Bahamas"
+        },
+        {
+          "synonyms": [],
+          "value": "Bahrain"
+        },
+        {
+          "synonyms": [],
+          "value": "Bangladesh"
+        },
+        {
+          "synonyms": [],
+          "value": "Barbados"
+        },
+        {
+          "synonyms": [],
+          "value": "Barbuda"
+        },
+        {
+          "synonyms": [],
+          "value": "Belarus"
+        },
+        {
+          "synonyms": [],
+          "value": "Belgium"
+        },
+        {
+          "synonyms": [],
+          "value": "Belize"
+        },
+        {
+          "synonyms": [],
+          "value": "Benin"
+        },
+        {
+          "synonyms": [],
+          "value": "Bermuda"
+        },
+        {
+          "synonyms": [],
+          "value": "Bhutan"
+        },
+        {
+          "synonyms": [],
+          "value": "Bolivia"
+        },
+        {
+          "synonyms": [],
+          "value": "Bosnia"
+        },
+        {
+          "synonyms": [],
+          "value": "Bosnia and Herzegovina"
+        },
+        {
+          "synonyms": [],
+          "value": "Botswana"
+        },
+        {
+          "synonyms": [],
+          "value": "Brazil"
+        },
+        {
+          "synonyms": [],
+          "value": "British Virgin Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Brunei"
+        },
+        {
+          "synonyms": [],
+          "value": "Bulgaria"
+        },
+        {
+          "synonyms": [],
+          "value": "Burkina Faso"
+        },
+        {
+          "synonyms": [],
+          "value": "Burma"
+        },
+        {
+          "synonyms": [],
+          "value": "Burundi"
+        },
+        {
+          "synonyms": [],
+          "value": "Caicos Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Cambodia"
+        },
+        {
+          "synonyms": [],
+          "value": "Cameroon"
+        },
+        {
+          "synonyms": [],
+          "value": "Canada"
+        },
+        {
+          "synonyms": [],
+          "value": "Cape Verde"
+        },
+        {
+          "synonyms": [],
+          "value": "Cayman Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Central African Republic"
+        },
+        {
+          "synonyms": [],
+          "value": "Chad"
+        },
+        {
+          "synonyms": [],
+          "value": "Chile"
+        },
+        {
+          "synonyms": [],
+          "value": "China"
+        },
+        {
+          "synonyms": [],
+          "value": "Christmas Island"
+        },
+        {
+          "synonyms": [],
+          "value": "Cocos"
+        },
+        {
+          "synonyms": [],
+          "value": "Cocos Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Colombia"
+        },
+        {
+          "synonyms": [],
+          "value": "Comoros"
+        },
+        {
+          "synonyms": [],
+          "value": "Congo"
+        },
+        {
+          "synonyms": [],
+          "value": "Cook Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Costa Rica"
+        },
+        {
+          "synonyms": [],
+          "value": "Cote d'Ivoire"
+        },
+        {
+          "synonyms": [],
+          "value": "Croatia"
+        },
+        {
+          "synonyms": [],
+          "value": "Cuba"
+        },
+        {
+          "synonyms": [],
+          "value": "Cyprus"
+        },
+        {
+          "synonyms": [],
+          "value": "Czech Republic"
+        },
+        {
+          "synonyms": [],
+          "value": "Democratic Republic of Congo"
+        },
+        {
+          "synonyms": [],
+          "value": "Denmark"
+        },
+        {
+          "synonyms": [],
+          "value": "Dhekelia"
+        },
+        {
+          "synonyms": [],
+          "value": "Djibouti"
+        },
+        {
+          "synonyms": [],
+          "value": "Dominica"
+        },
+        {
+          "synonyms": [],
+          "value": "Dominican Republic"
+        },
+        {
+          "synonyms": [],
+          "value": "East Timor"
+        },
+        {
+          "synonyms": [],
+          "value": "Ecuador"
+        },
+        {
+          "synonyms": [],
+          "value": "Egypt"
+        },
+        {
+          "synonyms": [],
+          "value": "El Salvador"
+        },
+        {
+          "synonyms": [],
+          "value": "England"
+        },
+        {
+          "synonyms": [],
+          "value": "Equatorial Guinea"
+        },
+        {
+          "synonyms": [],
+          "value": "Eritrea"
+        },
+        {
+          "synonyms": [],
+          "value": "Estonia"
+        },
+        {
+          "synonyms": [],
+          "value": "Ethiopia"
+        },
+        {
+          "synonyms": [],
+          "value": "Falkland Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Faroe Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Fiji"
+        },
+        {
+          "synonyms": [],
+          "value": "Finland"
+        },
+        {
+          "synonyms": [],
+          "value": "Former Soviet Union"
+        },
+        {
+          "synonyms": [],
+          "value": "Former USSR"
+        },
+        {
+          "synonyms": [],
+          "value": "France"
+        },
+        {
+          "synonyms": [],
+          "value": "French Polynesia"
+        },
+        {
+          "synonyms": [],
+          "value": "Futuna Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Gabon"
+        },
+        {
+          "synonyms": [],
+          "value": "Gambia"
+        },
+        {
+          "synonyms": [],
+          "value": "Georgia"
+        },
+        {
+          "synonyms": [],
+          "value": "Germany"
+        },
+        {
+          "synonyms": [],
+          "value": "Ghana"
+        },
+        {
+          "synonyms": [],
+          "value": "Gibraltar"
+        },
+        {
+          "synonyms": [],
+          "value": "Greece"
+        },
+        {
+          "synonyms": [],
+          "value": "Greenland"
+        },
+        {
+          "synonyms": [],
+          "value": "Grenada"
+        },
+        {
+          "synonyms": [],
+          "value": "Grenadines"
+        },
+        {
+          "synonyms": [],
+          "value": "Guam"
+        },
+        {
+          "synonyms": [],
+          "value": "Guatemala"
+        },
+        {
+          "synonyms": [],
+          "value": "Guernsey"
+        },
+        {
+          "synonyms": [],
+          "value": "Guinea"
+        },
+        {
+          "synonyms": [],
+          "value": "Guinea-Bissau"
+        },
+        {
+          "synonyms": [],
+          "value": "Guyana"
+        },
+        {
+          "synonyms": [],
+          "value": "Haiti"
+        },
+        {
+          "synonyms": [],
+          "value": "Herzegovina"
+        },
+        {
+          "synonyms": [],
+          "value": "Honduras"
+        },
+        {
+          "synonyms": [],
+          "value": "Hong Kong"
+        },
+        {
+          "synonyms": [],
+          "value": "Hoorn Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Hungary"
+        },
+        {
+          "synonyms": [],
+          "value": "Iceland"
+        },
+        {
+          "synonyms": [],
+          "value": "India"
+        },
+        {
+          "synonyms": [],
+          "value": "Indonesia"
+        },
+        {
+          "synonyms": [],
+          "value": "Iran"
+        },
+        {
+          "synonyms": [],
+          "value": "Iraq"
+        },
+        {
+          "synonyms": [],
+          "value": "Ireland"
+        },
+        {
+          "synonyms": [],
+          "value": "Isle of Man"
+        },
+        {
+          "synonyms": [],
+          "value": "Israel"
+        },
+        {
+          "synonyms": [],
+          "value": "Italy"
+        },
+        {
+          "synonyms": [],
+          "value": "Jamaica"
+        },
+        {
+          "synonyms": [],
+          "value": "Japan"
+        },
+        {
+          "synonyms": [],
+          "value": "Jersey"
+        },
+        {
+          "synonyms": [],
+          "value": "Jordan"
+        },
+        {
+          "synonyms": [],
+          "value": "Kazakhstan"
+        },
+        {
+          "synonyms": [],
+          "value": "Keeling Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Kenya"
+        },
+        {
+          "synonyms": [],
+          "value": "Kiribati"
+        },
+        {
+          "synonyms": [],
+          "value": "Korea"
+        },
+        {
+          "synonyms": [],
+          "value": "Kosovo"
+        },
+        {
+          "synonyms": [],
+          "value": "Kuwait"
+        },
+        {
+          "synonyms": [],
+          "value": "Kyrgyzstan"
+        },
+        {
+          "synonyms": [],
+          "value": "Laos"
+        },
+        {
+          "synonyms": [],
+          "value": "Latvia"
+        },
+        {
+          "synonyms": [],
+          "value": "Lebanon"
+        },
+        {
+          "synonyms": [],
+          "value": "Lesotho"
+        },
+        {
+          "synonyms": [],
+          "value": "Liberia"
+        },
+        {
+          "synonyms": [],
+          "value": "Libya"
+        },
+        {
+          "synonyms": [],
+          "value": "Liechtenstein"
+        },
+        {
+          "synonyms": [],
+          "value": "Lithuania"
+        },
+        {
+          "synonyms": [],
+          "value": "Luxembourg"
+        },
+        {
+          "synonyms": [],
+          "value": "Macao"
+        },
+        {
+          "synonyms": [],
+          "value": "Macau"
+        },
+        {
+          "synonyms": [],
+          "value": "Macedonia"
+        },
+        {
+          "synonyms": [],
+          "value": "Madagascar"
+        },
+        {
+          "synonyms": [],
+          "value": "Malawi"
+        },
+        {
+          "synonyms": [],
+          "value": "Malaysia"
+        },
+        {
+          "synonyms": [],
+          "value": "Maldives"
+        },
+        {
+          "synonyms": [],
+          "value": "Mali"
+        },
+        {
+          "synonyms": [],
+          "value": "Malta"
+        },
+        {
+          "synonyms": [],
+          "value": "Marshall Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Mauritania"
+        },
+        {
+          "synonyms": [],
+          "value": "Mauritius"
+        },
+        {
+          "synonyms": [],
+          "value": "Mayotte"
+        },
+        {
+          "synonyms": [],
+          "value": "Mexico"
+        },
+        {
+          "synonyms": [],
+          "value": "Micronesia"
+        },
+        {
+          "synonyms": [],
+          "value": "Miquelon"
+        },
+        {
+          "synonyms": [],
+          "value": "Moldova"
+        },
+        {
+          "synonyms": [],
+          "value": "Monaco"
+        },
+        {
+          "synonyms": [],
+          "value": "Mongolia"
+        },
+        {
+          "synonyms": [],
+          "value": "Montenegro"
+        },
+        {
+          "synonyms": [],
+          "value": "Montserrat"
+        },
+        {
+          "synonyms": [],
+          "value": "Morocco"
+        },
+        {
+          "synonyms": [],
+          "value": "Mozambique"
+        },
+        {
+          "synonyms": [],
+          "value": "Myanmar"
+        },
+        {
+          "synonyms": [],
+          "value": "Nagorno-Karabakh Republic"
+        },
+        {
+          "synonyms": [],
+          "value": "Namibia"
+        },
+        {
+          "synonyms": [],
+          "value": "Nauru"
+        },
+        {
+          "synonyms": [],
+          "value": "Nepal"
+        },
+        {
+          "synonyms": [],
+          "value": "Netherlands"
+        },
+        {
+          "synonyms": [],
+          "value": "Netherlands Antilles"
+        },
+        {
+          "synonyms": [],
+          "value": "Nevis"
+        },
+        {
+          "synonyms": [],
+          "value": "New Caledonia"
+        },
+        {
+          "synonyms": [],
+          "value": "New Zealand"
+        },
+        {
+          "synonyms": [],
+          "value": "Nicaragua"
+        },
+        {
+          "synonyms": [],
+          "value": "Niger"
+        },
+        {
+          "synonyms": [],
+          "value": "Nigeria"
+        },
+        {
+          "synonyms": [],
+          "value": "Niue"
+        },
+        {
+          "synonyms": [],
+          "value": "Norfolk Island"
+        },
+        {
+          "synonyms": [],
+          "value": "Northern Mariana Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "North Korea"
+        },
+        {
+          "synonyms": [],
+          "value": "Norway"
+        },
+        {
+          "synonyms": [],
+          "value": "Oman"
+        },
+        {
+          "synonyms": [],
+          "value": "Pakistan"
+        },
+        {
+          "synonyms": [],
+          "value": "Palau"
+        },
+        {
+          "synonyms": [],
+          "value": "Palestine"
+        },
+        {
+          "synonyms": [],
+          "value": "Palestinian Territory"
+        },
+        {
+          "synonyms": [],
+          "value": "Panama"
+        },
+        {
+          "synonyms": [],
+          "value": "Papua New Guinea"
+        },
+        {
+          "synonyms": [],
+          "value": "Paraguay"
+        },
+        {
+          "synonyms": [],
+          "value": "People's Republic of China"
+        },
+        {
+          "synonyms": [],
+          "value": "Peru"
+        },
+        {
+          "synonyms": [],
+          "value": "Philippines"
+        },
+        {
+          "synonyms": [],
+          "value": "Pitcairn Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Poland"
+        },
+        {
+          "synonyms": [],
+          "value": "Portugal"
+        },
+        {
+          "synonyms": [],
+          "value": "Principe"
+        },
+        {
+          "synonyms": [],
+          "value": "Puerto Rico"
+        },
+        {
+          "synonyms": [],
+          "value": "Qatar"
+        },
+        {
+          "synonyms": [],
+          "value": "Romania"
+        },
+        {
+          "synonyms": [],
+          "value": "Russia"
+        },
+        {
+          "synonyms": [],
+          "value": "Rwanda"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Barthelemy"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Barts"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Helena"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Kitts"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Kitts and Nevis"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Lucia"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Martin"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Pierre"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Pierre and Miquelon"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Vincent"
+        },
+        {
+          "synonyms": [],
+          "value": "Saint Vincent and the Grenadines"
+        },
+        {
+          "synonyms": [],
+          "value": "Samoa"
+        },
+        {
+          "synonyms": [],
+          "value": "San Marino"
+        },
+        {
+          "synonyms": [],
+          "value": "Sao Tome"
+        },
+        {
+          "synonyms": [],
+          "value": "Sao Tome and Principe"
+        },
+        {
+          "synonyms": [],
+          "value": "Saudi Arabia"
+        },
+        {
+          "synonyms": [],
+          "value": "Scotland"
+        },
+        {
+          "synonyms": [],
+          "value": "Senegal"
+        },
+        {
+          "synonyms": [],
+          "value": "Serbia"
+        },
+        {
+          "synonyms": [],
+          "value": "Seychelles"
+        },
+        {
+          "synonyms": [],
+          "value": "Sierra Leone"
+        },
+        {
+          "synonyms": [],
+          "value": "Singapore"
+        },
+        {
+          "synonyms": [],
+          "value": "Slovakia"
+        },
+        {
+          "synonyms": [],
+          "value": "Slovenia"
+        },
+        {
+          "synonyms": [],
+          "value": "Solomon Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Somalia"
+        },
+        {
+          "synonyms": [],
+          "value": "Somaliland"
+        },
+        {
+          "synonyms": [],
+          "value": "South Africa"
+        },
+        {
+          "synonyms": [],
+          "value": "South Korea"
+        },
+        {
+          "synonyms": [],
+          "value": "South Ossetia"
+        },
+        {
+          "synonyms": [],
+          "value": "Soviet Union"
+        },
+        {
+          "synonyms": [],
+          "value": "Spain"
+        },
+        {
+          "synonyms": [],
+          "value": "Sri Lanka"
+        },
+        {
+          "synonyms": [],
+          "value": "Sudan"
+        },
+        {
+          "synonyms": [],
+          "value": "Suriname"
+        },
+        {
+          "synonyms": [],
+          "value": "Svalbard"
+        },
+        {
+          "synonyms": [],
+          "value": "Swaziland"
+        },
+        {
+          "synonyms": [],
+          "value": "Sweden"
+        },
+        {
+          "synonyms": [],
+          "value": "Switzerland"
+        },
+        {
+          "synonyms": [],
+          "value": "Syria"
+        },
+        {
+          "synonyms": [],
+          "value": "Taiwan"
+        },
+        {
+          "synonyms": [],
+          "value": "Tajikistan"
+        },
+        {
+          "synonyms": [],
+          "value": "Tanzania"
+        },
+        {
+          "synonyms": [],
+          "value": "Thailand"
+        },
+        {
+          "synonyms": [],
+          "value": "Tibet"
+        },
+        {
+          "synonyms": [],
+          "value": "Tobago"
+        },
+        {
+          "synonyms": [],
+          "value": "Togo"
+        },
+        {
+          "synonyms": [],
+          "value": "Tokelau"
+        },
+        {
+          "synonyms": [],
+          "value": "Tonga"
+        },
+        {
+          "synonyms": [],
+          "value": "Transnistria"
+        },
+        {
+          "synonyms": [],
+          "value": "Trinidad"
+        },
+        {
+          "synonyms": [],
+          "value": "Trinidad and Tobago"
+        },
+        {
+          "synonyms": [],
+          "value": "Tristan da Cunha"
+        },
+        {
+          "synonyms": [],
+          "value": "Tunisia"
+        },
+        {
+          "synonyms": [],
+          "value": "Turkey"
+        },
+        {
+          "synonyms": [],
+          "value": "Turkmenistan"
+        },
+        {
+          "synonyms": [],
+          "value": "Turks and Caicos Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Turks Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Tuvalu"
+        },
+        {
+          "synonyms": [],
+          "value": "UAE"
+        },
+        {
+          "synonyms": [],
+          "value": "Uganda"
+        },
+        {
+          "synonyms": [],
+          "value": "UK"
+        },
+        {
+          "synonyms": [],
+          "value": "Ukraine"
+        },
+        {
+          "synonyms": [],
+          "value": "United Arab Emirates"
+        },
+        {
+          "synonyms": [],
+          "value": "United Kingdom"
+        },
+        {
+          "synonyms": [],
+          "value": "United States"
+        },
+        {
+          "synonyms": [],
+          "value": "United States Virgin Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Uruguay"
+        },
+        {
+          "synonyms": [],
+          "value": "US"
+        },
+        {
+          "synonyms": [],
+          "value": "USA"
+        },
+        {
+          "synonyms": [],
+          "value": "USSR"
+        },
+        {
+          "synonyms": [],
+          "value": "US Virgin Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Uzbekistan"
+        },
+        {
+          "synonyms": [],
+          "value": "Vanuatu"
+        },
+        {
+          "synonyms": [],
+          "value": "Vatican"
+        },
+        {
+          "synonyms": [],
+          "value": "Vatican City"
+        },
+        {
+          "synonyms": [],
+          "value": "Venezuela"
+        },
+        {
+          "synonyms": [],
+          "value": "Vietnam"
+        },
+        {
+          "synonyms": [],
+          "value": "Virgin Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Wallis and Futuna"
+        },
+        {
+          "synonyms": [],
+          "value": "Wallis Islands"
+        },
+        {
+          "synonyms": [],
+          "value": "Western Sahara"
+        },
+        {
+          "synonyms": [],
+          "value": "Yemen"
+        },
+        {
+          "synonyms": [],
+          "value": "Zambia"
+        },
+        {
+          "synonyms": [],
+          "value": "Zimbabwe"
+        }
+      ],
+      "matching_strictness": 0.5,
+      "use_synonyms": true
+    },
     "entityName": {
       "automatically_extensible": true,
       "data": [
@@ -50,6 +1209,29 @@
       ],
       "matching_strictness": 0.8,
       "use_synonyms": false
+    },
+    "gender": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [
+            "feminine",
+            "woman",
+            "girl"
+          ],
+          "value": "female"
+        },
+        {
+          "synonyms": [
+            "masculine",
+            "man",
+            "boy"
+          ],
+          "value": "male"
+        }
+      ],
+      "matching_strictness": 0.7,
+      "use_synonyms": true
     },
     "mathFunctions": {
       "automatically_extensible": false,
@@ -1867,7 +3049,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "me"
+              "text": "Fibi"
             },
             {
               "text": " "
@@ -1887,7 +3069,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Mom"
+              "text": "me"
             },
             {
               "text": " "
@@ -2182,58 +3364,6 @@
         }
       ]
     },
-    "saudation@hi": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Hi Alex"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "How are you"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Hello Alex"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Good "
-            },
-            {
-              "entity": "timeOfDay",
-              "slot_name": "timeOfDay",
-              "text": "Morning"
-            },
-            {
-              "text": " Alex"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Good "
-            },
-            {
-              "entity": "timeOfDay",
-              "slot_name": "timeOfDay",
-              "text": "Affternoon"
-            }
-          ]
-        }
-      ]
-    },
     "saudation@how.are.u": {
       "utterances": [
         {
@@ -2370,7 +3500,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "on october 1st at 10am"
+              "text": "the 3rd tuesday of June"
             },
             {
               "text": " to do "
@@ -2390,7 +3520,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "at 8 a.m."
+              "text": "tomorrow at 9pm"
             },
             {
               "text": " to "
@@ -2406,7 +3536,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Dad"
+              "text": "Mom"
             }
           ]
         }
@@ -2627,6 +3757,243 @@
             },
             {
               "text": "'s lights on please"
+            }
+          ]
+        }
+      ]
+    },
+    "wec@is_a_country": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Is "
+            },
+            {
+              "entity": "contry",
+              "slot_name": "contry",
+              "text": "Abkhazia"
+            },
+            {
+              "text": " a country?"
+            }
+          ]
+        }
+      ]
+    },
+    "wec@random_name": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Give me a name."
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Give me a "
+            },
+            {
+              "entity": "gender",
+              "slot_name": "gender",
+              "text": "female"
+            },
+            {
+              "text": " name"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Give me a "
+            },
+            {
+              "entity": "gender",
+              "slot_name": "gender",
+              "text": "feminine"
+            },
+            {
+              "text": " name Please"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate a "
+            },
+            {
+              "entity": "gender",
+              "slot_name": "gender",
+              "text": "woman"
+            },
+            {
+              "text": " name"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create a "
+            },
+            {
+              "entity": "gender",
+              "slot_name": "gender",
+              "text": "girl"
+            },
+            {
+              "text": " name"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate a name"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create a name"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a name"
+            }
+          ]
+        }
+      ]
+    },
+    "wec@us_inagural_speach": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Tell me a random inaugral speach"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me inaugral speach"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given in "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "on october 1st at 10am"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given in "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "at 8 a.m."
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "me"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given in "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "4:30 pm"
+            },
+            {
+              "text": " by president "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Mom"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given in "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "in 1 hour"
+            },
+            {
+              "text": " by pr. "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Dad"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given by "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Sister"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given by president "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Cat"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given by pr. "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Dog"
             }
           ]
         }

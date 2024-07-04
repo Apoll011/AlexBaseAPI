@@ -16,6 +16,22 @@ utterances:
 
 ---
 type: intent
+name: alex@repeat
+utterances:
+  - Repeat
+  - Again
+  - Another one
+  - Try again
+  - Give it another try
+  - Reconsider that choice
+  - Are you sure. Make another one
+  - Make another one
+  - Other
+  - Make me other one
+  - Make other
+
+---
+type: intent
 name: alex@skills
 slots:
   - name: major_skill
@@ -46,18 +62,17 @@ utterances:
 
 ---
 type: intent
-name: wec@is_a_country
+name: wec@is.a.country
 utterances:
   - Is [contry] a country?
 
 ---
 type: intent
-name: wec@us_inagural_speach
+name: wec@us.inagural.speach
 slots:
   - name: date
     entity: snips/datetime
 utterances:
-  - Tell me a random inaugral speach
   - Tell me inaugral speach
   - Tell me the inaugural speach given in [date]
   - Tell me the inaugural speach given in [date] by [person]
@@ -72,7 +87,7 @@ utterances:
 
 ---
 type: intent
-name: wec@random_name
+name: wec@random.name
 utterances:
   - Give me a name.
   - Give me a [gender] name
@@ -82,6 +97,8 @@ utterances:
   - Generate a name
   - Create a name
   - Make me a name
+  - Tell me a random name
+  - Tell me a random [gender] name
 
 ---
 type: intent
@@ -105,6 +122,7 @@ utterances:
   - Tanks you
   - tank you
   - Apreciated
+  - Great
 
 ---
 type: intent
@@ -116,7 +134,18 @@ utterances:
 
 ---
 type: intent
-name: saudation@are.u.sure
+name: saudation@hi
+utterances:
+  - Hi Alex
+  - How are you
+  - Hello Alex
+  - Good [timeOfDay] Alex
+  - Good [timeOfDay]
+
+
+---
+type: intent
+name: alex@are.u.sure
 utterances:
   - Are you sure
   - Are u sure
@@ -208,6 +237,50 @@ utterances:
   - Is [number] [type]
   - \[number] is even or odd
   - \[number] is [type]
+
+---
+type: intent
+name: math@random
+slots:
+  - name: type
+    entity: mathNumberType
+  - name: sign
+    entity: mathNumberSign
+  - name: smaller_number
+    entity: snips/number
+  - name: bigger_number
+    entity: snips/number
+utterances:
+  - Generate me a random number
+  - Create me a random number
+  - Make me a random number
+  - Generate me a [sign] random number
+  - Create me a [sign] random number
+  - Make me a [sign] random number
+  - Generate me a [sign] random [type] number
+  - Create me a [sign] random [type] number
+  - Make me a [sign] random [type] number
+  - Generate me a random [type] number
+  - Create me a random [type] number
+  - Make me a random [type] number
+  - Generate me a [type] random number
+  - Create me a [type] random number
+  - Make me a [type] random number
+  - Generate me a random number from [smaller_number] to [bigger_number]
+  - Create me a random number from [smaller_number] to [bigger_number]
+  - Make me a random number from [smaller_number] to [bigger_number]
+  - Generate me a [sign] random number from [smaller_number] to [bigger_number]
+  - Create me a [sign] random number from [smaller_number] to [bigger_number]
+  - Make me a [sign] random number from [smaller_number] to [bigger_number]
+  - Generate me a [sign] random [type] number from [smaller_number] to [bigger_number]
+  - Create me a [sign] random [type] number from [smaller_number] to [bigger_number]
+  - Make me a [sign] random [type] number from [smaller_number] to [bigger_number]
+  - Generate me a random [type] number from [smaller_number] to [bigger_number]
+  - Create me a random [type] number from [smaller_number] to [bigger_number]
+  - Make me a random [type] number from [smaller_number] to [bigger_number]
+  - Generate me a [type] random number from [smaller_number] to [bigger_number]
+  - Create me a [type] random number from [smaller_number] to [bigger_number]
+  - Make me a [type] random number from [smaller_number] to [bigger_number]
 
 ---
 type: intent
@@ -436,8 +509,8 @@ automatically_extensible: false # default value is true
 use_synonyms: true # default value is true
 matching_strictness: 0.8 # default value is 1.0
 values:
-  - [times, multiplied, timed by]
-  - [over, divided, over it by]
+  - [times, multiplied, timed by, multiply]
+  - [over, divided, over it by, divide]
   - [plus, and, added to, add, with]
   - minus
   - elavated
@@ -622,6 +695,21 @@ values:
   - even
   - odd
   - prime
+  - real
+  - imaginary
+  - natural
+
+---
+type: entity
+name: mathNumberSign
+automatically_extensible: false # default value is true
+use_synonyms: true # default value is true
+matching_strictness: 0.7 # default value is 1.0
+values:
+  - [positive, bigger than zero]
+  - [negative, smaller than zero]
+
+
 
 ---
 type: entity

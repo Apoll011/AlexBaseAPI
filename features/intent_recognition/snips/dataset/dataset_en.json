@@ -1282,6 +1282,25 @@
       "matching_strictness": 1.0,
       "use_synonyms": true
     },
+    "mathNumberSign": {
+      "automatically_extensible": false,
+      "data": [
+        {
+          "synonyms": [
+            "bigger than zero"
+          ],
+          "value": "positive"
+        },
+        {
+          "synonyms": [
+            "smaller than zero"
+          ],
+          "value": "negative"
+        }
+      ],
+      "matching_strictness": 0.7,
+      "use_synonyms": true
+    },
     "mathNumberType": {
       "automatically_extensible": false,
       "data": [
@@ -1296,6 +1315,18 @@
         {
           "synonyms": [],
           "value": "prime"
+        },
+        {
+          "synonyms": [],
+          "value": "real"
+        },
+        {
+          "synonyms": [],
+          "value": "imaginary"
+        },
+        {
+          "synonyms": [],
+          "value": "natural"
         }
       ],
       "matching_strictness": 0.95,
@@ -2239,6 +2270,112 @@
     }
   },
   "intents": {
+    "alex@are.u.sure": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Are you sure"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Are u sure"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Really"
+            }
+          ]
+        }
+      ]
+    },
+    "alex@repeat": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Repeat"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Again"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Another one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Try again"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Give it another try"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Reconsider that choice"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Are you sure. Make another one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make another one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me other one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make other"
+            }
+          ]
+        }
+      ]
+    },
     "alex@skills": {
       "utterances": [
         {
@@ -2919,6 +3056,655 @@
         }
       ]
     },
+    "math@random": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Generate me a random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "positive"
+            },
+            {
+              "text": " random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "bigger than zero"
+            },
+            {
+              "text": " random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "negative"
+            },
+            {
+              "text": " random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "smaller than zero"
+            },
+            {
+              "text": " random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "prime"
+            },
+            {
+              "text": " number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "positive"
+            },
+            {
+              "text": " random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "real"
+            },
+            {
+              "text": " number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "bigger than zero"
+            },
+            {
+              "text": " random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "imaginary"
+            },
+            {
+              "text": " number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "natural"
+            },
+            {
+              "text": " number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "even"
+            },
+            {
+              "text": " number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "odd"
+            },
+            {
+              "text": " number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "prime"
+            },
+            {
+              "text": " random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "real"
+            },
+            {
+              "text": " random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "imaginary"
+            },
+            {
+              "text": " random number"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "twenty one"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "2001"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "negative"
+            },
+            {
+              "text": " random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "twenty one"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "smaller than zero"
+            },
+            {
+              "text": " random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "2001"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "positive"
+            },
+            {
+              "text": " random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "bigger than zero"
+            },
+            {
+              "text": " random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "natural"
+            },
+            {
+              "text": " number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "twenty one"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "negative"
+            },
+            {
+              "text": " random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "even"
+            },
+            {
+              "text": " number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "2001"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a "
+            },
+            {
+              "entity": "mathNumberSign",
+              "slot_name": "sign",
+              "text": "smaller than zero"
+            },
+            {
+              "text": " random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "odd"
+            },
+            {
+              "text": " number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "prime"
+            },
+            {
+              "text": " number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "twenty one"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "real"
+            },
+            {
+              "text": " number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "2001"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a random "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "imaginary"
+            },
+            {
+              "text": " number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Generate me a "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "natural"
+            },
+            {
+              "text": " random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "twenty one"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Create me a "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "even"
+            },
+            {
+              "text": " random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "2001"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Make me a "
+            },
+            {
+              "entity": "mathNumberType",
+              "slot_name": "type",
+              "text": "odd"
+            },
+            {
+              "text": " random number from "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "smaller_number",
+              "text": "three hundred and four"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "bigger_number",
+              "text": "2001"
+            }
+          ]
+        }
+      ]
+    },
     "math@simple": {
       "utterances": [
         {
@@ -3049,7 +3835,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Fibi"
+              "text": "Dad"
             },
             {
               "text": " "
@@ -3069,7 +3855,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "me"
+              "text": "Sister"
             },
             {
               "text": " "
@@ -3339,26 +4125,53 @@
         }
       ]
     },
-    "saudation@are.u.sure": {
+    "saudation@hi": {
       "utterances": [
         {
           "data": [
             {
-              "text": "Are you sure"
+              "text": "Hi Alex"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Are u sure"
+              "text": "How are you"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Really"
+              "text": "Hello Alex"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Good "
+            },
+            {
+              "entity": "timeOfDay",
+              "slot_name": "timeOfDay",
+              "text": "Morning"
+            },
+            {
+              "text": " Alex"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Good "
+            },
+            {
+              "entity": "timeOfDay",
+              "slot_name": "timeOfDay",
+              "text": "Affternoon"
             }
           ]
         }
@@ -3421,6 +4234,13 @@
           "data": [
             {
               "text": "Apreciated"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Great"
             }
           ]
         }
@@ -3500,7 +4320,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "the 3rd tuesday of June"
+              "text": "on october 1st at 10am"
             },
             {
               "text": " to do "
@@ -3520,7 +4340,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "tomorrow at 9pm"
+              "text": "at 8 a.m."
             },
             {
               "text": " to "
@@ -3536,7 +4356,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Mom"
+              "text": "Cat"
             }
           ]
         }
@@ -3762,7 +4582,7 @@
         }
       ]
     },
-    "wec@is_a_country": {
+    "wec@is.a.country": {
       "utterances": [
         {
           "data": [
@@ -3781,7 +4601,7 @@
         }
       ]
     },
-    "wec@random_name": {
+    "wec@random.name": {
       "utterances": [
         {
           "data": [
@@ -3870,18 +4690,33 @@
               "text": "Make me a name"
             }
           ]
-        }
-      ]
-    },
-    "wec@us_inagural_speach": {
-      "utterances": [
+        },
         {
           "data": [
             {
-              "text": "Tell me a random inaugral speach"
+              "text": "Tell me a random name"
             }
           ]
         },
+        {
+          "data": [
+            {
+              "text": "Tell me a random "
+            },
+            {
+              "entity": "gender",
+              "slot_name": "gender",
+              "text": "male"
+            },
+            {
+              "text": " name"
+            }
+          ]
+        }
+      ]
+    },
+    "wec@us.inagural.speach": {
+      "utterances": [
         {
           "data": [
             {
@@ -3994,6 +4829,66 @@
               "entity": "person",
               "slot_name": "person",
               "text": "Dog"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given by "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Fibi"
+            },
+            {
+              "text": " in "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "the 3rd tuesday of June"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given by president "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "me"
+            },
+            {
+              "text": " in "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "tomorrow at 9pm"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the inaugural speach given by pr. "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Mom"
+            },
+            {
+              "text": " in "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "date",
+              "text": "today"
             }
           ]
         }

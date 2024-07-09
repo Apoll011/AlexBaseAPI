@@ -1338,14 +1338,16 @@
         {
           "synonyms": [
             "multiplied",
-            "timed by"
+            "timed by",
+            "multiply"
           ],
           "value": "times"
         },
         {
           "synonyms": [
             "divided",
-            "over it by"
+            "over it by",
+            "divide"
           ],
           "value": "over"
         },
@@ -3791,7 +3793,7 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "over"
+              "text": "multiply"
             },
             {
               "text": " with "
@@ -3811,7 +3813,7 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "divided"
+              "text": "over"
             },
             {
               "text": " that with "

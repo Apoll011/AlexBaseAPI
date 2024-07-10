@@ -27,7 +27,7 @@ class DictionaryKit:
     def get_closest(self, word):
         result = get_close_matches(word, self.dictionary.keys())
         if len(result)>0:
-            r = {"name": result[0], "definition": self.dictionary[result[0]], "confidence": self.softmax_confidence(len(result)), "others": result}
+            r = {"name": result[0], "definition": self.dictionary[result[0]], "confidence": self.softmax_confidence(len(result)), "others": result[1:]}
             return r
         else:
             return {"name": None, "confidence": 0.75}

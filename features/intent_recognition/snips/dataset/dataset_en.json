@@ -1786,6 +1786,10 @@
         {
           "synonyms": [],
           "value": "DaftPunk"
+        },
+        {
+          "synonyms": [],
+          "value": "POLYPHIA"
         }
       ],
       "matching_strictness": 0.8,
@@ -1819,7 +1823,7 @@
       "use_synonyms": true
     },
     "musicGenre": {
-      "automatically_extensible": false,
+      "automatically_extensible": true,
       "data": [
         {
           "synonyms": [
@@ -1847,6 +1851,20 @@
         {
           "synonyms": [],
           "value": "Worship"
+        },
+        {
+          "synonyms": [
+            "Voice made"
+          ],
+          "value": "Acapela"
+        },
+        {
+          "synonyms": [],
+          "value": "Rock"
+        },
+        {
+          "synonyms": [],
+          "value": "Worship"
         }
       ],
       "matching_strictness": 1.0,
@@ -1865,7 +1883,7 @@
         },
         {
           "synonyms": [],
-          "value": "\\Off"
+          "value": "\\[off, none]"
         }
       ],
       "matching_strictness": 1.0,
@@ -1909,6 +1927,10 @@
         {
           "synonyms": [],
           "value": "DaftPunk"
+        },
+        {
+          "synonyms": [],
+          "value": "Playing God"
         }
       ],
       "matching_strictness": 0.8,
@@ -4090,6 +4112,18 @@
               "entity": "TrueOrFalse",
               "slot_name": "shuffleEnabled",
               "text": "\\true"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set shuffle to "
+            },
+            {
+              "entity": "TrueOrFalse",
+              "slot_name": "shuffleEnabled",
+              "text": "\\false"
             }
           ]
         }

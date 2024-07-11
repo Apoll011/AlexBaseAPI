@@ -322,7 +322,9 @@ utterances:
   - Please [musicDo] the music
   - \[musicTrackAction] track
   - Set song repeat to [musicReapeatOptions]
+  - Set repeat mode to [musicReapeatOptions]
   - Set shuffle enabled to [shuffleEnabled]
+  - Set shuffle to [shuffleEnabled]
 
 ---
 type: intent
@@ -396,7 +398,7 @@ values:
 ---
 type: entity
 name: musicGenre
-automatically_extensible: false
+automatically_extensible: true
 values:
 - [Christian/Gospel, gospel, christian]
 - Music
@@ -404,7 +406,9 @@ values:
 - Praise & Worship
 - Rap
 - Worship
-
+- [Acapela, Voice made]
+- Rock
+- Worship
 
 ---
 type: entity
@@ -428,14 +432,6 @@ values:
 - [tan, tangen, tangente]
 - [sqrt, square root, square-root]
 
----
-type: entity
-name: musicTrackAction
-automatically_extensible: false
-use_synonyms: false # default value is true
-values:
-- next
-- back
 
 
 ---
@@ -446,7 +442,7 @@ use_synonyms: false # default value is true
 values:
 - One
 - All
-- \Off
+- \[off, none]
 
 
 ---
@@ -561,6 +557,7 @@ values:
   - Faded
   - Where are U now
   - DaftPunk
+  - Playing God
 
 ---
 type: entity
@@ -609,6 +606,7 @@ values:
   - TobyMac
   - Adele
   - DaftPunk
+  - POLYPHIA
 
 ---
 type: entity

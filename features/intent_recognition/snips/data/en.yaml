@@ -335,6 +335,36 @@ utterances:
   - Whats the name of this song
   - What is playing
 
+---
+type: intent
+name: alex@presents
+utterances:
+  - Who are you
+  - Present yourself
+  - Tell me about you
+  - Tell us about you
+
+---
+type: intent
+name: alex@presents.proposit
+utterances:
+  - What is your proposit
+  - Why they made you
+  - Why are you here
+  - What is the reason behind you creation
+  - What is the reason you are here
+  - Why you exist
+  - What is your objective
+  - What is you porpose
+
+---
+type: intent
+name: alex@presents.maker
+utterances:
+  - Who made you
+  - Who created you
+  - Who programed you
+
 # turnLightOn intent
 ---
 type: intent

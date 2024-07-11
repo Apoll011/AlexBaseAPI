@@ -2319,6 +2319,123 @@
         }
       ]
     },
+    "alex@presents": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Who are you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Present yourself"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me about you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell us about you"
+            }
+          ]
+        }
+      ]
+    },
+    "alex@presents.maker": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Who made you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Who created you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Who programed you"
+            }
+          ]
+        }
+      ]
+    },
+    "alex@presents.proposit": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "What is your proposit"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Why they made you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Why are you here"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is the reason behind you creation"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is the reason you are here"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Why you exist"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is your objective"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is you porpose"
+            }
+          ]
+        }
+      ]
+    },
     "alex@repeat": {
       "utterances": [
         {
@@ -4100,6 +4217,18 @@
               "entity": "musicReapeatOptions",
               "slot_name": "musicReapeatOptions",
               "text": "One"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set repeat mode to "
+            },
+            {
+              "entity": "musicReapeatOptions",
+              "slot_name": "musicReapeatOptions",
+              "text": "All"
             }
           ]
         },

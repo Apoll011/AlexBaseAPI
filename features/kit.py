@@ -40,14 +40,16 @@ class DictionaryKit:
 
     
 class IntentKit:
+    
     engine = None
+    loaded = False
     def __init__(self):
         pass
     
     def reuse(self):
         if self.engine == None:
             self.engine = SnipsNLUEngine.from_path("./features/intent_recognition/snips/engine/")
-
+            self.loaded = True
     def train(self):
         os.system("snips-nlu generate-dataset en ./features/intent_recognition/snips/data/en.yaml > ./features/intent_recognition/snips/dataset/dataset_en.json")
         with io.open("./features/intent_recognition/snips/dataset/dataset_en.json") as f:
@@ -56,6 +58,7 @@ class IntentKit:
         self.engine.fit(dataset)
         os.system("rm -rf ./features/intent_recognition/snips/engine")
         self.engine.persist("./features/intent_recognition/snips/engine/")
+        self.loaded = True
 
     def parse(self, text):
         return self.engine.parse(text)

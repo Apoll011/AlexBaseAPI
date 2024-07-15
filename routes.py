@@ -18,8 +18,14 @@ dictionaryKit = DictionaryKit()
 
 @alex_blueprint.route("alive")
 def alive(value):
-    return {
+    responce = {
         "on": True,
+        "kit": {
+            "all_on": True and intentKit.loaded and  dictionaryKit.loaded,
+            "user": True,
+            "intent": intentKit.loaded,
+            "dictionary": dictionaryKit.loaded
+        },
         "users": len(userKit.users), 
         "lang": {
             "trained": list(map(lambda e: e[6:-5], list(filter(lambda e: e.endswith(".yaml"),os.listdir("./features/intent_recognition/snips/data/"))))), 
@@ -27,6 +33,7 @@ def alive(value):
         },
         "version": __version__
         }
+    return responce
 
 @intent_blueprint.route("get/train")
 def intent_train(value):

@@ -29,6 +29,46 @@
         {
           "synonyms": [],
           "value": "register"
+        },
+        {
+          "synonyms": [],
+          "value": "buy apples"
+        },
+        {
+          "synonyms": [],
+          "value": "buy a car"
+        },
+        {
+          "synonyms": [],
+          "value": "sing"
+        },
+        {
+          "synonyms": [],
+          "value": "sing happy birth day"
+        },
+        {
+          "synonyms": [],
+          "value": "make a cake"
+        },
+        {
+          "synonyms": [],
+          "value": "make a program that does somethigs"
+        },
+        {
+          "synonyms": [],
+          "value": "create somthing"
+        },
+        {
+          "synonyms": [],
+          "value": "create"
+        },
+        {
+          "synonyms": [],
+          "value": "make"
+        },
+        {
+          "synonyms": [],
+          "value": "feed"
         }
       ],
       "matching_strictness": 0.8,
@@ -1960,15 +2000,15 @@
         },
         {
           "synonyms": [],
-          "value": "Mom"
+          "value": "mom"
         },
         {
           "synonyms": [],
-          "value": "Dad"
+          "value": "dad"
         },
         {
           "synonyms": [],
-          "value": "Sister"
+          "value": "sister"
         },
         {
           "synonyms": [],
@@ -1980,7 +2020,11 @@
         },
         {
           "synonyms": [],
-          "value": "Fibi"
+          "value": "fibi"
+        },
+        {
+          "synonyms": [],
+          "value": "you"
         }
       ],
       "matching_strictness": 0.6,
@@ -3976,7 +4020,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Dad"
+              "text": "mom"
             },
             {
               "text": " "
@@ -3996,7 +4040,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Sister"
+              "text": "dad"
             },
             {
               "text": " "
@@ -4521,7 +4565,119 @@
             {
               "entity": "person",
               "slot_name": "person",
+              "text": "sister"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "4:30 pm"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "register"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
               "text": "Cat"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "in 1 hour"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "buy apples"
+            },
+            {
+              "text": " to my "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "Dog"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "the 3rd tuesday of June"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "buy a car"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "fibi"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "tomorrow at 9pm"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "sing"
+            },
+            {
+              "text": " for "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "you"
             }
           ]
         }
@@ -4937,7 +5093,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Mom"
+              "text": "mom"
             }
           ]
         },
@@ -4957,7 +5113,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Dad"
+              "text": "dad"
             }
           ]
         },
@@ -4969,7 +5125,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Sister"
+              "text": "sister"
             }
           ]
         },
@@ -5005,7 +5161,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Fibi"
+              "text": "fibi"
             },
             {
               "text": " in "
@@ -5025,7 +5181,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "me"
+              "text": "you"
             },
             {
               "text": " in "
@@ -5045,7 +5201,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Mom"
+              "text": "me"
             },
             {
               "text": " in "

@@ -222,7 +222,12 @@ slots:
     entity: snips/datetime
 utterances:
   - Remeber me [time] to do [action]
+  - Remeber me [time] to [action]
   - Remeber me [time] to [action] my [person]
+  - Remeber me [time] to [action] [person]
+  - Remeber me [time] to [action] to my [person]
+  - Remeber me [time] to [action] to [person]
+  - Remeber me [time] to [action] for [person]
 
 ---
 type: intent
@@ -412,33 +417,33 @@ type: entity
 name: room
 automatically_extensible: no
 values:
-- bedroom
-- [living room, main room, lounge]
-- [garden, yard, backyard]
+  - bedroom
+  - [living room, main room, lounge]
+  - [garden, yard, backyard]
 
 ---
 type: entity
 name: musicDo
 automatically_extensible: false
 values:
-- resume
-- [playpause, play, pause, pause it, play it, stop the song, stop it, start the song]
-- fast forward
+  - resume
+  - [playpause, play, pause, pause it, play it, stop the song, stop it, start the song]
+  - fast forward
 
 ---
 type: entity
 name: musicGenre
 automatically_extensible: true
 values:
-- [Christian/Gospel, gospel, christian]
-- Music
-- Pop
-- Praise & Worship
-- Rap
-- Worship
-- [Acapela, Voice made]
-- Rock
-- Worship
+  - [Christian/Gospel, gospel, christian]
+  - Music
+  - Pop
+  - Praise & Worship
+  - Rap
+  - Worship
+  - [Acapela, Voice made]
+  - Rock
+  - Worship
 
 ---
 type: entity
@@ -446,8 +451,8 @@ name: musicTrackAction
 automatically_extensible: false
 use_synonyms: false # default value is true
 values:
-- next
-- back
+  - next
+  - back
 
 ---
 type: entity
@@ -455,12 +460,12 @@ name: mathFunctions
 automatically_extensible: false
 use_synonyms: true # default value is true
 values:
-- [sen, seno, sin]
-- [sinh, senh, arch-sen, arch-sin]
-- [cosh, arch-cos]
-- [cos, cosen, coseno]
-- [tan, tangen, tangente]
-- [sqrt, square root, square-root]
+  - [sen, seno, sin]
+  - [sinh, senh, arch-sen, arch-sin]
+  - [cosh, arch-cos]
+  - [cos, cosen, coseno]
+  - [tan, tangen, tangente]
+  - [sqrt, square root, square-root]
 
 
 
@@ -470,9 +475,9 @@ name: musicReapeatOptions
 automatically_extensible: false
 use_synonyms: false # default value is true
 values:
-- One
-- All
-- \[off, none]
+  - One
+  - All
+  - \[off, none]
 
 
 ---
@@ -480,9 +485,9 @@ type: entity
 name: timeOfDay
 automatically_extensible: no
 values:
-- Morning
-- Affternoon
-- Night
+  - Morning
+  - Affternoon
+  - Night
 
 # City Entity
 ---
@@ -521,12 +526,13 @@ use_synonyms: false # default value is true
 matching_strictness: 0.6 # default value is 1.0
 values:
   - me
-  - Mom
-  - Dad
-  - Sister
+  - mom
+  - dad
+  - sister
   - Cat
   - Dog
-  - Fibi
+  - fibi
+  - you
 
 ---
 type: entity
@@ -551,6 +557,16 @@ values:
   - call
   - buy
   - register
+  - buy apples
+  - buy a car
+  - sing
+  - sing happy birth day
+  - make a cake
+  - make a program that does somethigs
+  - create somthing
+  - create
+  - make
+  - feed
 
 ---
 type: entity
@@ -736,8 +752,6 @@ matching_strictness: 0.7 # default value is 1.0
 values:
   - [positive, bigger than zero]
   - [negative, smaller than zero]
-
-
 
 ---
 type: entity

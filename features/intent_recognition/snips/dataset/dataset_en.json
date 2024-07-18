@@ -1401,12 +1401,14 @@
           "value": "plus"
         },
         {
-          "synonyms": [],
+          "synonyms": [
+            "subtracted"
+          ],
           "value": "minus"
         },
         {
           "synonyms": [],
-          "value": "elavated"
+          "value": "elevated"
         }
       ],
       "matching_strictness": 0.8,
@@ -2480,22 +2482,8 @@
         }
       ]
     },
-    "alex@repeat": {
+    "alex@recall": {
       "utterances": [
-        {
-          "data": [
-            {
-              "text": "Repeat"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Again"
-            }
-          ]
-        },
         {
           "data": [
             {
@@ -2556,6 +2544,45 @@
           "data": [
             {
               "text": "Make other"
+            }
+          ]
+        }
+      ]
+    },
+    "alex@repeat": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Repeat"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Again"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I did not hear you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I could not hear you"
             }
           ]
         }
@@ -3951,7 +3978,15 @@
         {
           "data": [
             {
-              "text": "\\"
+              "text": "What is "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "first_number",
+              "text": "twenty one"
+            },
+            {
+              "text": " "
             },
             {
               "entity": "mathoperation",
@@ -3960,6 +3995,46 @@
             },
             {
               "text": " by "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "second_number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "multiply"
+            },
+            {
+              "text": " by "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "over"
+            },
+            {
+              "text": " with "
             },
             {
               "entity": "snips/number",
@@ -3976,10 +4051,10 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "multiply"
+              "text": "divided"
             },
             {
-              "text": " with "
+              "text": " that with "
             },
             {
               "entity": "snips/number",
@@ -3996,10 +4071,10 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
-              "text": "over"
+              "text": "over it by"
             },
             {
-              "text": " that with "
+              "text": " that by "
             },
             {
               "entity": "snips/number",
@@ -4398,6 +4473,20 @@
         {
           "data": [
             {
+              "text": "How r u"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How are u"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
               "text": "How are you Alex"
             }
           ]
@@ -4411,6 +4500,41 @@
               "entity": "mood",
               "slot_name": "mood",
               "text": "Neutral"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How are you doing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How are you doing Alex"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How are you doing today"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How r you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "How are you doing today Alex"
             }
           ]
         }
@@ -4558,14 +4682,6 @@
               "entity": "action",
               "slot_name": "action",
               "text": "buy"
-            },
-            {
-              "text": " my "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "sister"
             }
           ]
         },
@@ -4588,12 +4704,12 @@
               "text": "register"
             },
             {
-              "text": " "
+              "text": " my "
             },
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Cat"
+              "text": "sister"
             }
           ]
         },
@@ -4616,12 +4732,12 @@
               "text": "buy apples"
             },
             {
-              "text": " to my "
+              "text": " "
             },
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Dog"
+              "text": "Cat"
             }
           ]
         },
@@ -4644,12 +4760,12 @@
               "text": "buy a car"
             },
             {
-              "text": " to "
+              "text": " to my "
             },
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "fibi"
+              "text": "Dog"
             }
           ]
         },
@@ -4670,6 +4786,34 @@
               "entity": "action",
               "slot_name": "action",
               "text": "sing"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "fibi"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "today"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "sing happy birth day"
             },
             {
               "text": " for "

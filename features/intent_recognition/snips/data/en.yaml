@@ -20,6 +20,14 @@ name: alex@repeat
 utterances:
   - Repeat
   - Again
+  - What
+  - I did not hear you
+  - I could not hear you
+
+---
+type: intent
+name: alex@recall
+utterances:
   - Another one
   - Try again
   - Give it another try
@@ -129,8 +137,15 @@ type: intent
 name: saudation@how.are.u
 utterances:
   - How are you
+  - How r u
+  - How are u
   - How are you Alex
   - Are you [mood]
+  - How are you doing
+  - How are you doing Alex
+  - How are you doing today
+  - How r you
+  - How are you doing today Alex
 
 ---
 type: intent
@@ -189,9 +204,11 @@ slots:
 utterances:
   - How much is [first_number] [mathoperation] [second_number]
   - How much is [first_number] [mathoperation] by [second_number]
+  - What is [first_number] [mathoperation] by [second_number]
   - \[mathoperation] by [number]
   - \[mathoperation] with [number]
   - \[mathoperation] that with [number]
+  - \[mathoperation] that by [number]
 
 ---
 type: intent
@@ -544,8 +561,8 @@ values:
   - [times, multiplied, timed by, multiply]
   - [over, divided, over it by, divide]
   - [plus, and, added to, add, with]
-  - minus
-  - elavated
+  - [minus, subtracted]
+  - elevated
 
 ---
 type: entity

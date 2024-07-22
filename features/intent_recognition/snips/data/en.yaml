@@ -126,9 +126,9 @@ utterances:
 type: intent
 name: saudation@tanks
 utterances:
-  - Tanks
-  - Tanks you
-  - tank you
+  - Thanks
+  - Thanks you
+  - Thank you
   - Apreciated
   - Great
 
@@ -202,12 +202,16 @@ slots:
   - name: number
     entity: snips/number
 utterances:
+  - \[first_number] [mathoperation] [second_number]
   - How much is [first_number] [mathoperation] [second_number]
   - How much is [first_number] [mathoperation] by [second_number]
   - What is [first_number] [mathoperation] by [second_number]
   - \[mathoperation] by [number]
+  - \[mathoperation] dad by [number]
+  - \[mathoperation] [number]
   - \[mathoperation] with [number]
   - \[mathoperation] that with [number]
+  - \[mathoperation] dad with [number]
   - \[mathoperation] that by [number]
 
 ---
@@ -221,6 +225,11 @@ slots:
 utterances:
   - What is the [func] of [number]
   - \[func] of [number] is what
+  - \[func] of it
+  - What is it \[func]
+  - What is the \[func] of it
+  - \[func] of that
+  - \[func] of dad
 
 ---
 type: intent
@@ -562,7 +571,7 @@ values:
   - [over, divided, over it by, divide]
   - [plus, and, added to, add, with]
   - [minus, subtracted]
-  - elevated
+  - [elevated, elevate it]
 
 ---
 type: entity

@@ -1407,7 +1407,9 @@
           "value": "minus"
         },
         {
-          "synonyms": [],
+          "synonyms": [
+            "elevate it"
+          ],
           "value": "elevated"
         }
       ],
@@ -3157,7 +3159,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " even or odd"
@@ -3172,7 +3174,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " "
@@ -3192,7 +3194,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " is even or odd"
@@ -3207,7 +3209,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " is "
@@ -3239,7 +3241,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3259,7 +3261,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " is what"
@@ -3503,7 +3505,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3511,7 +3513,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3523,7 +3525,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3531,7 +3533,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3543,7 +3545,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3551,7 +3553,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3571,7 +3573,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3579,7 +3581,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3599,7 +3601,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3607,7 +3609,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3627,7 +3629,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3635,7 +3637,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3663,7 +3665,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3671,7 +3673,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3699,7 +3701,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3707,7 +3709,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3735,7 +3737,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3743,7 +3745,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3763,7 +3765,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3771,7 +3773,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3791,7 +3793,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3799,7 +3801,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3819,7 +3821,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3827,7 +3829,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3847,7 +3849,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3855,7 +3857,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3875,7 +3877,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3883,7 +3885,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3903,7 +3905,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3911,7 +3913,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         }
@@ -3922,7 +3924,7 @@
         {
           "data": [
             {
-              "text": "How much is "
+              "text": "\\"
             },
             {
               "entity": "snips/number",
@@ -3966,7 +3968,7 @@
               "text": "multiplied"
             },
             {
-              "text": " by "
+              "text": " "
             },
             {
               "entity": "snips/number",
@@ -3978,7 +3980,7 @@
         {
           "data": [
             {
-              "text": "What is "
+              "text": "How much is "
             },
             {
               "entity": "snips/number",
@@ -4006,7 +4008,15 @@
         {
           "data": [
             {
-              "text": "\\"
+              "text": "What is "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "first_number",
+              "text": "2001"
+            },
+            {
+              "text": " "
             },
             {
               "entity": "mathoperation",
@@ -4018,8 +4028,8 @@
             },
             {
               "entity": "snips/number",
-              "slot_name": "number",
-              "text": "2001"
+              "slot_name": "second_number",
+              "text": "twenty one"
             }
           ]
         },
@@ -4034,27 +4044,7 @@
               "text": "over"
             },
             {
-              "text": " with "
-            },
-            {
-              "entity": "snips/number",
-              "slot_name": "number",
-              "text": "twenty one"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "\\"
-            },
-            {
-              "entity": "mathoperation",
-              "slot_name": "mathoperation",
-              "text": "divided"
-            },
-            {
-              "text": " that with "
+              "text": " by "
             },
             {
               "entity": "snips/number",
@@ -4071,7 +4061,87 @@
             {
               "entity": "mathoperation",
               "slot_name": "mathoperation",
+              "text": "divided"
+            },
+            {
+              "text": " dad by "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
               "text": "over it by"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "divide"
+            },
+            {
+              "text": " with "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "three hundred and four"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "plus"
+            },
+            {
+              "text": " that with "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "2001"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "and"
             },
             {
               "text": " that by "
@@ -4079,7 +4149,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         }
@@ -4545,21 +4615,21 @@
         {
           "data": [
             {
-              "text": "Tanks"
+              "text": "Thanks"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "Tanks you"
+              "text": "Thanks you"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "tank you"
+              "text": "Thank you"
             }
           ]
         },

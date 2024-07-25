@@ -1273,6 +1273,63 @@
       "matching_strictness": 0.7,
       "use_synonyms": true
     },
+    "list_name": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [
+            "things to buy",
+            "buy"
+          ],
+          "value": "shopping"
+        },
+        {
+          "synonyms": [],
+          "value": "Fix"
+        },
+        {
+          "synonyms": [],
+          "value": "Project"
+        },
+        {
+          "synonyms": [
+            "Brain Storm",
+            "Project Ideas"
+          ],
+          "value": "Ideas"
+        },
+        {
+          "synonyms": [],
+          "value": "Movies"
+        },
+        {
+          "synonyms": [],
+          "value": "Songs"
+        },
+        {
+          "synonyms": [],
+          "value": "Anime"
+        },
+        {
+          "synonyms": [],
+          "value": "Tv Shows"
+        },
+        {
+          "synonyms": [],
+          "value": "Games"
+        },
+        {
+          "synonyms": [],
+          "value": "Apps"
+        },
+        {
+          "synonyms": [],
+          "value": "Subscription"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": true
+    },
     "mathFunctions": {
       "automatically_extensible": false,
       "data": [
@@ -1990,6 +2047,121 @@
         {
           "synonyms": [],
           "value": "back"
+        }
+      ],
+      "matching_strictness": 1.0,
+      "use_synonyms": false
+    },
+    "object": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "run"
+        },
+        {
+          "synonyms": [],
+          "value": "pizza"
+        },
+        {
+          "synonyms": [],
+          "value": "hamburger"
+        },
+        {
+          "synonyms": [],
+          "value": "lunch"
+        },
+        {
+          "synonyms": [],
+          "value": "play"
+        },
+        {
+          "synonyms": [],
+          "value": "read"
+        },
+        {
+          "synonyms": [],
+          "value": "study"
+        },
+        {
+          "synonyms": [],
+          "value": "order"
+        },
+        {
+          "synonyms": [],
+          "value": "leave"
+        },
+        {
+          "synonyms": [],
+          "value": "apple"
+        },
+        {
+          "synonyms": [],
+          "value": "milk"
+        },
+        {
+          "synonyms": [],
+          "value": "something"
+        },
+        {
+          "synonyms": [],
+          "value": "bread and milk"
+        },
+        {
+          "synonyms": [],
+          "value": "bread"
+        },
+        {
+          "synonyms": [],
+          "value": "soup"
+        },
+        {
+          "synonyms": [],
+          "value": "pencil"
+        },
+        {
+          "synonyms": [],
+          "value": "Test Paper"
+        },
+        {
+          "synonyms": [],
+          "value": "Cat food"
+        },
+        {
+          "synonyms": [],
+          "value": "Fish"
+        },
+        {
+          "synonyms": [],
+          "value": "Raw meat"
+        },
+        {
+          "synonyms": [],
+          "value": "Elephant"
+        },
+        {
+          "synonyms": [],
+          "value": "Tv"
+        },
+        {
+          "synonyms": [],
+          "value": "Iphone"
+        },
+        {
+          "synonyms": [],
+          "value": "Phone"
+        },
+        {
+          "synonyms": [],
+          "value": "Earbuds"
+        },
+        {
+          "synonyms": [],
+          "value": "Money"
+        },
+        {
+          "synonyms": [],
+          "value": "Meat"
         }
       ],
       "matching_strictness": 1.0,
@@ -3149,6 +3321,472 @@
         }
       ]
     },
+    "list@add": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Add "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "pizza"
+            },
+            {
+              "text": " to my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "shopping"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Add a "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "hamburger"
+            },
+            {
+              "text": " to my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "things to buy"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Add "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "lunch"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "buy"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Add a "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "play"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Fix"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Add "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "read"
+            },
+            {
+              "text": " to the "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Project"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Add to the "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Ideas"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Add "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "study"
+            },
+            {
+              "text": " to the list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Add a "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "order"
+            },
+            {
+              "text": " to the list"
+            }
+          ]
+        }
+      ]
+    },
+    "list@clear": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Delete "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "milk"
+            },
+            {
+              "text": " from my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Games"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Delete "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "something"
+            },
+            {
+              "text": " from the "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Apps"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remove "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "bread and milk"
+            },
+            {
+              "text": " from my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Subscription"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remove "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "bread"
+            },
+            {
+              "text": " from the "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "shopping"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Clear the "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "things to buy"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Clear the my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "buy"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        }
+      ]
+    },
+    "list@get": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Tell me "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Brain Storm"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me the things in my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Project Ideas"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me what is on my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Movies"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is on my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Songs"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "leave"
+            },
+            {
+              "text": " in my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Anime"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "apple"
+            },
+            {
+              "text": " on the "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Tv Shows"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        }
+      ]
+    },
+    "list@update": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Change "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "soup"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "object",
+              "slot_name": "new_entity",
+              "text": "pencil"
+            },
+            {
+              "text": " on my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Fix"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Change "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "Test Paper"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "object",
+              "slot_name": "new_entity",
+              "text": "Cat food"
+            },
+            {
+              "text": " in my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Project"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        }
+      ]
+    },
     "math@even.or.odd": {
       "utterances": [
         {
@@ -3159,7 +3797,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " even or odd"
@@ -3174,7 +3812,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " "
@@ -3194,7 +3832,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " is even or odd"
@@ -3209,7 +3847,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " is "
@@ -3241,7 +3879,7 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3261,10 +3899,82 @@
             {
               "entity": "snips/number",
               "slot_name": "number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " is what"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathFunctions",
+              "slot_name": "func",
+              "text": "sin"
+            },
+            {
+              "text": " of it"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is it \\"
+            },
+            {
+              "entity": "mathFunctions",
+              "slot_name": "func",
+              "text": "sinh"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is the \\"
+            },
+            {
+              "entity": "mathFunctions",
+              "slot_name": "func",
+              "text": "senh"
+            },
+            {
+              "text": " of it"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathFunctions",
+              "slot_name": "func",
+              "text": "arch-sen"
+            },
+            {
+              "text": " of that"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathFunctions",
+              "slot_name": "func",
+              "text": "arch-sin"
+            },
+            {
+              "text": " of dad"
             }
           ]
         }
@@ -3505,7 +4215,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3513,7 +4223,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3525,7 +4235,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3533,7 +4243,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3545,7 +4255,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3553,7 +4263,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3573,7 +4283,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3581,7 +4291,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3601,7 +4311,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3609,7 +4319,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3629,7 +4339,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3637,7 +4347,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3665,7 +4375,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3673,7 +4383,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3701,7 +4411,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3709,7 +4419,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3737,7 +4447,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3745,7 +4455,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3765,7 +4475,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3773,7 +4483,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3793,7 +4503,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3801,7 +4511,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3821,7 +4531,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3829,7 +4539,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         },
@@ -3849,7 +4559,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "three hundred and four"
+              "text": "2001"
             },
             {
               "text": " to "
@@ -3857,7 +4567,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "2001"
+              "text": "twenty one"
             }
           ]
         },
@@ -3877,7 +4587,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             },
             {
               "text": " to "
@@ -3885,7 +4595,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "three hundred and four"
+              "text": "2001"
             }
           ]
         },
@@ -3905,7 +4615,7 @@
             {
               "entity": "snips/number",
               "slot_name": "smaller_number",
-              "text": "2001"
+              "text": "twenty one"
             },
             {
               "text": " to "
@@ -3913,7 +4623,7 @@
             {
               "entity": "snips/number",
               "slot_name": "bigger_number",
-              "text": "twenty one"
+              "text": "three hundred and four"
             }
           ]
         }
@@ -4144,12 +4854,32 @@
               "text": "and"
             },
             {
-              "text": " that by "
+              "text": " dad with "
             },
             {
               "entity": "snips/number",
               "slot_name": "number",
               "text": "twenty one"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "mathoperation",
+              "slot_name": "mathoperation",
+              "text": "added to"
+            },
+            {
+              "text": " that by "
+            },
+            {
+              "entity": "snips/number",
+              "slot_name": "number",
+              "text": "three hundred and four"
             }
           ]
         }
@@ -4474,6 +5204,34 @@
           "data": [
             {
               "text": "What is playing"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What song is this"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is this songs"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is this song name"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "What is currently playing"
             }
           ]
         }
@@ -4990,6 +5748,26 @@
               "entity": "snips/duration",
               "slot_name": "duration",
               "text": "1h"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set a "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "run"
+            },
+            {
+              "text": " timer for "
+            },
+            {
+              "entity": "snips/duration",
+              "slot_name": "duration",
+              "text": "during two minutes"
             }
           ]
         }

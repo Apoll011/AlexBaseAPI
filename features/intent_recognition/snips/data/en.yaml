@@ -237,9 +237,76 @@ name: set@timer
 slots:
   - name: duration
     entity: snips/duration
+  - name: entity
+    entity: object
 utterances:
   - Set a timer for [duration]
+  - Set a [entity] timer for [duration]
 
+---
+type: intent
+name: list@add
+slots:
+  - name: list
+    entity: list_name
+  - name: entity
+    entity: object
+utterances:
+  - Add [entity] to my [list] list
+  - Add a [entity] to my [list] list
+  - Add [entity] to [list] list
+  - Add a [entity] to [list] list
+  - Add [entity] to the [list] list
+  - Add to the [list] list
+  - Add [entity] to the list
+  - Add a [entity] to the list
+
+---
+type: intent
+name: list@get
+slots:
+  - name: list
+    entity: list_name
+  - name: entity
+    entity: object
+utterances:
+  - Tell me [list] list
+  - Tell me the things in my [list] list
+  - Tell me what is on my [list] list
+  - What is on my [list] list
+  - Is [entity] in my [list] list
+  - Is [entity] on the [list] list
+
+---
+type: intent
+name: list@clear
+slots:
+  - name: list
+    entity: list_name
+  - name: entity
+    entity: object
+utterances:
+  - Delete [entity] from my [list] list
+  - Delete [entity] from the [list] list
+  - Remove [entity] from my [list] list
+  - Remove [entity] from the [list] list
+  - Clear the [list] list
+  - Clear the my [list] list
+
+---
+type: intent
+name: list@update
+slots:
+  - name: list
+    entity: list_name
+  - name: entity
+    entity: object
+  - name: new_entity
+    entity: object
+utterances:
+  - Change [entity] to [new_entity] on my [list] list
+  - Change [entity] to [new_entity] in my [list] list
+  
 ---
 type: intent
 name: set@reminder
@@ -365,6 +432,10 @@ utterances:
   - This song
   - Whats the name of this song
   - What is playing
+  - What song is this
+  - What is this songs
+  - What is this song name
+  - What is currently playing
 
 ---
 type: intent
@@ -470,6 +541,58 @@ values:
   - [Acapela, Voice made]
   - Rock
   - Worship
+
+---
+type: entity
+name: object
+automatically_extensible: true
+use_synonyms: false # default value is true
+values:
+  - run
+  - pizza
+  - hamburger
+  - lunch
+  - play
+  - read
+  - study
+  - order
+  - leave
+  - apple
+  - milk
+  - something
+  - bread and milk
+  - bread
+  - soup
+  - pencil
+  - Test Paper
+  - Cat food
+  - Fish
+  - Raw meat
+  - Elephant
+  - Tv
+  - Iphone
+  - Phone
+  - Earbuds
+  - Money
+  - Meat
+
+---
+type: entity
+name: list_name
+automatically_extensible: true
+use_synonyms: true 
+values:
+  - [shopping, things to buy, buy]
+  - Fix
+  - Project
+  - [Ideas, Brain Storm, Project Ideas]
+  - Movies
+  - Songs
+  - Anime
+  - Tv Shows
+  - Games
+  - Apps
+  - Subscription
 
 ---
 type: entity

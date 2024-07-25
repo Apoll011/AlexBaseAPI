@@ -260,6 +260,9 @@ utterances:
   - Add to the [list] list
   - Add [entity] to the list
   - Add a [entity] to the list
+  - \[entity] book to my [list] list 
+  - to my [list] list 
+  - What a [entity] to my [list] list 
 
 ---
 type: intent

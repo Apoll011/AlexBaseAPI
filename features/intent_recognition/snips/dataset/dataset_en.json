@@ -3482,6 +3482,44 @@
               "text": " to the list"
             }
           ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "leave"
+            },
+            {
+              "text": " book to my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Brain Storm"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "to my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Project Ideas"
+            },
+            {
+              "text": " list"
+            }
+          ]
         }
       ]
     },
@@ -3495,53 +3533,7 @@
             {
               "entity": "object",
               "slot_name": "entity",
-              "text": "milk"
-            },
-            {
-              "text": " from my "
-            },
-            {
-              "entity": "list_name",
-              "slot_name": "list",
-              "text": "Games"
-            },
-            {
-              "text": " list"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Delete "
-            },
-            {
-              "entity": "object",
-              "slot_name": "entity",
               "text": "something"
-            },
-            {
-              "text": " from the "
-            },
-            {
-              "entity": "list_name",
-              "slot_name": "list",
-              "text": "Apps"
-            },
-            {
-              "text": " list"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Remove "
-            },
-            {
-              "entity": "object",
-              "slot_name": "entity",
-              "text": "bread and milk"
             },
             {
               "text": " from my "
@@ -3559,12 +3551,12 @@
         {
           "data": [
             {
-              "text": "Remove "
+              "text": "Delete "
             },
             {
               "entity": "object",
               "slot_name": "entity",
-              "text": "bread"
+              "text": "bread and milk"
             },
             {
               "text": " from the "
@@ -3582,7 +3574,15 @@
         {
           "data": [
             {
-              "text": "Clear the "
+              "text": "Remove "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "bread"
+            },
+            {
+              "text": " from my "
             },
             {
               "entity": "list_name",
@@ -3597,12 +3597,50 @@
         {
           "data": [
             {
-              "text": "Clear the my "
+              "text": "Remove "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "soup"
+            },
+            {
+              "text": " from the "
             },
             {
               "entity": "list_name",
               "slot_name": "list",
               "text": "buy"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Clear the "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Fix"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Clear the my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Project"
             },
             {
               "text": " list"
@@ -3621,7 +3659,7 @@
             {
               "entity": "list_name",
               "slot_name": "list",
-              "text": "Brain Storm"
+              "text": "Movies"
             },
             {
               "text": " list"
@@ -3636,7 +3674,7 @@
             {
               "entity": "list_name",
               "slot_name": "list",
-              "text": "Project Ideas"
+              "text": "Songs"
             },
             {
               "text": " list"
@@ -3651,7 +3689,7 @@
             {
               "entity": "list_name",
               "slot_name": "list",
-              "text": "Movies"
+              "text": "Anime"
             },
             {
               "text": " list"
@@ -3666,30 +3704,7 @@
             {
               "entity": "list_name",
               "slot_name": "list",
-              "text": "Songs"
-            },
-            {
-              "text": " list"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Is "
-            },
-            {
-              "entity": "object",
-              "slot_name": "entity",
-              "text": "leave"
-            },
-            {
-              "text": " in my "
-            },
-            {
-              "entity": "list_name",
-              "slot_name": "list",
-              "text": "Anime"
+              "text": "Tv Shows"
             },
             {
               "text": " list"
@@ -3707,12 +3722,35 @@
               "text": "apple"
             },
             {
+              "text": " in my "
+            },
+            {
+              "entity": "list_name",
+              "slot_name": "list",
+              "text": "Games"
+            },
+            {
+              "text": " list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Is "
+            },
+            {
+              "entity": "object",
+              "slot_name": "entity",
+              "text": "milk"
+            },
+            {
               "text": " on the "
             },
             {
               "entity": "list_name",
               "slot_name": "list",
-              "text": "Tv Shows"
+              "text": "Apps"
             },
             {
               "text": " list"
@@ -3731,7 +3769,7 @@
             {
               "entity": "object",
               "slot_name": "entity",
-              "text": "soup"
+              "text": "pencil"
             },
             {
               "text": " to "
@@ -3739,7 +3777,7 @@
             {
               "entity": "object",
               "slot_name": "new_entity",
-              "text": "pencil"
+              "text": "Test Paper"
             },
             {
               "text": " on my "
@@ -3747,7 +3785,7 @@
             {
               "entity": "list_name",
               "slot_name": "list",
-              "text": "Fix"
+              "text": "Ideas"
             },
             {
               "text": " list"
@@ -3762,7 +3800,7 @@
             {
               "entity": "object",
               "slot_name": "entity",
-              "text": "Test Paper"
+              "text": "Cat food"
             },
             {
               "text": " to "
@@ -3770,7 +3808,7 @@
             {
               "entity": "object",
               "slot_name": "new_entity",
-              "text": "Cat food"
+              "text": "Fish"
             },
             {
               "text": " in my "
@@ -3778,7 +3816,7 @@
             {
               "entity": "list_name",
               "slot_name": "list",
-              "text": "Project"
+              "text": "Brain Storm"
             },
             {
               "text": " list"

@@ -70,6 +70,25 @@ utterances:
 
 ---
 type: intent
+name: eliza@start
+utterances:
+  - Ema
+  - Start Ema
+  - Ema Mode
+  - Can you turn on Ema
+  - I want to talk with Ema
+  - Put Ema on the command
+  - Eliza
+  - I need somebody too talk with
+  - Can I talk with you
+  - I am not ok
+  - I wannt too talk with some one
+  - Eliza Mode
+  - Psiciatric Mode
+  - I need help
+
+---
+type: intent
 name: wec@is.a.country
 utterances:
   - Is [contry] a country?
@@ -385,7 +404,7 @@ utterances:
 
 ---
 type: intent
-name: play@music
+name: music@play
 slots:
   - name: track
     entity: musicTrack
@@ -414,7 +433,7 @@ utterances:
 
 ---
 type: intent
-name: play@music.do
+name: music@do
 slots:
   - name: shuffleEnabled
     entity: TrueOrFalse
@@ -429,7 +448,7 @@ utterances:
 
 ---
 type: intent
-name: play@music.whats.playing
+name: music@whats.playing
 utterances:
   - What this song
   - This song

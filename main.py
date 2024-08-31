@@ -3,14 +3,22 @@ import uvicorn
 from models import *
 from features.kit import *
 from fastapi import FastAPI, Query
-from config import __version__ 
+from config import __version__, api
 from typing_extensions import Annotated
 
 app = FastAPI(title="Alex Server", version=__version__, description="Alex api server that handes complex and heavy tasks such an nlp user managements etc.", summary="Alex base server used for handling heavy functions", contact={"name": "Tiago Bernardo", "email": "tiagorobotik@gmail.com"}, license_info={"name": "Apache 2.0","url": "https://www.apache.org/licenses/LICENSE-2.0.html",})
 
+
 userKit = UserKit()
 intentKit = IntentKit()
 dictionaryKit = DictionaryKit()
+
+"""
+TO ADD:
+/auth
+/close
+/user/delete
+"""
 
 @app.get("/alex/alive", name="Check If Alive", description="This checks if alex is running and send the basic values")
 async def alive():
@@ -55,7 +63,7 @@ async def user_search_name(name: Annotated[str, Query(max_length=65, min_length=
     return {"users": userKit.searchUser.by_name(name)}
 
 @app.get("/users/search/tags", name="Search users by tags", description="Will search user using the tags each one has. Query is the tags name, exclude is a list of ids the exclud from the result, condition is (The sign to compare to the intensity: <, >, <=, >=, !=, =):(the Intensity of the tag) ex query=Friend, exclude=['0000000001(Master user id)'], condition = '>:50'. will return all the more that 50% friends excluding the master user.")
-async def user_search(search: TagsSearch):
+async def user_search(search: TagsSearch): #FIXME: This bugs on browser 
     try:
         return {"users": userKit.searchUser.by_tags(search.query, search.condition, search.exclude)}
     except Exception:
@@ -90,4 +98,4 @@ async def load_dic(lang:Lang = Lang.EN):
         return {"error": "Unable to load dictionary"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host=api["HOST"], port=api["PORT"])

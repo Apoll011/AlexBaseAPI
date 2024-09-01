@@ -4,7 +4,7 @@ from models import *
 from features.kit import *
 from fastapi import FastAPI, Query
 from config import __version__, api
-from typing_extensions import Annotated
+from typing_extensions import Annotated, Literal
 
 userKit = UserKit()
 intentKit = IntentKit()
@@ -16,8 +16,6 @@ app = FastAPI(title="Alex Server", version=__version__, description="Alex api se
 """
 TO ADD:
 /auth
-/close
-/user/delete
 """
 @app.get("/", name="Route")
 async def roote():
@@ -66,6 +64,10 @@ async def intent_reconize(text: Annotated[str, Query(max_length=250, min_length=
 async def user_search_name(name: Annotated[str, Query(max_length=65, min_length=2)]):
     return {"users": userKit.searchUser.by_name(name)}
 
+@app.options("/users", name="Get all users ID")
+async def get_users_id() -> List[str]:
+    return userKit.all()
+
 @app.get("/users/search/tags", name="Search users by tags", description="Will search user using the tags each one has. Query is the tags name, exclude is a list of ids the exclud from the result, condition is (The sign to compare to the intensity: <, >, <=, >=, !=, =):(the Intensity of the tag) ex query=Friend, exclude=['0000000001(Master user id)'], condition = '>:50'. will return all the more that 50% friends excluding the master user.")
 async def user_search(search: TagsSearch): #FIXME: This bugs on browser 
     try:
@@ -74,7 +76,7 @@ async def user_search(search: TagsSearch): #FIXME: This bugs on browser
         return {"error": "An error occurered"}
 
 @app.get("/user/get", name="Get user object", description="gets an user object from a given id eg: 0815636592")
-async def user_get(id: Annotated[str, Query(max_length=10, min_length=10)]):
+async def user_get(id: Annotated[str, Query(min_length=10)]):
     return userKit.getUser.by_id(id)
 
 @app.put("/user/create", name="Create user", description="Will create an user from an user object")

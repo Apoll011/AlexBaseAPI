@@ -64,14 +64,17 @@ class IntentKit:
 
 class UserKit:
     users = []
+    ids = []
     def __init__(self) -> None:
         self.update()
 
     def update(self):
         self.users = []
         for user in os.listdir("./features/user_backend/users"):
-            us = open("./features/user_backend/users/"+user, "r")
-            self.users.append(json.load(us))
+            us = json.load(open("./features/user_backend/users/"+user, "r"))
+            self.users.append(us)
+            self.ids.append(us['id'])
+
         self.searchUser = SearchUsers(self.users)
         self.getUser = GetUsers(self.users)
         self.createUserFuntion = CreateUsers
@@ -87,3 +90,6 @@ class UserKit:
             return True
         except:
             return False
+    
+    def all(self):
+        return self.ids

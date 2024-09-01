@@ -97,6 +97,10 @@ async def load_dic(lang:Lang = Lang.EN):
     except Exception:
         return {"error": "Unable to load dictionary"}
 
+@app.get("/close")
+async def close():
+    return {"responce": True}
+
 if __name__ == "__main__":
     print("Started server process")
     print("Waiting for application startup.")

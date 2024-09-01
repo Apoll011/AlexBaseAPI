@@ -98,4 +98,7 @@ async def load_dic(lang:Lang = Lang.EN):
         return {"error": "Unable to load dictionary"}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host=api["HOST"], port=api["PORT"])
+    print("Started server process")
+    print("Waiting for application startup.")
+    print(f"App started on http://{api['HOST']}:{api['PORT']}")
+    uvicorn.run(app, host=api["HOST"], port=api["PORT"], log_level="warning")

@@ -19,6 +19,10 @@ TO ADD:
 /close
 /user/delete
 """
+@app.get("/", name="Route")
+async def roote():
+    return {"name": "Alex"}
+
 
 @app.get("/alex/alive", name="Check If Alive", description="This checks if alex is running and send the basic values")
 async def alive():

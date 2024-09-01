@@ -13,6 +13,9 @@ userKit = UserKit()
 intentKit = IntentKit()
 dictionaryKit = DictionaryKit()
 
+app = FastAPI(title="Alex Server", version=__version__, description="Alex api server that handes complex and heavy tasks such an nlp user managements etc.", summary="Alex base server used for handling heavy functions", contact={"name": "Tiago Bernardo", "email": "tiagorobotik@gmail.com"}, license_info={"name": "Apache 2.0","url": "https://www.apache.org/licenses/LICENSE-2.0.html",}, on_startup=[intentKit.reuse, dictionaryKit.load])
+
+
 """
 TO ADD:
 /auth

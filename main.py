@@ -6,9 +6,6 @@ from fastapi import FastAPI, Query
 from config import __version__, api
 from typing_extensions import Annotated
 
-app = FastAPI(title="Alex Server", version=__version__, description="Alex api server that handes complex and heavy tasks such an nlp user managements etc.", summary="Alex base server used for handling heavy functions", contact={"name": "Tiago Bernardo", "email": "tiagorobotik@gmail.com"}, license_info={"name": "Apache 2.0","url": "https://www.apache.org/licenses/LICENSE-2.0.html",})
-
-
 userKit = UserKit()
 intentKit = IntentKit()
 dictionaryKit = DictionaryKit()
@@ -85,8 +82,13 @@ async def user_create(user: User):
     try:
         userKit.createUser(user)
         return {"responce":True}
-    except Exception:
-        return {"error": "Wont abble to create user"}
+    except Exception as e:
+        return {"error": f"Wont abble to create user ({e})"}
+
+@app.delete("/user/delete", name="Delete user", description="Will delete an user from an given user id")
+async def user_delete(id: str):
+    responce = userKit.delete_user(id)
+    return {"responce": responce}
 
 @app.get("/dictionary/get", name="Get word from dictionary", description="Will return the definition of a given word. Return null if no match is found.")
 async def dict_get(word: Annotated[str, Query(max_length=25, min_length=2)]):

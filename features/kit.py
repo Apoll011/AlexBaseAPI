@@ -38,7 +38,6 @@ class DictionaryKit:
         s = sum(new)
         return list(map(lambda x: x/s, new))[0]
 
-    
 class IntentKit:
     
     engine = None
@@ -61,17 +60,30 @@ class IntentKit:
         self.loaded = True
 
     def parse(self, text):
-        return self.engine.parse(text)
-
+        return self.engine.parse(text) # type: ignore
 
 class UserKit:
     users = []
     def __init__(self) -> None:
+        self.update()
+
+    def update(self):
+        self.users = []
         for user in os.listdir("./features/user_backend/users"):
             us = open("./features/user_backend/users/"+user, "r")
             self.users.append(json.load(us))
-        
         self.searchUser = SearchUsers(self.users)
         self.getUser = GetUsers(self.users)
-        self.createUser = CreateUsers
-  
+        self.createUserFuntion = CreateUsers
+    
+    def createUser(self, user_data):
+        self.createUserFuntion(user_data=user_data)
+        self.update()
+
+    def delete_user(self, id):
+        try:
+            os.system(f"rm ./features/user_backend/users/{id}.user")
+            self.update()
+            return True
+        except:
+            return False

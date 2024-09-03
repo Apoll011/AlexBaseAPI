@@ -17,6 +17,7 @@ app = FastAPI(title="Alex Server", version=__version__, description="Alex api se
 TO ADD:
 /auth
 """
+
 @app.get("/", name="Route")
 async def roote():
     return {"name": "Alex"}
@@ -34,52 +35,51 @@ async def alive():
         },
         "users": len(userKit.users), 
         "lang": {
-            "trained": list(map(lambda e: e[6:-5], list(filter(lambda e: e.endswith(".yaml"),os.listdir("./features/intent_recognition/snips/data/"))))), 
-            "instaled": list(map(lambda e: e[9:-4], list(filter(lambda e: e.endswith(".json"),os.listdir("./features/intent_recognition/snips/dataset/"))))), 
+            "trained": list(filter(lambda e: e.endswith(".yaml"),os.listdir("./features/intent_recognition/snips/data/"))), 
+            "instaled": list(filter(lambda e: e.endswith(".json"),os.listdir("./features/intent_recognition/snips/dataset/"))), 
         },
         "version": __version__
         }
     return responce
 
-@app.get("/intent_recognition/get/train", name="Train the Intent Recognition Engine")
-async def intent_train():
-    return {"responce": intentKit.train()}
-
-@app.get("/intent_recognition/get/reuse", name="Load saved Engine", description="This will load teh saved intent recognition engine to memory")
-async def intent_reuse():
+@app.get("/intent_recognition/engine", name="Train or Reuse the Intent Recognition Engine")
+async def intent_train(type: IntentRecongnitionEngineTrainType = IntentRecongnitionEngineTrainType.REUSE):
     try:
-        intentKit.reuse()
+        if type == IntentRecongnitionEngineTrainType.REUSE:
+            intentKit.reuse()
+        else:
+            intentKit.train()
         return {"responce": True}
     except Exception:
         return {"responce": False}
 
-@app.get("/intent_recognition/parse", name="Recognize intent from sentence", description="This will recognize the intent from a givin sentence and return the result parsed")
+@app.get("/intent_recognition/", name="Recognize intent from sentence", description="This will recognize the intent from a givin sentence and return the result parsed")
 async def intent_reconize(text: Annotated[str, Query(max_length=250, min_length=2)]):
     try:
         return intentKit.parse(text)
     except AttributeError:
         return {"error": "Engine not trained"}
 
-@app.get("/users/get/name", name="Search user by name")
-async def user_search_name(name: Annotated[str, Query(max_length=65, min_length=2)]):
-    return {"users": userKit.searchUser.by_name(name)}
-
 @app.options("/users", name="Get all users ID")
 async def get_users_id() -> List[str]:
     return userKit.all()
 
+@app.get("/users/search/name", name="Search user by name")
+async def user_search_name(name: Annotated[str, Query(max_length=65, min_length=2)]):
+    return {"users": userKit.searchUser.by_name(name)}
+
 @app.get("/users/search/tags", name="Search users by tags", description="Will search user using the tags each one has. Query is the tags name, exclude is a list of ids the exclud from the result, condition is (The sign to compare to the intensity: <, >, <=, >=, !=, =):(the Intensity of the tag) ex query=Friend, exclude=['0000000001(Master user id)'], condition = '>:50'. will return all the more that 50% friends excluding the master user.")
-async def user_search(search: TagsSearch): #FIXME: This bugs on browser 
+async def user_search( query: Annotated[str, Query(max_length=25, min_length=2)], condition: Annotated[str, Query(max_length=6, min_length=3)] = ">:0", exclude = []): 
     try:
-        return {"users": userKit.searchUser.by_tags(search.query, search.condition, search.exclude)}
+        return {"users": userKit.searchUser.by_tags(query, condition, exclude)}
     except Exception:
         return {"error": "An error occurered"}
 
-@app.get("/user/get", name="Get user object", description="gets an user object from a given id eg: 0815636592")
+@app.get("/user/", name="Get user object", description="gets an user object from a given id eg: 0815636592")
 async def user_get(id: Annotated[str, Query(min_length=10)]):
     return userKit.getUser.by_id(id)
 
-@app.put("/user/create", name="Create user", description="Will create an user from an user object")
+@app.put("/user/", name="Create user", description="Will create an user from an user object")
 async def user_create(user: User):
     try:
         userKit.createUser(user)
@@ -87,7 +87,7 @@ async def user_create(user: User):
     except Exception as e:
         return {"error": f"Wont abble to create user ({e})"}
 
-@app.delete("/user/delete", name="Delete user", description="Will delete an user from an given user id")
+@app.delete("/user/", name="Delete user", description="Will delete an user from an given user id")
 async def user_delete(id: str):
     responce = userKit.delete_user(id)
     return {"responce": responce}

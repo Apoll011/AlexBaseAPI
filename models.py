@@ -1,6 +1,8 @@
 from enum import Enum
+from fastapi import Query
 from typing import List, Dict
 from pydantic import BaseModel
+from typing_extensions import Annotated
 
 
 class Gender(Enum):
@@ -33,7 +35,6 @@ class Lang(str, Enum):
     EN = "en"
     PT = "pt"
 
-class TagsSearch(BaseModel):
-    query: str
-    condition: str = ">:0"
-    exclude: List[str] = []
+class IntentRecongnitionEngineTrainType(str, Enum):
+    TRAIN = "train"
+    REUSE = "reuse"

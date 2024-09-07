@@ -2,6 +2,7 @@
 
 # Define constants
 PID_FILE="/home/pegasus/.alex_server"
+ALEX_PID_FILE="/home/pegasus/.alex"
 SCRIPT_DIR="/home/pegasus/development/AlexBaseAPI/"
 LOG_FILE="output.log"
 
@@ -13,6 +14,7 @@ usage() {
     echo "  start              Start the Alex server if it's not running."
     echo "  stop               Stop the Alex server if it's running."
     echo "  reload             Reload the Alex server (stop and then start)."
+    echo "  show               Will show the Alex Server if Its Active."
     echo "  --help, -h         Display this help message."
     echo
     echo "Options for start and reload:"
@@ -61,6 +63,28 @@ startit() {
     fi
 }
 
+show() {
+    if [ ! -f "$PID_FILE" ]; then
+        echo "The server is not running."
+        exit 1
+    fi
+
+    while :
+    do
+        clear
+        echo "Name"
+        echo "Alex Server"
+        top -p $(cat "/home/pegasus/.alex_server") -n 1 -o -PID -b | tail -n +7 | awk '{print $1, $9, $10}'
+
+        if [ -f "$ALEX_PID_FILE" ]; then
+            echo "Alex"
+            top -p $(cat "/home/pegasus/.alex") -n 1 -o -PID -b | tail -n +7 | awk '{print $1, $9, $10}'
+
+        fi
+        sleep 1s
+    done
+}
+
 # Main script logic
 case "$1" in
     reload)
@@ -70,6 +94,9 @@ case "$1" in
         ;;
     stop)
         killit
+        ;;
+    show)
+        show
         ;;
     --help|-h)
         usage

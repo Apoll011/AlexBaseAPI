@@ -70,7 +70,8 @@ class IntentKit:
         self.loaded = True
 
     def parse(self, text):
-        return self.engine.parse(text) # type: ignore
+        if isinstance(self.engine, SnipsNLUEngine):
+            return self.engine.parse(text)
 
 class UserKit:
     users = []

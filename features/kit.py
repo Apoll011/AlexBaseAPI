@@ -6,7 +6,6 @@ from math import exp
 from difflib import get_close_matches
 from snips_nlu import SnipsNLUEngine
 from snips_nlu.default_configs import CONFIG_EN
-from features.user_backend import SearchUsers, CreateUsers, GetUsers
 
 class DictionaryKit:
     

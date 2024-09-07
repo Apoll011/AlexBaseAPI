@@ -14,7 +14,14 @@ class DictionaryKit:
 
     def load(self, language = "en"):
         if not self.loaded:
-            self.dictionary = json.load(open(f"./features/dictionary/language/{language}.json"))
+            path = f"./features/dictionary/language/{language}"
+            if os.path.isfile(f"{path}_full.json"):
+                path += "_full"
+            path += ".json"
+
+            with open(path, "r") as dicti:
+                self.dictionary = json.load(dicti)
+            
             self.loaded = True
 
     def get(self, word):

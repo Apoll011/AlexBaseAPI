@@ -9,3 +9,4 @@ pyvenv.cfg
 t/
 **.dic
 **.user
+en_full.json

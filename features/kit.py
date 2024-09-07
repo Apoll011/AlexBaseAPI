@@ -60,6 +60,9 @@ class IntentKit:
         os.system("snips-nlu generate-dataset en ./features/intent_recognition/snips/data/en.yaml > ./features/intent_recognition/snips/dataset/dataset_en.json")
         with io.open("./features/intent_recognition/snips/dataset/dataset_en.json") as f:
             dataset = json.load(f)
+        
+        if self.engine != None:
+            del self.engine
         self.engine = SnipsNLUEngine(config=CONFIG_EN)
         self.engine.fit(dataset)
         os.system("rm -rf ./features/intent_recognition/snips/engine")

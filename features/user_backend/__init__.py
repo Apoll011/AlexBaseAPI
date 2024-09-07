@@ -1,4 +1,5 @@
 import os
+import uuid
 import json
 
 class SearchUsers:
@@ -10,100 +11,70 @@ class SearchUsers:
         for user in self.users:
             if query in user["name"]:
                 result.append(user["id"])
-        return result if(len(result) > 0) else None
-    def by_tags(self, query, conditon = ">:0", exclue = []):
+        return result
+    
+    def by_tags(self, query, conditon = ">:0", exclude = []):
         result = []
-        v = conditon.split(":")
-        v[1] = int(v[1])
+        condition_parsed = {
+            "symbol": conditon.split(":")[0],
+            "value": int(conditon.split(":")[1])
+        }
         for user in self.users:
-            if user["id"] in exclue:
+            if user["id"] in exclude:
                 continue
             else:
-                for t in user["tags"]:
-                    quer = query if  type(query) == list else [query]
-                    t[1] = int(t[1])
-                    for que in quer:
-                        if que.lower() == t[0].lower():
-                            if v[0] == ">":
-                                if t[1] > v[1]:
+                for tag in user["tags"]:
+                    query_list:list[str] = query if type(query) == list else [query] # type: ignore
+                    tag[1] = int(tag[1])
+                    for individual_query in query_list:
+                        if individual_query.lower() == tag[0].lower():
+                            if condition_parsed["symbol"] == ">":
+                                if tag[1] > condition_parsed["value"]:
                                     result.append(user["id"])
-                            elif v[0] == "<":
-                                if t[1] < v[1]:
+                            elif condition_parsed["symbol"] == "<":
+                                if tag[1] < condition_parsed["value"]:
                                     result.append(user["id"])
-                            elif v[0] == ">=" or v[0] == "=>":
-                                if t[1] >= v[1]:
+                            elif condition_parsed["symbol"] == ">=" or condition_parsed["symbol"] == "=>":
+                                if tag[1] >= condition_parsed["value"]:
                                     result.append(user["id"])
-                            elif v[0] == "<=":
-                                if t[1] <= v[1]:
+                            elif condition_parsed["symbol"] == "<=":
+                                if tag[1] <= condition_parsed["value"]:
                                     result.append(user["id"])
-                            elif v[0] == "!=":
-                                if t[1] != v[1]:
+                            elif condition_parsed["symbol"] == "!=":
+                                if tag[1] != condition_parsed["value"]:
                                     result.append(user["id"])
-                            elif v[0] == "=":
-                                if t[1] == v[1]:
+                            elif condition_parsed["symbol"] == "=":
+                                if tag[1] == condition_parsed["value"]:
                                     result.append(user["id"])
-        return result if(len(result) > 0) else None
-
-def user_id(user_id):
-    uid = ""
-    if int(user_id) < 10:
-        uid = "000000000"+user_id
-    elif int(user_id) >= 10 and int(user_id) < 100:
-        uid = "00000000"+user_id
-    elif int(user_id) >= 100 and int(user_id) < 1000:
-        uid = "0000000"+user_id
-    elif int(user_id) >= 1000 and int(user_id) < 10000:
-        uid = "000000"+user_id
-    elif int(user_id) >= 10000 and int(user_id) < 100000:
-        uid = "00000"+user_id
-    elif int(user_id) >= 100000 and int(user_id) < 1000000:
-        uid = "0000"+user_id
-    elif int(user_id) >= 1000000 and int(user_id) < 10000000:
-        uid = "000"+user_id
-    elif int(user_id) >= 10000000 and int(user_id) < 100000000:
-        uid = "00"+user_id
-    elif int(user_id) >= 100000000 and int(user_id) < 1000000000:
-        uid = "0"+user_id
-    elif int(user_id) >= 1000000000 and int(user_id) < 10000000000:
-        uid = ""+user_id
-    else:
-        uid = user_id
-    return uid
+        return result
 
 class GetUsers:
     def __init__(self, users):
         self.users = users
-    def by_id(self, idd):
+    def by_id(self, id):
         #print(self.users)
-        if idd != None:
-            i = idd
-            uu = []
-            for u in self.users:
-                if type(i) != list:
+        if id != None:
+            users = []
+            for user in self.users:
+                if type(id) != list:
                     #print(u)
-                    if u["id"] == i:
-                        return u
+                    if user["id"] == id:
+                        return user
                 else:
-                    for ii in i:
-                        if u["id"] == ii:
-                            uu.append(u)
-            return uu
+                    for ii in id:
+                        if user["id"] == ii:
+                            users.append(user)
+            return users
         else:
             return None
 
 class CreateUsers:
     def __init__(self, user_data):
-        try:
-            a = "a"
-            users_lengths = len(os.listdir("./users"))
-            userid = str(users_lengths+1)
-            user = user_data
-            user["id"] = user_id(userid)
-            with open("./users/"+user["id"]+".user", a) as ui:
-                json.dump(user, ui)
-            return 1
-        except:
-            return 0
+        user = json.loads(user_data.model_dump_json())
+        user["id"] = str(uuid.uuid4())
+        with open("./features/user_backend/users/"+user["id"]+".user", 'a') as ui:
+            json.dump(user, ui)
+            
 
 
 """

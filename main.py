@@ -1,30 +1,119 @@
-import time
-import argparse
-from api.server import API
+import os
+import uvicorn
+from models import *
+from features.kit import *
+from fastapi import FastAPI, Query
 from config import __version__, api
-from routes import blueprint_list
-from features.kit import IntentKit
+from typing_extensions import Annotated, Literal
 
-server = API(api['HOST'], api['PORT'])
-server.register_blueprint_list(blueprint_list)
+userKit = UserKit()
+intentKit = IntentKit()
+dictionaryKit = DictionaryKit()
 
-server.client_name = "Alex"
+app = FastAPI(title="Alex Server", version=__version__, description="Alex api server that handes complex and heavy tasks such an nlp user managements etc.", summary="Alex base server used for handling heavy functions", contact={"name": "Tiago Bernardo", "email": "tiagorobotik@gmail.com"}, license_info={"name": "Apache 2.0","url": "https://www.apache.org/licenses/LICENSE-2.0.html",}, on_startup=[intentKit.reuse, dictionaryKit.load])
 
-parser = argparse.ArgumentParser()
 
-parser.add_argument("-s", "--start", action="store_true", help="Start The server")
-parser.add_argument("-t", "--train", action="store_true", help="Train the intent engine and exit")
+"""
+TO ADD:
+/auth
+"""
 
-parser.add_argument("-v", "--version", action="version", version=f"Alex Base Api {__version__}")
+@app.get("/", name="Route")
+async def roote():
+    return {"name": "Alex"}
 
-args = parser.parse_args()
 
-if args.start or args.train:
-    if args.train:
-        time_stared = time.time()
-        print("\33[34mRe-trainig everyting. This process take around 1 to 2 minutes please wait...\33[0m")
-        IntentKit().train()
-        print("\33[93mTime Took:", time.time() - time_stared, "seconds")
-    
-    if args.start:
-        server.serve()
+@app.get("/alex/alive", name="Check If Alive", description="This checks if alex is running and send the basic values")
+async def alive():
+    responce = {
+        "on": True,
+        "kit": {
+            "all_on": True and intentKit.loaded and  dictionaryKit.loaded,
+            "user": True,
+            "intent": intentKit.loaded,
+            "dictionary": dictionaryKit.loaded
+        },
+        "users": len(userKit.users), 
+        "lang": {
+            "trained": list(filter(lambda e: e.endswith(".yaml"),os.listdir("./features/intent_recognition/snips/data/"))), 
+            "instaled": list(filter(lambda e: e.endswith(".json"),os.listdir("./features/intent_recognition/snips/dataset/"))), 
+        },
+        "version": __version__
+        }
+    return responce
+
+@app.get("/intent_recognition/engine", name="Train or Reuse the Intent Recognition Engine")
+async def intent_train(type: IntentRecongnitionEngineTrainType = IntentRecongnitionEngineTrainType.REUSE):
+    try:
+        if type == IntentRecongnitionEngineTrainType.REUSE:
+            intentKit.reuse()
+        else:
+            intentKit.train()
+        return {"responce": True}
+    except Exception:
+        return {"responce": False}
+
+@app.get("/intent_recognition/", name="Recognize intent from sentence", description="This will recognize the intent from a givin sentence and return the result parsed")
+async def intent_reconize(text: Annotated[str, Query(max_length=250, min_length=2)]):
+    try:
+        return intentKit.parse(text)
+    except AttributeError:
+        return {"error": "Engine not trained"}
+
+@app.options("/users", name="Get all users ID")
+async def get_users_id() -> List[str]:
+    return userKit.all()
+
+@app.get("/users/search/name", name="Search user by name")
+async def user_search_name(name: Annotated[str, Query(max_length=65, min_length=2)]):
+    return {"users": userKit.searchUser.by_name(name)}
+
+@app.get("/users/search/tags", name="Search users by tags", description="Will search user using the tags each one has. Query is the tags name, exclude is a list of ids the exclud from the result, condition is (The sign to compare to the intensity: <, >, <=, >=, !=, =):(the Intensity of the tag) ex query=Friend, exclude=['0000000001(Master user id)'], condition = '>:50'. will return all the more that 50% friends excluding the master user.")
+async def user_search( query: Annotated[str, Query(max_length=25, min_length=2)], condition: Annotated[str, Query(max_length=6, min_length=3)] = ">:0", exclude = []): 
+    try:
+        return {"users": userKit.searchUser.by_tags(query, condition, exclude)}
+    except Exception:
+        return {"error": "An error occurered"}
+
+@app.get("/user/", name="Get user object", description="gets an user object from a given id eg: 0815636592")
+async def user_get(id: Annotated[str, Query(min_length=10)]):
+    return userKit.getUser.by_id(id)
+
+@app.put("/user/", name="Create user", description="Will create an user from an user object")
+async def user_create(user: User):
+    try:
+        userKit.createUser(user)
+        return {"responce":True}
+    except Exception as e:
+        return {"error": f"Wont abble to create user ({e})"}
+
+@app.delete("/user/", name="Delete user", description="Will delete an user from an given user id")
+async def user_delete(id: str):
+    responce = userKit.delete_user(id)
+    return {"responce": responce}
+
+@app.get("/dictionary/get", name="Get word from dictionary", description="Will return the definition of a given word. Return null if no match is found.")
+async def dict_get(word: Annotated[str, Query(max_length=25, min_length=2)]):
+    return dictionaryKit.get(word)
+
+@app.get("/dictionary/get/closest", name="Get the closes match in Dictionary", description="Will get the closes match of the word found in the dictionary. and return it and others matches too. Return null if no match is found.")
+async def dict_get_cosest(word: Annotated[str, Query(max_length=25, min_length=2)]):
+    return dictionaryKit.get_closest(word)
+
+@app.get("/dictionary/load", name = "Load the dictionary", description="Loads the dictionary file based on the given language.")
+async def load_dic(lang:Lang = Lang.EN):
+    try:
+        dictionaryKit.load(lang)
+        return {"responce": True}
+    except Exception:
+        return {"error": "Unable to load dictionary"}
+
+@app.get("/close")
+async def close():
+    return {"responce": True}
+
+if __name__ == "__main__":
+    print("Started server process")
+    print("Waiting for application startup.")
+    print(f"App started on http://{api['HOST']}:{api['PORT']}")
+    uvicorn.run(app, host=api["HOST"], port=api["PORT"], log_level="warning")

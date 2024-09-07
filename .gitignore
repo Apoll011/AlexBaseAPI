@@ -8,3 +8,5 @@ pyvenv.cfg
 **/engine/
 t/
 **.dic
+**.user
+en_full.json

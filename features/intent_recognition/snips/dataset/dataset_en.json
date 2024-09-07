@@ -3326,6 +3326,48 @@
         {
           "data": [
             {
+              "text": "Ema"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Start Ema"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Ema Mode"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you turn on Ema"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I want to talk with Ema"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Put Ema on the command"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
               "text": "Eliza"
             }
           ]
@@ -5050,7 +5092,101 @@
         }
       ]
     },
-    "play@music": {
+    "music@do": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Please "
+            },
+            {
+              "entity": "musicDo",
+              "slot_name": "musicDo",
+              "text": "resume"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please "
+            },
+            {
+              "entity": "musicDo",
+              "slot_name": "musicDo",
+              "text": "playpause"
+            },
+            {
+              "text": " the music"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "\\"
+            },
+            {
+              "entity": "musicTrackAction",
+              "slot_name": "musicTrackAction",
+              "text": "next"
+            },
+            {
+              "text": " track"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set song repeat to "
+            },
+            {
+              "entity": "musicReapeatOptions",
+              "slot_name": "musicReapeatOptions",
+              "text": "One"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set repeat mode to "
+            },
+            {
+              "entity": "musicReapeatOptions",
+              "slot_name": "musicReapeatOptions",
+              "text": "All"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set shuffle enabled to "
+            },
+            {
+              "entity": "TrueOrFalse",
+              "slot_name": "shuffleEnabled",
+              "text": "\\true"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Set shuffle to "
+            },
+            {
+              "entity": "TrueOrFalse",
+              "slot_name": "shuffleEnabled",
+              "text": "\\false"
+            }
+          ]
+        }
+      ]
+    },
+    "music@play": {
       "utterances": [
         {
           "data": [
@@ -5204,101 +5340,7 @@
         }
       ]
     },
-    "play@music.do": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Please "
-            },
-            {
-              "entity": "musicDo",
-              "slot_name": "musicDo",
-              "text": "resume"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Please "
-            },
-            {
-              "entity": "musicDo",
-              "slot_name": "musicDo",
-              "text": "playpause"
-            },
-            {
-              "text": " the music"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "\\"
-            },
-            {
-              "entity": "musicTrackAction",
-              "slot_name": "musicTrackAction",
-              "text": "next"
-            },
-            {
-              "text": " track"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Set song repeat to "
-            },
-            {
-              "entity": "musicReapeatOptions",
-              "slot_name": "musicReapeatOptions",
-              "text": "One"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Set repeat mode to "
-            },
-            {
-              "entity": "musicReapeatOptions",
-              "slot_name": "musicReapeatOptions",
-              "text": "All"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Set shuffle enabled to "
-            },
-            {
-              "entity": "TrueOrFalse",
-              "slot_name": "shuffleEnabled",
-              "text": "\\true"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Set shuffle to "
-            },
-            {
-              "entity": "TrueOrFalse",
-              "slot_name": "shuffleEnabled",
-              "text": "\\false"
-            }
-          ]
-        }
-      ]
-    },
-    "play@music.whats.playing": {
+    "music@whats.playing": {
       "utterances": [
         {
           "data": [

@@ -1,7 +1,5 @@
 pyvenv.cfg
-**/bin/
-**/lib/
-**/include/
+.venv/
 **/__pycache__
 .vscode/
 **/.DS_Store

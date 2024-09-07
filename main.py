@@ -112,8 +112,24 @@ async def load_dic(lang:Lang = Lang.EN):
 async def close():
     return {"responce": True}
 
-if __name__ == "__main__":
+def lock_pid():
+    pid = os.getpid()
+    with open('/home/pegasus/.alex_server', "x") as pidfile:
+        pidfile.write(str(pid))
+
+def clean():
+    os.system("rm /home/pegasus/.alex_server")
+
+def main():
     print("Started server process")
     print("Waiting for application startup.")
     print(f"App started on http://{api['HOST']}:{api['PORT']}")
     uvicorn.run(app, host=api["HOST"], port=api["PORT"], log_level="warning")
+
+if __name__ == "__main__":
+    try:
+        lock_pid()
+        main()
+    except Exception:
+        pass
+    clean()

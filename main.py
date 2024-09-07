@@ -66,18 +66,18 @@ async def get_users_id() -> List[str]:
 
 @app.get("/users/search/name", name="Search user by name")
 async def user_search_name(name: Annotated[str, Query(max_length=65, min_length=2)]):
-    return {"users": userKit.searchUser.by_name(name)}
+    return {"users": userKit.search_by_name(name)}
 
 @app.get("/users/search/tags", name="Search users by tags", description="Will search user using the tags each one has. Query is the tags name, exclude is a list of ids the exclud from the result, condition is (The sign to compare to the intensity: <, >, <=, >=, !=, =):(the Intensity of the tag) ex query=Friend, exclude=['0000000001(Master user id)'], condition = '>:50'. will return all the more that 50% friends excluding the master user.")
 async def user_search( query: Annotated[str, Query(max_length=25, min_length=2)], condition: Annotated[str, Query(max_length=6, min_length=3)] = ">:0", exclude = []): 
     try:
-        return {"users": userKit.searchUser.by_tags(query, condition, exclude)}
+        return {"users": userKit.search_by_tags(query, condition, exclude)}
     except Exception:
         return {"error": "An error occurered"}
 
 @app.get("/user/", name="Get user object", description="gets an user object from a given id eg: 0815636592")
 async def user_get(id: Annotated[str, Query(min_length=10)]):
-    return userKit.getUser.by_id(id)
+    return userKit.get(id)
 
 @app.put("/user/", name="Create user", description="Will create an user from an user object")
 async def user_create(user: User):

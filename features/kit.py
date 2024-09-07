@@ -1,6 +1,7 @@
 import io
 import os
 import json
+import uuid
 from math import exp
 from difflib import get_close_matches
 from snips_nlu import SnipsNLUEngine
@@ -72,6 +73,8 @@ class IntentKit:
     def parse(self, text):
         if isinstance(self.engine, SnipsNLUEngine):
             return self.engine.parse(text)
+        else:
+            raise Exception("Intent recognition Engine not loaded")
 
 class UserKit:
     users = []
@@ -86,9 +89,27 @@ class UserKit:
             self.users.append(us)
             self.ids.append(us['id'])
 
-        self.searchUser = SearchUsers(self.users)
-        self.getUser = GetUsers(self.users)
-        self.createUserFuntion = CreateUsers
+    def get(self, id: str):
+        if id != None:
+            users = []
+            for user in self.users:
+                if type(id) != list:
+                    #print(u)
+                    if user["id"] == id:
+                        return user
+                else:
+                    for ii in id:
+                        if user["id"] == ii:
+                            users.append(user)
+            return users
+        else:
+            return None
+    
+    def createUserFuntion(self, user_data):
+        user = json.loads(user_data.model_dump_json())
+        user["id"] = str(uuid.uuid4())
+        with open("./features/user_backend/users/"+user["id"]+".user", 'a') as ui:
+            json.dump(user, ui)
     
     def createUser(self, user_data):
         self.createUserFuntion(user_data=user_data)
@@ -104,3 +125,45 @@ class UserKit:
     
     def all(self):
         return self.ids
+    
+    def search_by_name(self, query):
+        result = []
+        for user in self.users:
+            if query in user["name"]:
+                result.append(user["id"])
+        return result
+    
+    def search_by_tags(self, query, conditon = ">:0", exclude = []):
+        result = []
+        condition_parsed = {
+            "symbol": conditon.split(":")[0],
+            "value": int(conditon.split(":")[1])
+        }
+        for user in self.users:
+            if user["id"] in exclude:
+                continue
+            else:
+                for tag in user["tags"]:
+                    query_list:list[str] = query if type(query) == list else [query] # type: ignore
+                    tag[1] = int(tag[1])
+                    for individual_query in query_list:
+                        if individual_query.lower() == tag[0].lower():
+                            if condition_parsed["symbol"] == ">":
+                                if tag[1] > condition_parsed["value"]:
+                                    result.append(user["id"])
+                            elif condition_parsed["symbol"] == "<":
+                                if tag[1] < condition_parsed["value"]:
+                                    result.append(user["id"])
+                            elif condition_parsed["symbol"] == ">=" or condition_parsed["symbol"] == "=>":
+                                if tag[1] >= condition_parsed["value"]:
+                                    result.append(user["id"])
+                            elif condition_parsed["symbol"] == "<=":
+                                if tag[1] <= condition_parsed["value"]:
+                                    result.append(user["id"])
+                            elif condition_parsed["symbol"] == "!=":
+                                if tag[1] != condition_parsed["value"]:
+                                    result.append(user["id"])
+                            elif condition_parsed["symbol"] == "=":
+                                if tag[1] == condition_parsed["value"]:
+                                    result.append(user["id"])
+        return result

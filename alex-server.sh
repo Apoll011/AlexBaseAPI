@@ -69,20 +69,17 @@ show() {
         exit 1
     fi
 
-    while :
-    do
-        clear
-        echo "Name"
-        echo "Alex Server"
-        top -p $(cat "/home/pegasus/.alex_server") -n 1 -o -PID -b | tail -n +7 | awk '{print $1, $9, $10}'
+    if [ -f "$ALEX_PID_FILE" ]; then
+        echo "Alex"
+        top -p $(cat "$PID_FILE"),$(cat "$ALEX_PID_FILE") -d 0.2 -E g -e m -H
+    else
+        top -p $(cat "$PID_FILE") -d 0.1 -E g -e m -H
+    fi
+}
 
-        if [ -f "$ALEX_PID_FILE" ]; then
-            echo "Alex"
-            top -p $(cat "/home/pegasus/.alex") -n 1 -o -PID -b | tail -n +7 | awk '{print $1, $9, $10}'
-
-        fi
-        sleep 1s
-    done
+clear() {
+    rm "$PID_FILE"
+    rm "$ALEX_PID_FILE"
 }
 
 # Main script logic
@@ -98,10 +95,16 @@ case "$1" in
     show)
         show
         ;;
+    clear)
+        clear
+        ;;
     --help|-h)
         usage
         ;;
-    *)
+    start)
         startit
+        ;;
+    *)
+        echo "$1" is not a valid command. See -h/--help for help
         ;;
 esac

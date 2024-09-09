@@ -15,6 +15,7 @@ usage() {
     echo "  stop               Stop the Alex server if it's running."
     echo "  reload             Reload the Alex server (stop and then start)."
     echo "  show               Will show the Alex Server if Its Active."
+    echo "  train              Will train all the ai related features of The Alex Base Server."
     echo "  --help, -h         Display this help message."
     echo
     echo "Options for start and reload:"
@@ -23,6 +24,11 @@ usage() {
     echo "The Alex server listens on port 1178 of 0.0.0.0."
     echo "Logs are saved to $LOG_FILE."
     exit 0
+}
+
+use_env() {
+    cd "$SCRIPT_DIR"
+    source .venv/bin/activate
 }
 
 # Function to kill the server
@@ -55,8 +61,7 @@ startit() {
     else
         shift
         echo "Starting server"
-        cd "$SCRIPT_DIR"
-        source .venv/bin/activate
+        use_env
         nohup python main.py "$@" > "$LOG_FILE" 2>&1 &
         sleep 4
         echo "Alex Server started with PID $(cat $PID_FILE)."
@@ -82,6 +87,13 @@ clear() {
     rm "$ALEX_PID_FILE"
 }
 
+train() {
+    use_env
+    killit
+    python train.py
+    startit
+}
+
 # Main script logic
 case "$1" in
     reload)
@@ -103,6 +115,9 @@ case "$1" in
         ;;
     start)
         startit
+        ;;
+    train)
+        train
         ;;
     *)
         echo "$1" is not a valid command. See -h/--help for help

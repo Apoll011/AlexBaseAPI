@@ -26,6 +26,22 @@ utterances:
 
 ---
 type: intent
+name: tell@joke
+utterances:
+  - Tell me a joke
+  - Can you tell me a joke
+  - Please tell me a random joke
+  - I want to hear a joke
+  - Random Joke
+  - Tell me a [jokeType] joke
+  - Can you tell me a [jokeType] joke
+  - Please tell me a random [jokeType] joke
+  - I want to hear a [jokeType] joke
+  - Random [jokeType] Joke
+
+
+---
+type: intent
 name: alex@recall
 utterances:
   - Another one
@@ -835,6 +851,16 @@ values:
   - Home
   - Clouds
   - Forever
+
+---
+type: entity
+name: jokeType
+use_synonyms: true
+matching_strictness: 0.8
+values:
+  - [all, any]
+  - [neutral, normal]
+  - [chuck, Chuck Norris]
 
 ---
 type: entity

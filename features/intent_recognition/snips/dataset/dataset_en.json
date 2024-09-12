@@ -1273,6 +1273,29 @@
       "matching_strictness": 0.7,
       "use_synonyms": true
     },
+    "jokeType": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [
+            "any"
+          ],
+          "value": "all"
+        },
+        {
+          "synonyms": [
+            "normal"
+          ],
+          "value": "neutral"
+        },
+        {
+          "synonyms": [],
+          "value": "chuck"
+        }
+      ],
+      "matching_strictness": 0.8,
+      "use_synonyms": true
+    },
     "list_name": {
       "automatically_extensible": true,
       "data": [
@@ -5917,6 +5940,120 @@
               "entity": "snips/duration",
               "slot_name": "duration",
               "text": "during two minutes"
+            }
+          ]
+        }
+      ]
+    },
+    "tell@joke": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Tell me a joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you tell me a joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please tell me a random joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I want to hear a joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Random Joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Tell me a "
+            },
+            {
+              "entity": "jokeType",
+              "slot_name": "jokeType",
+              "text": "all"
+            },
+            {
+              "text": " joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Can you tell me a "
+            },
+            {
+              "entity": "jokeType",
+              "slot_name": "jokeType",
+              "text": "any"
+            },
+            {
+              "text": " joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Please tell me a random "
+            },
+            {
+              "entity": "jokeType",
+              "slot_name": "jokeType",
+              "text": "neutral"
+            },
+            {
+              "text": " joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "I want to hear a "
+            },
+            {
+              "entity": "jokeType",
+              "slot_name": "jokeType",
+              "text": "normal"
+            },
+            {
+              "text": " joke"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Random "
+            },
+            {
+              "entity": "jokeType",
+              "slot_name": "jokeType",
+              "text": "chuck"
+            },
+            {
+              "text": " Joke"
             }
           ]
         }

@@ -53,7 +53,7 @@ class IntentKit:
         pass
     
     def reuse(self):
-        if self.engine == None:
+        if self.engine is None:
             self.engine = SnipsNLUEngine.from_path("./features/intent_recognition/snips/engine/")
             self.loaded = True
     def train(self):
@@ -61,7 +61,7 @@ class IntentKit:
         with io.open("./features/intent_recognition/snips/dataset/dataset_en.json") as f:
             dataset = json.load(f)
         
-        if self.engine != None:
+        if self.engine is not None:
             del self.engine
         self.engine = SnipsNLUEngine(config=CONFIG_EN)
         self.engine.fit(dataset)
@@ -89,7 +89,7 @@ class UserKit:
             self.ids.append(us['id'])
 
     def get(self, id: str):
-        if id != None:
+        if id is not None:
             users = []
             for user in self.users:
                 if type(id) != list:
@@ -103,13 +103,13 @@ class UserKit:
             return users
         else:
             return None
-    
+
     def createUserFuntion(self, user_data):
         user = json.loads(user_data.model_dump_json())
         user["id"] = str(uuid.uuid4())
         with open("./features/user_backend/users/"+user["id"]+".user", 'a') as ui:
             json.dump(user, ui)
-    
+
     def createUser(self, user_data):
         self.createUserFuntion(user_data=user_data)
         self.update()
@@ -132,11 +132,13 @@ class UserKit:
                 result.append(user["id"])
         return result
     
-    def search_by_tags(self, query, conditon = ">:0", exclude = []):
+    def search_by_tags(self, query, condition =">:0", exclude=None):
+        if exclude is None:
+            exclude = []
         result = []
         condition_parsed = {
-            "symbol": conditon.split(":")[0],
-            "value": int(conditon.split(":")[1])
+            "symbol": condition.split(":")[0],
+            "value": int(condition.split(":")[1])
         }
         for user in self.users:
             if user["id"] in exclude:

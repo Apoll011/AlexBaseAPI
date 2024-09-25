@@ -1,3 +1,3 @@
-from features.kit import *
+from kit import *
 intentKit = IntentKit()
 intentKit.train()

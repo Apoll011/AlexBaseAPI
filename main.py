@@ -66,8 +66,7 @@ async def user_search_name(name: Annotated[str, Query(max_length=65, min_length=
     return {"users": userKit.search_by_name(name)}
 
 @app.get("/users/search/tags", name="Search users by tags", description="Will search user using the tags each one has. Query is the tags name, exclude is a list of ids the exclud from the result, condition is (The sign to compare to the intensity: <, >, <=, >=, !=, =):(the Intensity of the tag) ex query=Friend, exclude=['0000000001(Master user id)'], condition = '>:50'. will return all the more that 50% friends excluding the master user.")
-async def user_search(query: Annotated[str, Query(max_length=25, min_length=2)], condition: Annotated[str, Query(max_length=6, min_length=3)] = ">:0",
-                      exclude=None):
+async def user_search(query: Annotated[str, Query(max_length=25, min_length=2)], condition: Annotated[str, Query(max_length=6, min_length=3)] = ">:0", exclude=None):
     if exclude is None:
         exclude = []
     try:
@@ -116,7 +115,7 @@ async def close():
 async def main_upload(file: UploadFile = File(...), version = "-1.1.1", platform = PlatformType.LINUX):
     chunk = 1024 * 5
     if platform == PlatformType.LINUX:
-        extension = ".lix"
+        extension = ".zip"
     elif platform == PlatformType.MACOS:
         extension = ".app"
     else:
@@ -159,7 +158,7 @@ def main_last(platform = PlatformType.LINUX):
     bigger = None
     name = None
     if platform == PlatformType.LINUX:
-        extension = ".lix"
+        extension = ".zip"
     elif platform == PlatformType.MACOS:
         extension = ".app"
     else:
@@ -173,7 +172,7 @@ def main_last(platform = PlatformType.LINUX):
         if (bigger and version_core_tuple > bigger) or bigger is None:
             bigger = version_core_tuple
             name = main_core
-    return {"name": name + extension, "version": bigger, "versions": files}
+    return {"name": name + extension if name is not None else None, "version": bigger, "versions": files}
 
 @app.get("/version_control/main/get")
 async def main_get(platform = PlatformType.LINUX):
@@ -196,7 +195,7 @@ def lib_last(lib_type: LibType):
         if (bigger and version_core_tuple > bigger) or bigger is None:
             bigger = version_core_tuple
             name = lib_core
-    return {"name": name + ".zip", "version": bigger, "versions": files}
+    return {"name": name + ".zip" if name is not None else None , "version": bigger, "versions": files}
 
 @app.get("/version_control/lib/get")
 async def lib_get(lib_type: LibType):

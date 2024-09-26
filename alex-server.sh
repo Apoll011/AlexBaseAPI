@@ -83,8 +83,8 @@ show() {
 }
 
 clear() {
-    rm "$PID_FILE"
-    rm "$ALEX_PID_FILE"
+    rm -f "$PID_FILE"
+    rm -f "$ALEX_PID_FILE"
 }
 
 train() {
@@ -103,6 +103,7 @@ case "$1" in
         ;;
     stop)
         killit
+        clear
         ;;
     show)
         show
@@ -114,6 +115,7 @@ case "$1" in
         usage
         ;;
     start)
+        clear
         startit
         ;;
     train)

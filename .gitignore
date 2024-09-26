@@ -9,3 +9,4 @@ t/
 **.user
 en_full.json
 output.log
+version_controller/

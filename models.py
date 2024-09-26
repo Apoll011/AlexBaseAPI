@@ -35,6 +35,17 @@ class Lang(str, Enum):
     EN = "en"
     PT = "pt"
 
+class PlatformType(str, Enum):
+    LINUX = "linux"
+    MACOS = "macos"
+    WINDOWS = "win"
+
+class LibType(str, Enum):
+    WEB = "web"
+    AUDIO = "audio"
+    LANGUAGE = "language"
+    MODEL = "model"
+
 class IntentRecongnitionEngineTrainType(str, Enum):
     TRAIN = "train"
     REUSE = "reuse"

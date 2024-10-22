@@ -1,6 +1,6 @@
 import glob
 import os.path
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import lingua_franca
 import lingua_franca.parse
@@ -413,7 +413,8 @@ def nice_time(dt=None, lang='', speech=True, use_24hour=False, use_ampm=False):
     Returns:
         (str): The formatted time string
     """
-    return {"responce": lingua_franca.format.nice_time(dt if dt is not None else datetime.now(), lang, speech, use_24hour, use_ampm)}
+    n = datetime.now() + timedelta(hours=1)
+    return {"responce": lingua_franca.format.nice_time(dt if dt is not None else n, lang, speech, use_24hour, use_ampm)}
 
 @app.get("/lang/format/pronounce_number")
 def pronounce_number(number: int, lang='', places=2):

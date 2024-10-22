@@ -1,6 +1,7 @@
 import glob
 import os.path
 
+import lingua_franca
 import uvicorn
 from starlette.responses import FileResponse, JSONResponse
 from models import *
@@ -204,6 +205,11 @@ async def lib_get(lib_type: LibType):
         return FileResponse(f"./features/version_controller/lib/{l['name']}", media_type="application/octet-stream", filename=l["name"])
     else:
         return JSONResponse({"error": "Not Found"}, status_code=404)
+
+@app.get("/get")
+async def get():
+    return FileResponse("features/alex.sh")
+
 
 def lock_pid():
     pid = os.getpid()

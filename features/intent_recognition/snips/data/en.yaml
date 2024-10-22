@@ -185,7 +185,6 @@ type: intent
 name: saudation@hi
 utterances:
   - Hi Alex
-  - How are you
   - Hello Alex
   - Good [timeOfDay] Alex
   - Good [timeOfDay]
@@ -357,6 +356,12 @@ utterances:
   - Remeber me [time] to [action] to my [person]
   - Remeber me [time] to [action] to [person]
   - Remeber me [time] to [action] for [person]
+  - Remeber me [time] too [action]
+  - Remeber me [time] too [action] my [person]
+  - Remeber me [time] too [action] [person]
+  - Remeber me [time] too [action] to my [person]
+  - Remeber me [time] too [action] to [person]
+  - Remeber me [time] too [action] for [person]
 
 ---
 type: intent

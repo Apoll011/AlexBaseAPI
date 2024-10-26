@@ -115,7 +115,6 @@ case "$1" in
         usage
         ;;
     start)
-        clear
         startit
         ;;
     train)

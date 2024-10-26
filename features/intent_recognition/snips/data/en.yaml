@@ -1,1320 +1,1263 @@
-# searchFlight Intent
----
-type: intent
-name: search@flight
-slots:
-  - name: origin
-    entity: region
-  - name: destination
-    entity: region
-  - name: date
-    entity: snips/datetime
-utterances:
-  - find me a flight from [origin] to [destination]
-  - I need a flight leaving [date] to [destination]
-  - show me flights to go to [destination] leaving [date]
-
----
 type: intent
 name: alex@repeat
 utterances:
-  - Repeat
-  - Again
-  - What
-  - I did not hear you
-  - I could not hear you
-
+- Repeat
+- What
+- I did not hear you
+- I could not hear you
 ---
 type: intent
 name: tell@joke
 utterances:
-  - Tell me a joke
-  - Can you tell me a joke
-  - Please tell me a random joke
-  - I want to hear a joke
-  - Random Joke
-  - Tell me a [jokeType] joke
-  - Can you tell me a [jokeType] joke
-  - Please tell me a random [jokeType] joke
-  - I want to hear a [jokeType] joke
-  - Random [jokeType] Joke
-
-
+- Tell me a joke
+- Can you tell me a joke
+- Please tell me a random joke
+- I want to hear a joke
+- Random Joke
+- Tell me a [jokeType] joke
+- Can you tell me a [jokeType] joke
+- Please tell me a random [jokeType] joke
+- I want to hear a [jokeType] joke
+- Random [jokeType] Joke
 ---
 type: intent
 name: alex@recall
 utterances:
-  - Another one
-  - Try again
-  - Give it another try
-  - Reconsider that choice
-  - Are you sure. Make another one
-  - Make another one
-  - Other
-  - Make me other one
-  - Make other
-
+- Another one
+- Again
+- Try again
+- Give it another try
+- Reconsider that choice
+- Are you sure. Make another one
+- Make another one
+- Other
+- Make me other one
+- Make other
 ---
 type: intent
 name: alex@skills
 slots:
-  - name: major_skill
-    entity: skillMajor
-  - name: minor_skill
-    entity: skillMinor
+- name: major_skill
+  entity: skillMajor
+- name: minor_skill
+  entity: skillMinor
 utterances:
-  - Can you [major_skill] [minor_skill]
-  - Can you [major_skill] a [minor_skill]
-  - Can you [major_skill] one [minor_skill]
-  - Can you do [major_skill] and tell if [minor_skill]
-  - Can you do [major_skill] and tell if is [minor_skill]
-  - Can you do [major_skill] [minor_skill]
-  - Can you [major_skill] some [minor_skill]
-  - Can you do [major_skill] some [minor_skill]
-  - Can you [major_skill]
-  - Can you do [major_skill]
-  - Do you [major_skill]
-  - Do you [major_skill] [minor_skill]
-  - Do you [major_skill] some [minor_skill]
-  - Are you capable of doing [major_skill] [minor_skill]
-  - Are you capable of doing [major_skill]
-  - Are you capable of doing [major_skill] some [minor_skill]
-  - Is the [major_skill] installed
-  - Is the [major_skill] skill installed
-  - Is the [major_skill] [minor_skill] installed
-  - Is the [major_skill] [minor_skill] skill installed
-
+- Can you [major_skill] [minor_skill]
+- Can you [major_skill] a [minor_skill]
+- Can you [major_skill] one [minor_skill]
+- Can you do [major_skill] and tell if [minor_skill]
+- Can you do [major_skill] and tell if is [minor_skill]
+- Can you do [major_skill] [minor_skill]
+- Can you [major_skill] some [minor_skill]
+- Can you do [major_skill] some [minor_skill]
+- Can you [major_skill]
+- Can you do [major_skill]
+- Do you [major_skill]
+- Do you [major_skill] [minor_skill]
+- Do you [major_skill] some [minor_skill]
+- Are you capable of doing [major_skill] [minor_skill]
+- Are you capable of doing [major_skill]
+- Are you capable of doing [major_skill] some [minor_skill]
+- Is the [major_skill] installed
+- Is the [major_skill] skill installed
+- Is the [major_skill] [minor_skill] installed
+- Is the [major_skill] [minor_skill] skill installed
 ---
 type: intent
 name: eliza@start
 utterances:
-  - Ema
-  - Start Ema
-  - Ema Mode
-  - Can you turn on Ema
-  - I want to talk with Ema
-  - Put Ema on the command
-  - Eliza
-  - I need somebody too talk with
-  - Can I talk with you
-  - I wannt too talk with some one
-  - Eliza Mode
-  - Psiciatric Mode
-
----
-type: intent
-name: wec@is.a.country
-utterances:
-  - Is [contry] a country?
-
----
-type: intent
-name: wec@us.inagural.speach
-slots:
-  - name: date
-    entity: snips/datetime
-utterances:
-  - Tell me inaugral speach
-  - Tell me the inaugural speach given in [date]
-  - Tell me the inaugural speach given in [date] by [person]
-  - Tell me the inaugural speach given in [date] by president [person]
-  - Tell me the inaugural speach given in [date] by pr. [person]
-  - Tell me the inaugural speach given by [person]
-  - Tell me the inaugural speach given by president [person]
-  - Tell me the inaugural speach given by pr. [person]
-  - Tell me the inaugural speach given by [person] in [date]
-  - Tell me the inaugural speach given by president [person] in [date]
-  - Tell me the inaugural speach given by pr. [person] in [date]
-
----
-type: intent
-name: wec@random.name
-utterances:
-  - Give me a name.
-  - Give me a [gender] name
-  - Give me a [gender] name Please
-  - Generate a [gender] name
-  - Create a [gender] name
-  - Generate a name
-  - Create a name
-  - Make me a name
-  - Tell me a random name
-  - Tell me a random [gender] name
-
+- Ema
+- Start Ema
+- Ema Mode
+- Can you turn on Ema
+- I want to talk with Ema
+- Put Ema on the command
+- Eliza
+- I need somebody too talk with
+- Can I talk with you
+- I wannt too talk with some one
+- Eliza Mode
+- Psiciatric Mode
 ---
 type: intent
 name: dictionary@get
 utterances:
-  - What is the meaning of [word]
-  - What is [word]
-  - What is a [word]
-  - What is the [word]
-  - What is the signification of [word]
-  - Who is [word]
-  - What is [word]
-  - Can you tell me the definition of [word]
-  - Do you know the definition of [word]
-
+- What is the meaning of [word]
+- What is [word]
+- What is a [word]
+- What is the [word]
+- What is the signification of [word]
+- Who is [word]
+- What is [word]
+- Can you tell me the definition of [word]
+- Do you know the definition of [word]
 ---
 type: intent
 name: saudation@tanks
 utterances:
-  - Thanks
-  - Thanks you
-  - Thank you
-  - Apreciated
-  - Great
-
+- Thanks
+- Thanks you
+- Thank you
+- Apreciated
+- Great
 ---
 type: intent
 name: saudation@how.are.u
 utterances:
-  - How are you
-  - How r u
-  - How are u
-  - How are you Alex
-  - Are you [mood]
-  - How are you doing
-  - How are you doing Alex
-  - How are you doing today
-  - How r you
-  - How are you doing today Alex
-
+- How are you
+- How r u
+- How are u
+- How are you Alex
+- Are you [mood]
+- How are you doing
+- How are you doing Alex
+- How are you doing today
+- How r you
+- How are you doing today Alex
 ---
 type: intent
 name: saudation@hi
 utterances:
-  - Hi Alex
-  - Hello Alex
-  - Good [timeOfDay] Alex
-  - Good [timeOfDay]
-
-
----
-type: intent
-name: alex@are.u.sure
-utterances:
-  - Are you sure
-  - Are u sure
-  - Really
-
+- Hi Alex
+- Hello Alex
+- Good [timeOfDay] Alex
+- Good [timeOfDay]
 ---
 type: intent
 name: close@something
 utterances:
-  - Please, close [entityName]
-  - Close [entityName]
-  - Quit [entityName]
-
+- Please, close [entityName]
+- Close [entityName]
+- Quit [entityName]
+---
+type: intent
+name: open@app
+utterances:
+- Please, open [entityName]
+- Open [entityName]
+- Start [entityName]
 ---
 type: intent
 name: close@alex
 utterances:
-  - Please, close Alex
-  - Please, close Yourself
-  - Close Alex
-  - Close Yourself
-  - Quit
-
+- Please, close Alex
+- Please, close Yourself
+- Close Yourself
+- Quit
+- Good bye
+- Bye
+- Bye Bye
+- Adios
+- Saionara
 ---
 type: intent
 name: money@tranfer
 utterances:
-  - Send [person] [snips/amountOfMoney]
-  - Pay [person] [snips/amountOfMoney]
-
+- Send [person] [snips/amountOfMoney]
+- Pay [person] [snips/amountOfMoney]
 ---
 type: intent
 name: math@simple
 slots:
-  - name: first_number
-    entity: snips/number
-  - name: second_number
-    entity: snips/number
-  - name: number
-    entity: snips/number
+- name: first_number
+  entity: snips/number
+- name: second_number
+  entity: snips/number
+- name: number
+  entity: snips/number
 utterances:
-  - \[first_number] [mathoperation] [second_number]
-  - How much is [first_number] [mathoperation] [second_number]
-  - How much is [first_number] [mathoperation] by [second_number]
-  - What is [first_number] [mathoperation] by [second_number]
-  - \[mathoperation] by [number]
-  - \[mathoperation] dad by [number]
-  - \[mathoperation] [number]
-  - \[mathoperation] with [number]
-  - \[mathoperation] that with [number]
-  - \[mathoperation] dad with [number]
-  - \[mathoperation] that by [number]
-
+- \[first_number] [mathoperation] [second_number]
+- How much is [first_number] [mathoperation] [second_number]
+- How much is [first_number] [mathoperation] by [second_number]
+- What is [first_number] [mathoperation] by [second_number]
+- \[mathoperation] by [number]
+- \[mathoperation] dad by [number]
+- \[mathoperation] [number]
+- \[mathoperation] with [number]
+- \[mathoperation] that with [number]
+- \[mathoperation] dad with [number]
+- \[mathoperation] that by [number]
 ---
 type: intent
 name: math@geometry
 slots:
-  - name: func
-    entity: mathFunctions
-  - name: number
-    entity: snips/number
+- name: func
+  entity: mathFunctions
+- name: number
+  entity: snips/number
 utterances:
-  - What is the [func] of [number]
-  - \[func] of [number] is what
-  - \[func] of it
-  - What is it \[func]
-  - What is the \[func] of it
-  - \[func] of that
-  - \[func] of dad
-
+- What is the [func] of [number]
+- \[func] of [number] is what
+- \[func] of it
+- What is it \[func]
+- What is the \[func] of it
+- \[func] of that
+- \[func] of dad
 ---
 type: intent
 name: set@timer
 slots:
-  - name: duration
-    entity: snips/duration
-  - name: entity
-    entity: object
+- name: duration
+  entity: snips/duration
+- name: entity
+  entity: object
 utterances:
-  - Set a timer for [duration]
-  - Set a [entity] timer for [duration]
-
+- Set a timer for [duration]
+- Set a [entity] timer for [duration]
 ---
 type: intent
 name: list@add
 slots:
-  - name: list
-    entity: list_name
-  - name: entity
-    entity: object
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
 utterances:
-  - Add [entity] to my [list] list
-  - Add a [entity] to my [list] list
-  - Add [entity] to [list] list
-  - Add a [entity] to [list] list
-  - Add [entity] to the [list] list
-  - Add to the [list] list
-  - Add [entity] to the list
-  - Add a [entity] to the list
-  - \[entity] book to my [list] list 
-  - to my [list] list 
-  - What a [entity] to my [list] list 
-
+- Add [entity] to my [list] list
+- Add a [entity] to my [list] list
+- Add [entity] to [list] list
+- Add a [entity] to [list] list
+- Add [entity] to the [list] list
+- Add to the [list] list
+- Add [entity] to the list
+- Add a [entity] to the list
+- \[entity] book to my [list] list
+- to my [list] list
+- What a [entity] to my [list] list
 ---
 type: intent
 name: list@get
 slots:
-  - name: list
-    entity: list_name
-  - name: entity
-    entity: object
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
 utterances:
-  - Tell me [list] list
-  - Tell me the things in my [list] list
-  - Tell me what is on my [list] list
-  - What is on my [list] list
-  - Is [entity] in my [list] list
-  - Is [entity] on the [list] list
-
+- Tell me [list] list
+- Tell me the things in my [list] list
+- Tell me what is on my [list] list
+- What is on my [list] list
+- Is [entity] in my [list] list
+- Is [entity] on the [list] list
 ---
 type: intent
 name: list@clear
 slots:
-  - name: list
-    entity: list_name
-  - name: entity
-    entity: object
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
 utterances:
-  - Delete [entity] from my [list] list
-  - Delete [entity] from the [list] list
-  - Remove [entity] from my [list] list
-  - Remove [entity] from the [list] list
-  - Clear the [list] list
-  - Clear the my [list] list
-
+- Delete [entity] from my [list] list
+- Delete [entity] from the [list] list
+- Remove [entity] from my [list] list
+- Remove [entity] from the [list] list
+- Clear the [list] list
+- Clear the my [list] list
 ---
 type: intent
 name: list@update
 slots:
-  - name: list
-    entity: list_name
-  - name: entity
-    entity: object
-  - name: new_entity
-    entity: object
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
+- name: new_entity
+  entity: object
 utterances:
-  - Change [entity] to [new_entity] on my [list] list
-  - Change [entity] to [new_entity] in my [list] list
-  
+- Change [entity] to [new_entity] on my [list] list
+- Change [entity] to [new_entity] in my [list] list
 ---
 type: intent
 name: set@reminder
 slots:
-  - name: time
-    entity: snips/datetime
+- name: time
+  entity: snips/datetime
 utterances:
-  - Remeber me [time] to do [action]
-  - Remeber me [time] to [action]
-  - Remeber me [time] to [action] my [person]
-  - Remeber me [time] to [action] [person]
-  - Remeber me [time] to [action] to my [person]
-  - Remeber me [time] to [action] to [person]
-  - Remeber me [time] to [action] for [person]
-  - Remeber me [time] too [action]
-  - Remeber me [time] too [action] my [person]
-  - Remeber me [time] too [action] [person]
-  - Remeber me [time] too [action] to my [person]
-  - Remeber me [time] too [action] to [person]
-  - Remeber me [time] too [action] for [person]
-
+- Remeber me [time] to do [action]
+- Remeber me [time] to [action]
+- Remeber me [time] to [action] my [person]
+- Remeber me [time] to [action] [person]
+- Remeber me [time] to [action] to my [person]
+- Remeber me [time] to [action] to [person]
+- Remeber me [time] to [action] for [person]
+- Remeber me [time] too [action]
+- Remeber me [time] too [action] my [person]
+- Remeber me [time] too [action] [person]
+- Remeber me [time] too [action] to my [person]
+- Remeber me [time] too [action] to [person]
+- Remeber me [time] too [action] for [person]
 ---
 type: intent
 name: math@even.or.odd
 slots:
-  - name: number
-    entity: snips/number
-  - name: type
-    entity: mathNumberType
+- name: number
+  entity: snips/number
+- name: type
+  entity: mathNumberType
 utterances:
-  - Is [number] even or odd
-  - Is [number] [type]
-  - \[number] is even or odd
-  - \[number] is [type]
-
+- Is [number] even or odd
+- Is [number] [type]
+- \[number] is even or odd
+- \[number] is [type]
 ---
 type: intent
 name: math@random
 slots:
-  - name: type
-    entity: mathNumberType
-  - name: sign
-    entity: mathNumberSign
-  - name: smaller_number
-    entity: snips/number
-  - name: bigger_number
-    entity: snips/number
+- name: type
+  entity: mathNumberType
+- name: sign
+  entity: mathNumberSign
+- name: smaller_number
+  entity: snips/number
+- name: bigger_number
+  entity: snips/number
 utterances:
-  - Generate me a random number
-  - Create me a random number
-  - Make me a random number
-  - Generate me a [sign] random number
-  - Create me a [sign] random number
-  - Make me a [sign] random number
-  - Generate me a [sign] random [type] number
-  - Create me a [sign] random [type] number
-  - Make me a [sign] random [type] number
-  - Generate me a random [type] number
-  - Create me a random [type] number
-  - Make me a random [type] number
-  - Generate me a [type] random number
-  - Create me a [type] random number
-  - Make me a [type] random number
-  - Generate me a random number from [smaller_number] to [bigger_number]
-  - Create me a random number from [smaller_number] to [bigger_number]
-  - Make me a random number from [smaller_number] to [bigger_number]
-  - Generate me a [sign] random number from [smaller_number] to [bigger_number]
-  - Create me a [sign] random number from [smaller_number] to [bigger_number]
-  - Make me a [sign] random number from [smaller_number] to [bigger_number]
-  - Generate me a [sign] random [type] number from [smaller_number] to [bigger_number]
-  - Create me a [sign] random [type] number from [smaller_number] to [bigger_number]
-  - Make me a [sign] random [type] number from [smaller_number] to [bigger_number]
-  - Generate me a random [type] number from [smaller_number] to [bigger_number]
-  - Create me a random [type] number from [smaller_number] to [bigger_number]
-  - Make me a random [type] number from [smaller_number] to [bigger_number]
-  - Generate me a [type] random number from [smaller_number] to [bigger_number]
-  - Create me a [type] random number from [smaller_number] to [bigger_number]
-  - Make me a [type] random number from [smaller_number] to [bigger_number]
-
+- Generate me a random number
+- Create me a random number
+- Make me a random number
+- Generate me a [sign] random number
+- Create me a [sign] random number
+- Make me a [sign] random number
+- Generate me a [sign] random [type] number
+- Create me a [sign] random [type] number
+- Make me a [sign] random [type] number
+- Generate me a random [type] number
+- Create me a random [type] number
+- Make me a random [type] number
+- Generate me a [type] random number
+- Create me a [type] random number
+- Make me a [type] random number
+- Generate me a random number from [smaller_number] to [bigger_number]
+- Create me a random number from [smaller_number] to [bigger_number]
+- Make me a random number from [smaller_number] to [bigger_number]
+- Generate me a [sign] random number from [smaller_number] to [bigger_number]
+- Create me a [sign] random number from [smaller_number] to [bigger_number]
+- Make me a [sign] random number from [smaller_number] to [bigger_number]
+- Generate me a [sign] random [type] number from [smaller_number] to [bigger_number]
+- Create me a [sign] random [type] number from [smaller_number] to [bigger_number]
+- Make me a [sign] random [type] number from [smaller_number] to [bigger_number]
+- Generate me a random [type] number from [smaller_number] to [bigger_number]
+- Create me a random [type] number from [smaller_number] to [bigger_number]
+- Make me a random [type] number from [smaller_number] to [bigger_number]
+- Generate me a [type] random number from [smaller_number] to [bigger_number]
+- Create me a [type] random number from [smaller_number] to [bigger_number]
+- Make me a [type] random number from [smaller_number] to [bigger_number]
 ---
 type: intent
 name: music@play
 slots:
-  - name: track
-    entity: musicTrack
-  - name: artist
-    entity: musicArtist
-  - name: album
-    entity: musicAlbum
-  - name: playlist
-    entity: musicAlbum
-  - name: genre
-    entity: musicGenre
+- name: track
+  entity: musicTrack
+- name: artist
+  entity: musicArtist
+- name: album
+  entity: musicAlbum
+- name: playlist
+  entity: musicAlbum
+- name: genre
+  entity: musicGenre
 utterances:
-  - Play [track]
-  - Play the album [album]
-  - Play the music by [artist]
-  - Play all the music of [artist]
-  - Play all the songs of [artist]
-  - Play the [track] by [artist]
-  - Play the playlist [playlist]
-  - Play all the [genre] music
-  - Play all the [genre] songs
-  - Play all the songs
-  - Play all my songs
-  - Play all my music
-  - Play the entire library
-
+- Play [track]
+- Play the album [album]
+- Play the music by [artist]
+- Play all the music of [artist]
+- Play all the songs of [artist]
+- Play the [track] by [artist]
+- Play the playlist [playlist]
+- Play all the [genre] music
+- Play all the [genre] songs
+- Play all the songs
+- Play all my songs
+- Play all my music
+- Play the entire library
 ---
 type: intent
 name: music@do
 slots:
-  - name: shuffleEnabled
-    entity: TrueOrFalse
+- name: shuffleEnabled
+  entity: TrueOrFalse
 utterances:
-  - Please [musicDo]
-  - Please [musicDo] the music
-  - \[musicTrackAction] track
-  - Set song repeat to [musicReapeatOptions]
-  - Set repeat mode to [musicReapeatOptions]
-  - Set shuffle enabled to [shuffleEnabled]
-  - Set shuffle to [shuffleEnabled]
-
+- Please [musicDo]
+- Please [musicDo] the music
+- \[musicTrackAction] track
+- Set song repeat to [musicReapeatOptions]
+- Set repeat mode to [musicReapeatOptions]
+- Set shuffle enabled to [shuffleEnabled]
+- Set shuffle to [shuffleEnabled]
 ---
 type: intent
 name: music@whats.playing
 utterances:
-  - What this song
-  - This song
-  - Whats the name of this song
-  - What is playing
-  - What song is this
-  - What is this songs
-  - What is this song name
-  - What is currently playing
-
+- What this song
+- This song
+- Whats the name of this song
+- What is playing
+- What song is this
+- What is this songs
+- What is this song name
+- What is currently playing
 ---
 type: intent
 name: alex@presents
 utterances:
-  - Who are you
-  - Present yourself
-  - Tell me about you
-  - Tell us about you
-
+- Who are you
+- Present yourself
+- Tell me about you
+- Tell us about you
 ---
 type: intent
 name: alex@presents.proposit
 utterances:
-  - What is your proposit
-  - Why they made you
-  - Why are you here
-  - What is the reason behind you creation
-  - What is the reason you are here
-  - Why you exist
-  - What is your objective
-  - What is you porpose
-
+- What is your proposit
+- Why they made you
+- Why are you here
+- What is the reason behind you creation
+- What is the reason you are here
+- Why you exist
+- What is your objective
+- What is you porpose
 ---
 type: intent
 name: alex@presents.maker
 utterances:
-  - Who made you
-  - Who created you
-  - Who programed you
-
-# turnLightOn intent
----
-type: intent
-name: turnOn@light
-slots:
-  - name: room
-    entity: room
-utterances:
-  - Turn on the lights in the [room](kitchen)
-  - give me some light in the [room](bathroom) please
-  - Can you light up the [room](living room) ?
-  - switch the [room](bedroom)'s lights on please
-
-# turnLightOff intent
----
-type: intent
-name: turnOff@light
-slots:
-  - name: room
-    entity: room
-utterances:
-  - Turn off the lights in the [room](entrance)
-  - turn the [room](bathroom)'s light out please
-  - switch off the light the [room](kitchen), will you?
-  - Switch the [room](bedroom)'s lights off please
-
-# setTemperature intent
+- Who made you
+- Who created you
+- Who programed you
 ---
 type: intent
 name: set@temperature
 slots:
-  - name: room
-    entity: room
-  - name: roomTemperature
-    entity: snips/temperature
+- name: room
+  entity: room
+- name: roomTemperature
+  entity: snips/temperature
 utterances:
-  - Set the temperature to [roomTemperature](19 degrees) in the [room](bedroom)
-  - please set the [room](living room)'s temperature to [roomTemperature](twenty two degrees celsius)
-  - I want [roomTemperature](75 degrees fahrenheit) in the [room](bathroom) please
-  - Can you increase the temperature to [roomTemperature](22 degrees) ?
-
-# room entity
+- Set the temperature to [roomTemperature](19 degrees) in the [room](bedroom)
+- please set the [room](living room)'s temperature to [roomTemperature](twenty two
+  degrees celsius)
+- I want [roomTemperature](75 degrees fahrenheit) in the [room](bathroom) please
+- Can you increase the temperature to [roomTemperature](22 degrees) ?
 ---
 type: entity
 name: room
-automatically_extensible: no
+automatically_extensible: false
 values:
-  - bedroom
-  - [living room, main room, lounge]
-  - [garden, yard, backyard]
-
+- bedroom
+- - living room
+  - main room
+  - lounge
+- - garden
+  - yard
+  - backyard
 ---
 type: entity
 name: musicDo
 automatically_extensible: false
 values:
-  - resume
-  - [playpause, play, pause, pause it, play it, stop the song, stop it, start the song]
-  - fast forward
-
+- resume
+- - playpause
+  - play
+  - pause
+  - pause it
+  - play it
+  - stop the song
+  - stop it
+  - start the song
+- fast forward
 ---
 type: entity
 name: musicGenre
 automatically_extensible: true
 values:
-  - [Christian/Gospel, gospel, christian]
-  - Music
-  - Pop
-  - Praise & Worship
-  - Rap
-  - Worship
-  - [Acapela, Voice made]
-  - Rock
-  - Worship
-
+- - Christian/Gospel
+  - gospel
+  - christian
+- Music
+- Pop
+- Praise & Worship
+- Rap
+- Worship
+- - Acapela
+  - Voice made
+- Rock
+- Worship
 ---
 type: entity
 name: object
 automatically_extensible: true
-use_synonyms: false # default value is true
+use_synonyms: false
 values:
-  - run
-  - pizza
-  - hamburger
-  - lunch
-  - play
-  - read
-  - study
-  - order
-  - leave
-  - apple
-  - milk
-  - something
-  - bread and milk
-  - bread
-  - soup
-  - pencil
-  - Test Paper
-  - Cat food
-  - Fish
-  - Raw meat
-  - Elephant
-  - Tv
-  - Iphone
-  - Phone
-  - Earbuds
-  - Money
-  - Meat
-
+- run
+- pizza
+- hamburger
+- lunch
+- play
+- read
+- study
+- order
+- leave
+- apple
+- milk
+- something
+- bread and milk
+- bread
+- soup
+- pencil
+- Test Paper
+- Cat food
+- Fish
+- Raw meat
+- Elephant
+- Tv
+- Iphone
+- Phone
+- Earbuds
+- Money
+- Meat
 ---
 type: entity
 name: list_name
 automatically_extensible: true
-use_synonyms: true 
+use_synonyms: true
 values:
-  - [shopping, things to buy, buy]
-  - Fix
-  - Project
-  - [Ideas, Brain Storm, Project Ideas]
-  - Movies
-  - Songs
-  - Anime
-  - Tv Shows
-  - Games
-  - Apps
-  - Subscription
-
+- - shopping
+  - things to buy
+  - buy
+- Fix
+- Project
+- - Ideas
+  - Brain Storm
+  - Project Ideas
+- Movies
+- Songs
+- Anime
+- Tv Shows
+- Games
+- Apps
+- Subscription
 ---
 type: entity
 name: musicTrackAction
 automatically_extensible: false
-use_synonyms: false # default value is true
+use_synonyms: false
 values:
-  - next
-  - back
-
+- next
+- back
 ---
 type: entity
 name: mathFunctions
 automatically_extensible: false
-use_synonyms: true # default value is true
+use_synonyms: true
 values:
-  - [sen, seno, sin]
-  - [sinh, senh, arch-sen, arch-sin]
-  - [cosh, arch-cos]
-  - [cos, cosen, coseno]
-  - [tan, tangen, tangente]
-  - [sqrt, square root, square-root]
-
-
-
+- - sen
+  - seno
+  - sin
+- - sinh
+  - senh
+  - arch-sen
+  - arch-sin
+- - cosh
+  - arch-cos
+- - cos
+  - cosen
+  - coseno
+- - tan
+  - tangen
+  - tangente
+- - sqrt
+  - square root
+  - square-root
 ---
 type: entity
 name: musicReapeatOptions
 automatically_extensible: false
-use_synonyms: false # default value is true
+use_synonyms: false
 values:
-  - One
-  - All
-  - \[off, none]
-
-
+- One
+- All
+- \[off, none]
 ---
 type: entity
 name: timeOfDay
-automatically_extensible: no
+automatically_extensible: false
 values:
-  - Morning
-  - Affternoon
-  - Night
-
-# City Entity
+- Morning
+- Affternoon
+- Night
 ---
 type: entity
 name: region
-automatically_extensible: true # default value is true
-use_synonyms: false # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.8
 values:
-  - london
-  - Berlin
-  - [new york, big apple]
-  - [paris, city of lights]
-  - Mindelo
-  - Cabo verde
-  - São Vicente
-  - House
-  - Church
-  - School
-
+- london
+- Berlin
+- - new york
+  - big apple
+- - paris
+  - city of lights
+- Mindelo
+- Cabo verde
+- São Vicente
+- House
+- Church
+- School
 ---
 type: entity
 name: entityName
-automatically_extensible: true # default value is true
-use_synonyms: false # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.5
 values:
-  - Youtube
-  - [pc, computer]
-
+- youtube
+- - pc
+  - computer
+- pycharm
+- webstorm
+- firefox
+- files
+- clion
+- terminal
+- - localsend_app
+  - localsend
+  - airdrop
+  - local send
+- python
+- - casaos
+  - casa os
+- google
+- chorme
+- calculator
 ---
 type: entity
 name: person
-automatically_extensible: true # default value is true
-use_synonyms: false # default value is true
-matching_strictness: 0.6 # default value is 1.0
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.6
 values:
-  - me
-  - mom
-  - dad
-  - sister
-  - Cat
-  - Dog
-  - fibi
-  - you
-
+- me
+- mom
+- dad
+- sister
+- Cat
+- Dog
+- fibi
+- you
 ---
 type: entity
 name: mathoperation
-automatically_extensible: false # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.8
 values:
-  - [times, multiplied, timed by, multiply]
-  - [over, divided, over it by, divide]
-  - [plus, and, added to, add, with]
-  - [minus, subtracted]
-  - [elevated, elevate it]
-
+- - times
+  - multiplied
+  - timed by
+  - multiply
+- - over
+  - divided
+  - over it by
+  - divide
+- - plus
+  - and
+  - added to
+  - add
+  - with
+- - minus
+  - subtracted
+- - elevated
+  - elevate it
 ---
 type: entity
 name: action
-automatically_extensible: true # default value is true
-use_synonyms: false # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.8
 values:
-  - call
-  - buy
-  - register
-  - buy apples
-  - buy a car
-  - sing
-  - sing happy birth day
-  - make a cake
-  - make a program that does somethigs
-  - create somthing
-  - create
-  - make
-  - feed
-
+- call
+- buy
+- register
+- buy apples
+- buy a car
+- sing
+- sing happy birth day
+- make a cake
+- make a program that does somethigs
+- create somthing
+- create
+- make
+- feed
 ---
 type: entity
 name: playMode
-automatically_extensible: false # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.8
 values:
-  - random
-  - line
-  - order
-
+- random
+- line
+- order
 ---
 type: entity
 name: TrueOrFalse
-automatically_extensible: false # default value is true
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 1.0
 values:
-  - \true
-  - \false
-
+- - \true
+  - 'yes'
+- - \false
+  - 'no'
 ---
 type: entity
 name: musicTrack
-automatically_extensible: true # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
 values:
-  - Forever
-  - Mi Amor
-  - Golden Hour
-  - Home
-  - Clouds
-  - Rei das maldições
-  - Faded
-  - Where are U now
-  - DaftPunk
-  - Playing God
-
+- Forever
+- Mi Amor
+- Golden Hour
+- Home
+- Clouds
+- Rei das maldições
+- Faded
+- Where are U now
+- DaftPunk
+- Playing God
 ---
 type: entity
 name: musicArtist
-automatically_extensible: true # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
 values:
-  - 4HIM With Jon Anderson
-  - 7 Minutoz
-  - Adele
-  - Alan Walker
-  - Ali Gatie
-  - Barak
-  - Bethel Music Kids
-  - Better is one Day
-  - Burlap To Cashmere
-  - Chris Rodrigues
-  - Cindy Morgan
-  - Colde
-  - Delirious With Amy Grace
-  - IEBM
-  - Imagine Dragons
-  - [JVKE, JAKE]
-  - Jaci Velasquez
-  - KALEO
-  - Lewis Capaldi
-  - MHRAP
-  - Marcela Gandara
-  - Metro Boomin
-  - Micah Palace
-  - Michael W. Smith
-  - Michelle Tumes
-  - Myles Smith
-  - Máire Brennan
-  - Måneskin
-  - Park Eun Bin
-  - Paulo Cesar Baruk
-  - Pentatonix
-  - Point Of Grace
-  - Post Malone
-  - Rita Rocha
-  - Sia
-  - Sixpence None The Rich
-  - Suno Ai
-  - TobyMac
-  - Adele
-  - DaftPunk
-  - POLYPHIA
-
+- 4HIM With Jon Anderson
+- 7 Minutoz
+- Adele
+- Alan Walker
+- Ali Gatie
+- Barak
+- Bethel Music Kids
+- Better is one Day
+- Burlap To Cashmere
+- Chris Rodrigues
+- Cindy Morgan
+- Colde
+- Delirious With Amy Grace
+- IEBM
+- Imagine Dragons
+- - JVKE
+  - JAKE
+- Jaci Velasquez
+- KALEO
+- Lewis Capaldi
+- MHRAP
+- Marcela Gandara
+- Metro Boomin
+- Micah Palace
+- Michael W. Smith
+- Michelle Tumes
+- Myles Smith
+- Máire Brennan
+- Måneskin
+- Park Eun Bin
+- Paulo Cesar Baruk
+- Pentatonix
+- Point Of Grace
+- Post Malone
+- Rita Rocha
+- Sia
+- Sixpence None The Rich
+- Suno Ai
+- TobyMac
+- Adele
+- DaftPunk
+- POLYPHIA
 ---
 type: entity
 name: musicAlbum
-automatically_extensible: true # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
 values:
-  - This is what ____ feels like
-  - Mi Amor
-  - Home
-  - Clouds
-  - Forever
-
+- This is what ____ feels like
+- Mi Amor
+- Home
+- Clouds
+- Forever
 ---
 type: entity
 name: jokeType
 use_synonyms: true
 matching_strictness: 0.8
 values:
-  - [all, any]
-  - [neutral, normal]
-  - [chuck, Chuck Norris]
-
+- - all
+  - any
+- - neutral
+  - normal
+- - chuck
+  - Chuck Norris
 ---
 type: entity
 name: word
-automatically_extensible: true # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.6 # default value is 1.0
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.6
 values:
-  - water
-  - zip code
-  - test
-  - user
-  - Alex
-  - Over dose
-  - Testing
-  - Apple
-  - music
-  - Computer
-  - Etc
-  - Apollo 1
-  - Apoll0 11
-  - Apollo 13
-  - Apollo 9
-
+- water
+- zip code
+- test
+- user
+- Alex
+- Over dose
+- Testing
+- Apple
+- music
+- Computer
+- Etc
+- Apollo 1
+- Apoll0 11
+- Apollo 13
+- Apollo 9
 ---
 type: entity
 name: skillMajor
-automatically_extensible: true # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.6 # default value is 1.0
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.6
 values:
-  - math
-  - play
-  - [saudation, greet, greeting]
-  - set
-  - learn
-  - define
-  - translate
-  - generate
-  - make
-  - send
-  - call
-  - search
-
+- math
+- play
+- - saudation
+  - greet
+  - greeting
+- set
+- learn
+- define
+- translate
+- generate
+- make
+- send
+- call
+- search
 ---
 type: entity
 name: skillMinor
-automatically_extensible: true # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.6 # default value is 1.0
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.6
 values:
-  - music
-  - simple
-  - geometry
-  - [even_or_odd, even, odd, prime]
-  - [music_whats_playing, what is playing, currently playing]
-  - [music_do, do actions]
-  - timer
-  - reminder
-  - skills
-  - [hi, someone]
-  - tanks
-
----
-type: entity
-name: mathNumberType
-automatically_extensible: false # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.95 # default value is 1.0
-values:
+- music
+- simple
+- geometry
+- - even_or_odd
   - even
   - odd
   - prime
-  - real
-  - imaginary
-  - natural
-
+- - music_whats_playing
+  - what is playing
+  - currently playing
+- - music_do
+  - do actions
+- timer
+- reminder
+- skills
+- - hi
+  - someone
+- tanks
+---
+type: entity
+name: mathNumberType
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.95
+values:
+- even
+- odd
+- prime
+- real
+- imaginary
+- natural
 ---
 type: entity
 name: mathNumberSign
-automatically_extensible: false # default value is true
-use_synonyms: true # default value is true
-matching_strictness: 0.7 # default value is 1.0
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.7
 values:
-  - [positive, bigger than zero]
-  - [negative, smaller than zero]
-
+- - positive
+  - bigger than zero
+- - negative
+  - smaller than zero
 ---
 type: entity
 name: gender
 automatically_extensible: false
 matching_strictness: 0.7
 values:
-  - [female, feminine, woman, girl]
-  - [male, masculine, man, boy]
-
+- - female
+  - feminine
+  - woman
+  - girl
+- - male
+  - masculine
+  - man
+  - boy
 ---
 type: entity
 name: mood
-automatically_extensible: false # default value is true
-use_synonyms: false # default value is true
-matching_strictness: 0.8 # default value is 1.0
+automatically_extensible: false
+use_synonyms: false
+matching_strictness: 0.8
 values:
-  - Neutral
-  - Afraid
-  - Aggravated
-  - Angry
-  - Anxious
-  - Ashamed
-  - Assertive
-  - Burdened
-  - Brave
-  - Calm
-  - Cautious
-  - Challenged
-  - Cheerful
-  - Cherished
-  - Comforted
-  - Contented
-  - Creative
-  - Curious
-  - Depressed
-  - Embarrassed
-  - Energized
-  - Envious 
-  - Excited 
-  - Furious 
-  - Guilty
-  - Grumpy
-  - Happy
-  - Hopeful
-  - Humiliated 
-  - Hurt
-  - Indifferent
-  - Day-dreaming
-  - Insecure 
-  - Irritated 
-  - Lonely
-  - Loved
-  - Mad
-  - Optimistic
-  - Overwhelmed 
-  - Panicked
-  - Peaceful
-  - Positive
-  - Pessimistic
-  - Shameful 
-  - Prepared
-  - Skeptical 
-  - Proud
-  - Sorrowful
-  - Suicidal 
-  - Ready forchange
-  - Relieved
-  - Renewed
-  - Sad
-  - Self-confident
-
+- Neutral
+- Afraid
+- Aggravated
+- Angry
+- Anxious
+- Ashamed
+- Assertive
+- Burdened
+- Brave
+- Calm
+- Cautious
+- Challenged
+- Cheerful
+- Cherished
+- Comforted
+- Contented
+- Creative
+- Curious
+- Depressed
+- Embarrassed
+- Energized
+- Envious
+- Excited
+- Furious
+- Guilty
+- Grumpy
+- Happy
+- Hopeful
+- Humiliated
+- Hurt
+- Indifferent
+- Day-dreaming
+- Insecure
+- Irritated
+- Lonely
+- Loved
+- Mad
+- Optimistic
+- Overwhelmed
+- Panicked
+- Peaceful
+- Positive
+- Pessimistic
+- Shameful
+- Prepared
+- Skeptical
+- Proud
+- Sorrowful
+- Suicidal
+- Ready forchange
+- Relieved
+- Renewed
+- Sad
+- Self-confident
 ---
 type: entity
 name: contry
 automatically_extensible: false
 matching_strictness: 0.5
 values:
-  - Abkhazia
-  - Afghanistan
-  - Akrotiri
-  - Aland
-  - Aland Islands
-  - Albania
-  - Algeria
-  - America
-  - American Samoa
-  - Andorra
-  - Angola
-  - Anguilla
-  - Antigua
-  - Antigua and Barbuda
-  - Argentina
-  - Armenia
-  - Aruba
-  - Ascension Island
-  - Australia
-  - Austria
-  - Azerbaijan
-  - Bahamas
-  - Bahrain
-  - Bangladesh
-  - Barbados
-  - Barbuda
-  - Belarus
-  - Belgium
-  - Belize
-  - Benin
-  - Bermuda
-  - Bhutan
-  - Bolivia
-  - Bosnia
-  - Bosnia and Herzegovina
-  - Botswana
-  - Brazil
-  - British Virgin Islands
-  - Brunei
-  - Bulgaria
-  - Burkina Faso
-  - Burma
-  - Burundi
-  - Caicos Islands
-  - Cambodia
-  - Cameroon
-  - Canada
-  - Cape Verde
-  - Cayman Islands
-  - Central African Republic
-  - Chad
-  - Chile
-  - China
-  - Christmas Island
-  - Cocos
-  - Cocos Islands
-  - Colombia
-  - Comoros
-  - Congo
-  - Cook Islands
-  - Costa Rica
-  - Cote d'Ivoire
-  - Croatia
-  - Cuba
-  - Cyprus
-  - Czech Republic
-  - Democratic Republic of Congo
-  - Denmark
-  - Dhekelia
-  - Djibouti
-  - Dominica
-  - Dominican Republic
-  - East Timor
-  - Ecuador
-  - Egypt
-  - El Salvador
-  - England
-  - Equatorial Guinea
-  - Eritrea
-  - Estonia
-  - Ethiopia
-  - Falkland Islands
-  - Faroe Islands
-  - Fiji
-  - Finland
-  - Former Soviet Union
-  - Former USSR
-  - France
-  - French Polynesia
-  - Futuna Islands
-  - Gabon
-  - Gambia
-  - Georgia
-  - Germany
-  - Ghana
-  - Gibraltar
-  - Greece
-  - Greenland
-  - Grenada
-  - Grenadines
-  - Guam
-  - Guatemala
-  - Guernsey
-  - Guinea
-  - Guinea-Bissau
-  - Guyana
-  - Haiti
-  - Herzegovina
-  - Honduras
-  - Hong Kong
-  - Hoorn Islands
-  - Hungary
-  - Iceland
-  - India
-  - Indonesia
-  - Iran
-  - Iraq
-  - Ireland
-  - Isle of Man
-  - Israel
-  - Italy
-  - Jamaica
-  - Japan
-  - Jersey
-  - Jordan
-  - Kazakhstan
-  - Keeling Islands
-  - Kenya
-  - Kiribati
-  - Korea
-  - Kosovo
-  - Kuwait
-  - Kyrgyzstan
-  - Laos
-  - Latvia
-  - Lebanon
-  - Lesotho
-  - Liberia
-  - Libya
-  - Liechtenstein
-  - Lithuania
-  - Luxembourg
-  - Macao
-  - Macau
-  - Macedonia
-  - Madagascar
-  - Malawi
-  - Malaysia
-  - Maldives
-  - Mali
-  - Malta
-  - Marshall Islands
-  - Mauritania
-  - Mauritius
-  - Mayotte
-  - Mexico
-  - Micronesia
-  - Miquelon
-  - Moldova
-  - Monaco
-  - Mongolia
-  - Montenegro
-  - Montserrat
-  - Morocco
-  - Mozambique
-  - Myanmar
-  - Nagorno-Karabakh Republic
-  - Namibia
-  - Nauru
-  - Nepal
-  - Netherlands
-  - Netherlands Antilles
-  - Nevis
-  - New Caledonia
-  - New Zealand
-  - Nicaragua
-  - Niger
-  - Nigeria
-  - Niue
-  - Norfolk Island
-  - Northern Mariana Islands
-  - North Korea
-  - Norway
-  - Oman
-  - Pakistan
-  - Palau
-  - Palestine
-  - Palestinian Territory
-  - Panama
-  - Papua New Guinea
-  - Paraguay
-  - People's Republic of China
-  - Peru
-  - Philippines
-  - Pitcairn Islands
-  - Poland
-  - Portugal
-  - Principe
-  - Puerto Rico
-  - Qatar
-  - Romania
-  - Russia
-  - Rwanda
-  - Saint Barthelemy
-  - Saint Barts
-  - Saint Helena
-  - Saint Kitts 
-  - Saint Kitts and Nevis
-  - Saint Lucia
-  - Saint Martin
-  - Saint Pierre 
-  - Saint Pierre and Miquelon
-  - Saint Vincent
-  - Saint Vincent and the Grenadines
-  - Samoa
-  - San Marino
-  - Sao Tome
-  - Sao Tome and Principe
-  - Saudi Arabia
-  - Scotland
-  - Senegal
-  - Serbia
-  - Seychelles
-  - Sierra Leone
-  - Singapore
-  - Slovakia
-  - Slovenia
-  - Solomon Islands
-  - Somalia
-  - Somaliland
-  - South Africa
-  - South Korea
-  - South Ossetia
-  - Soviet Union
-  - Spain
-  - Sri Lanka
-  - Sudan
-  - Suriname
-  - Svalbard
-  - Swaziland
-  - Sweden
-  - Switzerland
-  - Syria
-  - Taiwan
-  - Tajikistan
-  - Tanzania
-  - Thailand
-  - Tibet
-  - Tobago
-  - Togo
-  - Tokelau
-  - Tonga
-  - Transnistria
-  - Trinidad
-  - Trinidad and Tobago
-  - Tristan da Cunha
-  - Tunisia
-  - Turkey
-  - Turkmenistan
-  - Turks and Caicos Islands
-  - Turks Islands
-  - Tuvalu
-  - UAE
-  - Uganda
-  - UK
-  - Ukraine
-  - United Arab Emirates
-  - United Kingdom
-  - United States
-  - United States Virgin Islands
-  - Uruguay
-  - US
-  - USA
-  - USSR
-  - US Virgin Islands
-  - Uzbekistan
-  - Vanuatu
-  - Vatican
-  - Vatican City
-  - Venezuela
-  - Vietnam
-  - Virgin Islands
-  - Wallis and Futuna
-  - Wallis Islands
-  - Western Sahara
-  - Yemen
-  - Zambia
-  - Zimbabwe
+- Abkhazia
+- Afghanistan
+- Akrotiri
+- Aland
+- Aland Islands
+- Albania
+- Algeria
+- America
+- American Samoa
+- Andorra
+- Angola
+- Anguilla
+- Antigua
+- Antigua and Barbuda
+- Argentina
+- Armenia
+- Aruba
+- Ascension Island
+- Australia
+- Austria
+- Azerbaijan
+- Bahamas
+- Bahrain
+- Bangladesh
+- Barbados
+- Barbuda
+- Belarus
+- Belgium
+- Belize
+- Benin
+- Bermuda
+- Bhutan
+- Bolivia
+- Bosnia
+- Bosnia and Herzegovina
+- Botswana
+- Brazil
+- British Virgin Islands
+- Brunei
+- Bulgaria
+- Burkina Faso
+- Burma
+- Burundi
+- Caicos Islands
+- Cambodia
+- Cameroon
+- Canada
+- Cape Verde
+- Cayman Islands
+- Central African Republic
+- Chad
+- Chile
+- China
+- Christmas Island
+- Cocos
+- Cocos Islands
+- Colombia
+- Comoros
+- Congo
+- Cook Islands
+- Costa Rica
+- Cote d'Ivoire
+- Croatia
+- Cuba
+- Cyprus
+- Czech Republic
+- Democratic Republic of Congo
+- Denmark
+- Dhekelia
+- Djibouti
+- Dominica
+- Dominican Republic
+- East Timor
+- Ecuador
+- Egypt
+- El Salvador
+- England
+- Equatorial Guinea
+- Eritrea
+- Estonia
+- Ethiopia
+- Falkland Islands
+- Faroe Islands
+- Fiji
+- Finland
+- Former Soviet Union
+- Former USSR
+- France
+- French Polynesia
+- Futuna Islands
+- Gabon
+- Gambia
+- Georgia
+- Germany
+- Ghana
+- Gibraltar
+- Greece
+- Greenland
+- Grenada
+- Grenadines
+- Guam
+- Guatemala
+- Guernsey
+- Guinea
+- Guinea-Bissau
+- Guyana
+- Haiti
+- Herzegovina
+- Honduras
+- Hong Kong
+- Hoorn Islands
+- Hungary
+- Iceland
+- India
+- Indonesia
+- Iran
+- Iraq
+- Ireland
+- Isle of Man
+- Israel
+- Italy
+- Jamaica
+- Japan
+- Jersey
+- Jordan
+- Kazakhstan
+- Keeling Islands
+- Kenya
+- Kiribati
+- Korea
+- Kosovo
+- Kuwait
+- Kyrgyzstan
+- Laos
+- Latvia
+- Lebanon
+- Lesotho
+- Liberia
+- Libya
+- Liechtenstein
+- Lithuania
+- Luxembourg
+- Macao
+- Macau
+- Macedonia
+- Madagascar
+- Malawi
+- Malaysia
+- Maldives
+- Mali
+- Malta
+- Marshall Islands
+- Mauritania
+- Mauritius
+- Mayotte
+- Mexico
+- Micronesia
+- Miquelon
+- Moldova
+- Monaco
+- Mongolia
+- Montenegro
+- Montserrat
+- Morocco
+- Mozambique
+- Myanmar
+- Nagorno-Karabakh Republic
+- Namibia
+- Nauru
+- Nepal
+- Netherlands
+- Netherlands Antilles
+- Nevis
+- New Caledonia
+- New Zealand
+- Nicaragua
+- Niger
+- Nigeria
+- Niue
+- Norfolk Island
+- Northern Mariana Islands
+- North Korea
+- Norway
+- Oman
+- Pakistan
+- Palau
+- Palestine
+- Palestinian Territory
+- Panama
+- Papua New Guinea
+- Paraguay
+- People's Republic of China
+- Peru
+- Philippines
+- Pitcairn Islands
+- Poland
+- Portugal
+- Principe
+- Puerto Rico
+- Qatar
+- Romania
+- Russia
+- Rwanda
+- Saint Barthelemy
+- Saint Barts
+- Saint Helena
+- Saint Kitts
+- Saint Kitts and Nevis
+- Saint Lucia
+- Saint Martin
+- Saint Pierre
+- Saint Pierre and Miquelon
+- Saint Vincent
+- Saint Vincent and the Grenadines
+- Samoa
+- San Marino
+- Sao Tome
+- Sao Tome and Principe
+- Saudi Arabia
+- Scotland
+- Senegal
+- Serbia
+- Seychelles
+- Sierra Leone
+- Singapore
+- Slovakia
+- Slovenia
+- Solomon Islands
+- Somalia
+- Somaliland
+- South Africa
+- South Korea
+- South Ossetia
+- Soviet Union
+- Spain
+- Sri Lanka
+- Sudan
+- Suriname
+- Svalbard
+- Swaziland
+- Sweden
+- Switzerland
+- Syria
+- Taiwan
+- Tajikistan
+- Tanzania
+- Thailand
+- Tibet
+- Tobago
+- Togo
+- Tokelau
+- Tonga
+- Transnistria
+- Trinidad
+- Trinidad and Tobago
+- Tristan da Cunha
+- Tunisia
+- Turkey
+- Turkmenistan
+- Turks and Caicos Islands
+- Turks Islands
+- Tuvalu
+- UAE
+- Uganda
+- UK
+- Ukraine
+- United Arab Emirates
+- United Kingdom
+- United States
+- United States Virgin Islands
+- Uruguay
+- US
+- USA
+- USSR
+- US Virgin Islands
+- Uzbekistan
+- Vanuatu
+- Vatican
+- Vatican City
+- Venezuela
+- Vietnam
+- Virgin Islands
+- Wallis and Futuna
+- Wallis Islands
+- Western Sahara
+- Yemen
+- Zambia
+- Zimbabwe

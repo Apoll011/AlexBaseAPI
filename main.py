@@ -84,13 +84,21 @@ async def user_search(query: Annotated[str, Query(max_length=25, min_length=2)],
 async def user_get(id: Annotated[str, Query(min_length=10)]):
     return userKit.get(id)
 
+@app.patch("/user/", name="Update user", description="Will update an user from an user object")
+async def user_update(user: str):
+    try:
+        userKit.update_user(user)
+        return {"responce":True}
+    except Exception as e:
+        return {"error": f"Unable to create user ({e})"}
+
 @app.put("/user/", name="Create user", description="Will create an user from an user object")
-async def user_create(user: User):
+async def user_create(user: str):
     try:
         userKit.createUser(user)
         return {"responce":True}
     except Exception as e:
-        return {"error": f"Wont abble to create user ({e})"}
+        return {"error": f"Unable to create user ({e})"}
 
 @app.delete("/user/", name="Delete user", description="Will delete an user from an given user id")
 async def user_delete(id: str):

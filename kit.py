@@ -105,13 +105,19 @@ class UserKit:
             return None
 
     def createUserFuntion(self, user_data):
-        user = json.loads(user_data.model_dump_json())
+        user = json.loads(user_data.replace("'", "\""))
         user["id"] = str(uuid.uuid4())
         with open("./features/user_backend/users/"+user["id"]+".user", 'a') as ui:
             json.dump(user, ui)
 
     def createUser(self, user_data):
         self.createUserFuntion(user_data=user_data)
+        self.update()
+
+    def update_user(self, user_data):
+        user = json.loads(user_data.replace("'", "\""))
+        with open("./features/user_backend/users/"+user["id"]+".user", 'w') as ui:
+            json.dump(user, ui)
         self.update()
 
     def delete_user(self, id):

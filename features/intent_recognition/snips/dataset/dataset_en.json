@@ -4,11 +4,15 @@
       "automatically_extensible": false,
       "data": [
         {
-          "synonyms": [],
+          "synonyms": [
+            "yes"
+          ],
           "value": "\\true"
         },
         {
-          "synonyms": [],
+          "synonyms": [
+            "no"
+          ],
           "value": "\\false"
         }
       ],
@@ -1238,16 +1242,70 @@
       "data": [
         {
           "synonyms": [],
-          "value": "Youtube"
+          "value": "youtube"
         },
         {
           "synonyms": [
             "computer"
           ],
           "value": "pc"
+        },
+        {
+          "synonyms": [],
+          "value": "pycharm"
+        },
+        {
+          "synonyms": [],
+          "value": "webstorm"
+        },
+        {
+          "synonyms": [],
+          "value": "firefox"
+        },
+        {
+          "synonyms": [],
+          "value": "files"
+        },
+        {
+          "synonyms": [],
+          "value": "clion"
+        },
+        {
+          "synonyms": [],
+          "value": "terminal"
+        },
+        {
+          "synonyms": [
+            "localsend",
+            "airdrop",
+            "local send"
+          ],
+          "value": "localsend_app"
+        },
+        {
+          "synonyms": [],
+          "value": "python"
+        },
+        {
+          "synonyms": [
+            "casa os"
+          ],
+          "value": "casaos"
+        },
+        {
+          "synonyms": [],
+          "value": "google"
+        },
+        {
+          "synonyms": [],
+          "value": "chorme"
+        },
+        {
+          "synonyms": [],
+          "value": "calculator"
         }
       ],
-      "matching_strictness": 0.8,
+      "matching_strictness": 0.5,
       "use_synonyms": false
     },
     "gender": {
@@ -1289,7 +1347,9 @@
           "value": "neutral"
         },
         {
-          "synonyms": [],
+          "synonyms": [
+            "Chuck Norris"
+          ],
           "value": "chuck"
         }
       ],
@@ -2537,31 +2597,6 @@
     }
   },
   "intents": {
-    "alex@are.u.sure": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Are you sure"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Are u sure"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Really"
-            }
-          ]
-        }
-      ]
-    },
     "alex@presents": {
       "utterances": [
         {
@@ -2691,6 +2726,13 @@
         {
           "data": [
             {
+              "text": "Again"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
               "text": "Try again"
             }
           ]
@@ -2752,13 +2794,6 @@
           "data": [
             {
               "text": "Repeat"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Again"
             }
           ]
         },
@@ -3172,13 +3207,6 @@
         {
           "data": [
             {
-              "text": "Close Alex"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
               "text": "Close Yourself"
             }
           ]
@@ -3187,6 +3215,41 @@
           "data": [
             {
               "text": "Quit"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Good bye"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Bye"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Bye Bye"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Adios"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Saionara"
             }
           ]
         }
@@ -3202,7 +3265,7 @@
             {
               "entity": "entityName",
               "slot_name": "entityName",
-              "text": "Youtube"
+              "text": "youtube"
             }
           ]
         },
@@ -5067,7 +5130,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "mom"
+              "text": "me"
             },
             {
               "text": " "
@@ -5087,7 +5150,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "dad"
+              "text": "mom"
             },
             {
               "text": " "
@@ -5189,7 +5252,7 @@
             {
               "entity": "TrueOrFalse",
               "slot_name": "shuffleEnabled",
-              "text": "\\false"
+              "text": "yes"
             }
           ]
         }
@@ -5409,19 +5472,52 @@
         }
       ]
     },
-    "saudation@hi": {
+    "open@app": {
       "utterances": [
         {
           "data": [
             {
-              "text": "Hi Alex"
+              "text": "Please, open "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "pycharm"
             }
           ]
         },
         {
           "data": [
             {
-              "text": "How are you"
+              "text": "Open "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "webstorm"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Start "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "firefox"
+            }
+          ]
+        }
+      ]
+    },
+    "saudation@hi": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Hi Alex"
             }
           ]
         },
@@ -5709,7 +5805,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "sister"
+              "text": "dad"
             }
           ]
         },
@@ -5737,7 +5833,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Cat"
+              "text": "sister"
             }
           ]
         },
@@ -5765,7 +5861,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "Dog"
+              "text": "Cat"
             }
           ]
         },
@@ -5793,7 +5889,7 @@
             {
               "entity": "person",
               "slot_name": "person",
-              "text": "fibi"
+              "text": "Dog"
             }
           ]
         },
@@ -5821,7 +5917,167 @@
             {
               "entity": "person",
               "slot_name": "person",
+              "text": "fibi"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "on october 1st at 10am"
+            },
+            {
+              "text": " too "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "make a cake"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "at 8 a.m."
+            },
+            {
+              "text": " too "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "make a program that does somethigs"
+            },
+            {
+              "text": " my "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
               "text": "you"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "4:30 pm"
+            },
+            {
+              "text": " too "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "create somthing"
+            },
+            {
+              "text": " "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "me"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "in 1 hour"
+            },
+            {
+              "text": " too "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "create"
+            },
+            {
+              "text": " to my "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "mom"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "the 3rd tuesday of June"
+            },
+            {
+              "text": " too "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "make"
+            },
+            {
+              "text": " to "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "dad"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Remeber me "
+            },
+            {
+              "entity": "snips/datetime",
+              "slot_name": "time",
+              "text": "tomorrow at 9pm"
+            },
+            {
+              "text": " too "
+            },
+            {
+              "entity": "action",
+              "slot_name": "action",
+              "text": "feed"
+            },
+            {
+              "text": " for "
+            },
+            {
+              "entity": "person",
+              "slot_name": "person",
+              "text": "sister"
             }
           ]
         }
@@ -6195,299 +6451,6 @@
             },
             {
               "text": " a country?"
-            }
-          ]
-        }
-      ]
-    },
-    "wec@random.name": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Give me a name."
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Give me a "
-            },
-            {
-              "entity": "gender",
-              "slot_name": "gender",
-              "text": "female"
-            },
-            {
-              "text": " name"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Give me a "
-            },
-            {
-              "entity": "gender",
-              "slot_name": "gender",
-              "text": "feminine"
-            },
-            {
-              "text": " name Please"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Generate a "
-            },
-            {
-              "entity": "gender",
-              "slot_name": "gender",
-              "text": "woman"
-            },
-            {
-              "text": " name"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Create a "
-            },
-            {
-              "entity": "gender",
-              "slot_name": "gender",
-              "text": "girl"
-            },
-            {
-              "text": " name"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Generate a name"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Create a name"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Make me a name"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me a random name"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me a random "
-            },
-            {
-              "entity": "gender",
-              "slot_name": "gender",
-              "text": "male"
-            },
-            {
-              "text": " name"
-            }
-          ]
-        }
-      ]
-    },
-    "wec@us.inagural.speach": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Tell me inaugral speach"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given in "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "on october 1st at 10am"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given in "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "at 8 a.m."
-            },
-            {
-              "text": " by "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "me"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given in "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "4:30 pm"
-            },
-            {
-              "text": " by president "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "mom"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given in "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "in 1 hour"
-            },
-            {
-              "text": " by pr. "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "dad"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given by "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "sister"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given by president "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "Cat"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given by pr. "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "Dog"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given by "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "fibi"
-            },
-            {
-              "text": " in "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "the 3rd tuesday of June"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given by president "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "you"
-            },
-            {
-              "text": " in "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "tomorrow at 9pm"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Tell me the inaugural speach given by pr. "
-            },
-            {
-              "entity": "person",
-              "slot_name": "person",
-              "text": "me"
-            },
-            {
-              "text": " in "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "today"
             }
           ]
         }

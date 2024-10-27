@@ -46,13 +46,13 @@ async def alive():
     return responce
 
 @app.get("/intent_recognition/engine", name="Train or Reuse the Intent Recognition Engine")
-async def intent_train(type: IntentRecongnitionEngineTrainType = IntentRecongnitionEngineTrainType.REUSE):
+async def intent_train(type: IntentRecongnitionEngineTrainType = IntentRecongnitionEngineTrainType.REUSE, lang: Lang = "en"):
     try:
         if type == IntentRecongnitionEngineTrainType.REUSE:
-            intentKit.reuse()
+            intentKit.reuse(lang)
         else:
-            intentKit.train()
-        return {"responce": True}
+            intentKit.train(lang)
+        return {"responce": True, "action": type.value, "lang": lang}
     except Exception:
         return {"responce": False}
 

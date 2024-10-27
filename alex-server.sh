@@ -89,8 +89,10 @@ clear() {
 
 train() {
     use_env
-    killit
-    python train.py
+    if [ -f "$PID_FILE" ]; then
+        killit
+    fi
+    python train.py $1
     startit
 }
 
@@ -118,7 +120,7 @@ case "$1" in
         startit
         ;;
     train)
-        train
+        train $2
         ;;
     *)
         echo "$1" is not a valid command. See -h/--help for help

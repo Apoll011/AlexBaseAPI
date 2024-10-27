@@ -5,7 +5,7 @@ import uuid
 from math import exp
 from difflib import get_close_matches
 from snips_nlu import SnipsNLUEngine
-from snips_nlu.default_configs import CONFIG_EN
+from snips_nlu.default_configs import CONFIG_EN, CONFIG_PT_PT
 
 class DictionaryKit:
     
@@ -52,21 +52,22 @@ class IntentKit:
     def __init__(self):
         pass
     
-    def reuse(self):
-        if self.engine is None:
-            self.engine = SnipsNLUEngine.from_path("./features/intent_recognition/snips/engine/")
-            self.loaded = True
-    def train(self):
-        os.system("snips-nlu generate-dataset en ./features/intent_recognition/snips/data/en.yaml > ./features/intent_recognition/snips/dataset/dataset_en.json")
-        with io.open("./features/intent_recognition/snips/dataset/dataset_en.json") as f:
+    def reuse(self, lang = "en"):
+    #    if self.engine is None:
+        self.engine = SnipsNLUEngine.from_path(f"./features/intent_recognition/snips/engine/{lang}")
+        self.loaded = True
+
+    def train(self, lang = "en"):
+        os.system(f"snips-nlu generate-dataset en ./features/intent_recognition/snips/data/{lang}.yaml > ./features/intent_recognition/snips/dataset/dataset_{lang}.json")
+        with io.open(f"./features/intent_recognition/snips/dataset/dataset_{lang}.json") as f:
             dataset = json.load(f)
         
         if self.engine is not None:
             del self.engine
         self.engine = SnipsNLUEngine(config=CONFIG_EN)
         self.engine.fit(dataset)
-        os.system("rm -rf ./features/intent_recognition/snips/engine")
-        self.engine.persist("./features/intent_recognition/snips/engine/")
+        os.system(f"rm -rf ./features/intent_recognition/snips/engine/{lang}/")
+        self.engine.persist(f"./features/intent_recognition/snips/engine/{lang}")
         self.loaded = True
 
     def parse(self, text):

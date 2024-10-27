@@ -5675,70 +5675,6 @@
         }
       ]
     },
-    "search@flight": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "find me a flight from "
-            },
-            {
-              "entity": "region",
-              "slot_name": "origin",
-              "text": "london"
-            },
-            {
-              "text": " to "
-            },
-            {
-              "entity": "region",
-              "slot_name": "destination",
-              "text": "Berlin"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "I need a flight leaving "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "tomorrow at 9pm"
-            },
-            {
-              "text": " to "
-            },
-            {
-              "entity": "region",
-              "slot_name": "destination",
-              "text": "new york"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "show me flights to go to "
-            },
-            {
-              "entity": "region",
-              "slot_name": "destination",
-              "text": "big apple"
-            },
-            {
-              "text": " leaving "
-            },
-            {
-              "entity": "snips/datetime",
-              "slot_name": "date",
-              "text": "today"
-            }
-          ]
-        }
-      ]
-    },
     "set@reminder": {
       "utterances": [
         {
@@ -5749,7 +5685,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "on october 1st at 10am"
+              "text": "tomorrow at 9pm"
             },
             {
               "text": " to do "
@@ -5769,7 +5705,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "at 8 a.m."
+              "text": "today"
             },
             {
               "text": " to "
@@ -5789,7 +5725,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "4:30 pm"
+              "text": "on october 1st at 10am"
             },
             {
               "text": " to "
@@ -5817,7 +5753,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "in 1 hour"
+              "text": "at 8 a.m."
             },
             {
               "text": " to "
@@ -5845,7 +5781,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "the 3rd tuesday of June"
+              "text": "4:30 pm"
             },
             {
               "text": " to "
@@ -5873,7 +5809,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "tomorrow at 9pm"
+              "text": "in 1 hour"
             },
             {
               "text": " to "
@@ -5901,7 +5837,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "today"
+              "text": "the 3rd tuesday of June"
             },
             {
               "text": " to "
@@ -5929,7 +5865,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "on october 1st at 10am"
+              "text": "tomorrow at 9pm"
             },
             {
               "text": " too "
@@ -5949,7 +5885,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "at 8 a.m."
+              "text": "today"
             },
             {
               "text": " too "
@@ -5977,7 +5913,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "4:30 pm"
+              "text": "on october 1st at 10am"
             },
             {
               "text": " too "
@@ -6005,7 +5941,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "in 1 hour"
+              "text": "at 8 a.m."
             },
             {
               "text": " too "
@@ -6033,7 +5969,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "the 3rd tuesday of June"
+              "text": "4:30 pm"
             },
             {
               "text": " too "
@@ -6061,7 +5997,7 @@
             {
               "entity": "snips/datetime",
               "slot_name": "time",
-              "text": "tomorrow at 9pm"
+              "text": "in 1 hour"
             },
             {
               "text": " too "
@@ -6310,147 +6246,6 @@
             },
             {
               "text": " Joke"
-            }
-          ]
-        }
-      ]
-    },
-    "turnOff@light": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Turn off the lights in the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "entrance"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "turn the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "bathroom"
-            },
-            {
-              "text": "'s light out please"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "switch off the light the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "kitchen"
-            },
-            {
-              "text": ", will you?"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Switch the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "bedroom"
-            },
-            {
-              "text": "'s lights off please"
-            }
-          ]
-        }
-      ]
-    },
-    "turnOn@light": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Turn on the lights in the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "kitchen"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "give me some light in the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "bathroom"
-            },
-            {
-              "text": " please"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "Can you light up the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "living room"
-            },
-            {
-              "text": " ?"
-            }
-          ]
-        },
-        {
-          "data": [
-            {
-              "text": "switch the "
-            },
-            {
-              "entity": "room",
-              "slot_name": "room",
-              "text": "bedroom"
-            },
-            {
-              "text": "'s lights on please"
-            }
-          ]
-        }
-      ]
-    },
-    "wec@is.a.country": {
-      "utterances": [
-        {
-          "data": [
-            {
-              "text": "Is "
-            },
-            {
-              "entity": "contry",
-              "slot_name": "contry",
-              "text": "Abkhazia"
-            },
-            {
-              "text": " a country?"
             }
           ]
         }

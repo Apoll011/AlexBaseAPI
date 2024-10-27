@@ -1,0 +1,1328 @@
+type: intent
+name: alex@repeat
+utterances:
+- Repita o que disseste
+- O que disseste
+- O que
+- Não entendi
+- Eu não te ouvi
+- Não pode te ouvir
+- Não consegui te ouvir
+slots: []
+---
+type: intent
+name: tell@joke
+utterances:
+- Tell me a joke
+- Can you tell me a joke
+- Please tell me a random joke
+- I want to hear a joke
+- Random Joke
+- Tell me a [jokeType] joke
+- Can you tell me a [jokeType] joke
+- Please tell me a random [jokeType] joke
+- I want to hear a [jokeType] joke
+- Random [jokeType] Joke
+---
+type: intent
+name: alex@recall
+utterances:
+- Outro
+- Tente novamente
+- Tente outra vez
+- Tente mais uma vez
+- Outra vez
+- Reconsidere
+- Reconsidere essa escolha
+- Tems a certeza. Faça outro
+- Tems a certeza. Tente outra vez
+- Faça outro
+- Me faça outro
+- Gere outro
+- Gere um diferente
+- Tente mais uma vez
+---
+type: intent
+name: alex@skills
+slots:
+- name: major_skill
+  entity: skillMajor
+- name: minor_skill
+  entity: skillMinor
+utterances:
+- Consegues fazer [major_skill] [minor_skill]
+- Consegues fazer [major_skill] uma [minor_skill]
+- Consegues fazer  [major_skill] um [minor_skill]
+- Consegues fazer [major_skill] e dizer se [minor_skill]
+- Consegues fazer [major_skill] e dizer se é [minor_skill]
+- Consegues fazer [major_skill] alguma [minor_skill]
+- Consegues fazer [major_skill]
+- Fazes [major_skill]
+- Fazes [major_skill] [minor_skill]
+- Fazes [major_skill] alguma [minor_skill]
+- És capaz de [major_skill] [minor_skill]
+- És capaz de [major_skill]
+- és capade fazer [major_skill] e [minor_skill]
+- O skill [major_skill] está instalado
+- O skill [major_skill] [minor_skill] está instalado
+---
+type: intent
+name: eliza@start
+utterances:
+- Ema
+- Atice Ema
+- Mode Ema
+- Podes ativar a Ema
+- Eu quero falar com a Ema
+- Coloque a Ema no comando
+- Eliza
+- Eu preciso falar com alguém
+- Posso falar contigo
+- Eu quero falar com alguém
+- Modo Eliza
+- Modo de Psicologo
+slots: []
+---
+type: intent
+name: dictionary@get
+utterances:
+- Qual é o significado de [word]
+- O que é [word]
+- O que é um [word]
+- O que é o [word]
+- Qual é a definição de [word]
+- Quem é [word]
+- '[word] é o que'
+- Podes me dizer a definição de [word]
+- Sabes a definição de [word]
+slots: []
+---
+type: intent
+name: saudation@tanks
+utterances:
+- Thanks
+- Thanks you
+- Thank you
+- Apreciated
+- Great
+---
+type: intent
+name: saudation@how.are.u
+utterances:
+- How are you
+- How r u
+- How are u
+- How are you Alex
+- Are you [mood]
+- How are you doing
+- How are you doing Alex
+- How are you doing today
+- How r you
+- How are you doing today Alex
+---
+type: intent
+name: saudation@hi
+utterances:
+- Hi Alex
+- Hello Alex
+- Good [timeOfDay] Alex
+- Good [timeOfDay]
+---
+type: intent
+name: close@something
+utterances:
+- Por favor feche [entityName]
+- Por favor feche o [entityName]
+- Feche [entityName]
+- Desligue [entityName]
+slots: []
+---
+type: intent
+name: open@app
+utterances:
+- Please, open [entityName]
+- Open [entityName]
+- Start [entityName]
+---
+type: intent
+name: close@alex
+utterances:
+- Por favor feche-se
+- Feche o Alex
+- Feche-se
+- Desligue-se
+- Adeus
+- Bye
+- Bye Bye
+- Adios
+- Saionara
+slots: []
+---
+type: intent
+name: money@tranfer
+utterances:
+- Send [person] [snips/amountOfMoney]
+- Pay [person] [snips/amountOfMoney]
+---
+type: intent
+name: math@simple
+slots:
+- name: first_number
+  entity: snips/number
+- name: second_number
+  entity: snips/number
+- name: number
+  entity: snips/number
+utterances:
+- \[first_number] [mathoperation] [second_number]
+- How much is [first_number] [mathoperation] [second_number]
+- How much is [first_number] [mathoperation] by [second_number]
+- What is [first_number] [mathoperation] by [second_number]
+- \[mathoperation] by [number]
+- \[mathoperation] dad by [number]
+- \[mathoperation] [number]
+- \[mathoperation] with [number]
+- \[mathoperation] that with [number]
+- \[mathoperation] dad with [number]
+- \[mathoperation] that by [number]
+---
+type: intent
+name: math@geometry
+slots:
+- name: func
+  entity: mathFunctions
+- name: number
+  entity: snips/number
+utterances:
+- What is the [func] of [number]
+- \[func] of [number] is what
+- \[func] of it
+- What is it \[func]
+- What is the \[func] of it
+- \[func] of that
+- \[func] of dad
+---
+type: intent
+name: set@timer
+slots:
+- name: duration
+  entity: snips/duration
+- name: entity
+  entity: object
+utterances:
+- Set a timer for [duration]
+- Set a [entity] timer for [duration]
+---
+type: intent
+name: list@add
+slots:
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
+utterances:
+- Adicione [entity] a minha lista de [list]
+- Adicione um [entity] a minha lista de [list]
+- Adicione [entity] para minha lista de [list]
+- Adicione um [entity] para a minha lista de [list]
+- Adicione [entity] para a lista de [list]
+- Addicione para a lista de [list]
+- Adicione [entity] para a lista
+- Adicione [entity] para a minha lista
+- Para minha lista de [list]
+---
+type: intent
+name: list@get
+slots:
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
+utterances:
+- Tell me [list] list
+- Tell me the things in my [list] list
+- Tell me what is on my [list] list
+- What is on my [list] list
+- Is [entity] in my [list] list
+- Is [entity] on the [list] list
+---
+type: intent
+name: list@clear
+slots:
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
+utterances:
+- Delete [entity] da minha lista de [list]
+- Delete [entity] da lista de [list]
+- Remova [entity] da lista de [list]
+- Remova [entity] da minha lista de [list]
+- Limpe a minha lista de [list]
+- Limpe a lista de [list]
+---
+type: intent
+name: list@update
+slots:
+- name: list
+  entity: list_name
+- name: entity
+  entity: object
+- name: new_entity
+  entity: object
+utterances:
+- Change [entity] to [new_entity] on my [list] list
+- Change [entity] to [new_entity] in my [list] list
+---
+type: intent
+name: set@reminder
+slots:
+- name: time
+  entity: snips/datetime
+utterances:
+- Remeber me [time] to do [action]
+- Remeber me [time] to [action]
+- Remeber me [time] to [action] my [person]
+- Remeber me [time] to [action] [person]
+- Remeber me [time] to [action] to my [person]
+- Remeber me [time] to [action] to [person]
+- Remeber me [time] to [action] for [person]
+- Remeber me [time] too [action]
+- Remeber me [time] too [action] my [person]
+- Remeber me [time] too [action] [person]
+- Remeber me [time] too [action] to my [person]
+- Remeber me [time] too [action] to [person]
+- Remeber me [time] too [action] for [person]
+---
+type: intent
+name: math@even.or.odd
+slots:
+- name: number
+  entity: snips/number
+- name: type
+  entity: mathNumberType
+utterances:
+- Is [number] even or odd
+- Is [number] [type]
+- \[number] is even or odd
+- \[number] is [type]
+---
+type: intent
+name: math@random
+slots:
+- name: type
+  entity: mathNumberType
+- name: sign
+  entity: mathNumberSign
+- name: smaller_number
+  entity: snips/number
+- name: bigger_number
+  entity: snips/number
+utterances:
+- Generate me a random number
+- Create me a random number
+- Make me a random number
+- Generate me a [sign] random number
+- Create me a [sign] random number
+- Make me a [sign] random number
+- Generate me a [sign] random [type] number
+- Create me a [sign] random [type] number
+- Make me a [sign] random [type] number
+- Generate me a random [type] number
+- Create me a random [type] number
+- Make me a random [type] number
+- Generate me a [type] random number
+- Create me a [type] random number
+- Make me a [type] random number
+- Generate me a random number from [smaller_number] to [bigger_number]
+- Create me a random number from [smaller_number] to [bigger_number]
+- Make me a random number from [smaller_number] to [bigger_number]
+- Generate me a [sign] random number from [smaller_number] to [bigger_number]
+- Create me a [sign] random number from [smaller_number] to [bigger_number]
+- Make me a [sign] random number from [smaller_number] to [bigger_number]
+- Generate me a [sign] random [type] number from [smaller_number] to [bigger_number]
+- Create me a [sign] random [type] number from [smaller_number] to [bigger_number]
+- Make me a [sign] random [type] number from [smaller_number] to [bigger_number]
+- Generate me a random [type] number from [smaller_number] to [bigger_number]
+- Create me a random [type] number from [smaller_number] to [bigger_number]
+- Make me a random [type] number from [smaller_number] to [bigger_number]
+- Generate me a [type] random number from [smaller_number] to [bigger_number]
+- Create me a [type] random number from [smaller_number] to [bigger_number]
+- Make me a [type] random number from [smaller_number] to [bigger_number]
+---
+type: intent
+name: music@play
+slots:
+- name: track
+  entity: musicTrack
+- name: artist
+  entity: musicArtist
+- name: album
+  entity: musicAlbum
+- name: playlist
+  entity: musicAlbum
+- name: genre
+  entity: musicGenre
+utterances:
+- Play [track]
+- Play the album [album]
+- Play the music by [artist]
+- Play all the music of [artist]
+- Play all the songs of [artist]
+- Play the [track] by [artist]
+- Play the playlist [playlist]
+- Play all the [genre] music
+- Play all the [genre] songs
+- Play all the songs
+- Play all my songs
+- Play all my music
+- Play the entire library
+---
+type: intent
+name: music@do
+slots:
+- name: shuffleEnabled
+  entity: TrueOrFalse
+utterances:
+- Please [musicDo]
+- Please [musicDo] the music
+- \[musicTrackAction] track
+- Set song repeat to [musicReapeatOptions]
+- Set repeat mode to [musicReapeatOptions]
+- Set shuffle enabled to [shuffleEnabled]
+- Set shuffle to [shuffleEnabled]
+---
+type: intent
+name: music@whats.playing
+utterances:
+- What this song
+- This song
+- Whats the name of this song
+- What is playing
+- What song is this
+- What is this songs
+- What is this song name
+- What is currently playing
+---
+type: intent
+name: alex@presents
+utterances:
+- Quem és tu
+- O que és
+- Apresenta-te
+- Conta-me sobre ti
+- Conta-nos sobre ti
+---
+type: intent
+name: alex@presents.proposit
+utterances:
+- Qual é o teu proposito
+- Porque é que te fizeram
+- Porque é que estás aqui
+- Qual é a razão por trás da tua criação
+- Qual é a razão para estares aqui
+- Porque é que existes
+- Qual é o teu objetivo
+slots: []
+---
+type: intent
+name: alex@presents.maker
+utterances:
+- Quem te fez
+- Quem te criou
+- Quem te programou
+slots: []
+---
+type: entity
+name: room
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 1.0
+values:
+- - quarto
+  - quarto de cama
+  - meu quarto
+- - sala de estar
+  - sala principal
+- quintal
+---
+type: entity
+name: musicDo
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 1.0
+values:
+- - resume
+  - resumir
+- - playpause
+  - play
+  - pausar
+  - pause o
+  - tocar
+  - toque o
+  - pause a música
+  - pare a música
+  - pare o
+  - começe a música
+- - fast forward
+  - avançe
+---
+type: entity
+name: musicGenre
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 1.0
+values:
+- - Christian/Gospel
+  - gospel
+  - cristão
+- - Music
+  - Musica
+- Pop
+- - Praise & Worship
+  - Louvor e adoração
+  - louvor
+- Rap
+- - Worship
+  - adoração
+- - Acapela
+  - Feito com voz
+- Rock
+---
+type: entity
+name: object
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 1.0
+values:
+- correr
+- pizza
+- hamburger
+- almoço
+- play
+- ler
+- estudar
+- encomendar
+- sair
+- maça
+- leite
+- algo
+- pão e leite
+- pão
+- sopa
+- lapis
+- Papel de teste
+- comida de gato
+- ração
+- peixe
+- carne
+- carne crua
+- elefante
+- carro
+- mota
+- caderno
+- computador
+- Tv
+- Iphone
+- Phone
+- Earbuds
+- Money
+- Meat
+---
+type: entity
+name: list_name
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 1.0
+values:
+- - compras
+  - comprar
+  - coisas para comprar
+  - ir a loja
+  - para comprar
+- ideias
+- projetos
+- filmes
+- músicas
+- Animes
+- Series
+- Jogos
+- Applicativos
+- Subscrições
+---
+type: entity
+name: musicTrackAction
+automatically_extensible: false
+use_synonyms: false
+matching_strictness: 1.0
+values:
+- - next
+  - proximo
+- - back
+  - anterior
+---
+type: entity
+name: mathFunctions
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 1.0
+values:
+- - sen
+  - seno
+  - sin
+- - sinh
+  - senh
+  - arch-sen
+  - arch-sin
+  - seno inverso
+- - cosh
+  - arch-cos
+  - coseno inverso
+- - cos
+  - cosen
+  - coseno
+- - tan
+  - tangen
+  - tangente
+- - sqrt
+  - raiz-quadrada
+  - raiz quadrada
+---
+type: entity
+name: musicReapeatOptions
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 1.0
+values:
+- - One
+  - um só
+  - apenas esse
+  - apenas um
+- - All
+  - todos
+- - \off
+  - nenhum
+  - desligado
+---
+type: entity
+name: timeOfDay
+automatically_extensible: false
+values:
+- Morning
+- Affternoon
+- Night
+---
+type: entity
+name: region
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
+values:
+- Londres
+- Berlin
+- nova york
+- - paris
+  - Cidade das luzes
+- Mindelo
+- Cabo verde
+- São Vicente
+- Casa
+- Igreja
+- Escola
+---
+type: entity
+name: entityName
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.5
+values:
+- youtube
+- - pc
+  - computador
+- pycharm
+- webstorm
+- firefox
+- - files
+  - ficheiro
+- clion
+- terminal
+- - localsend_app
+  - localsend
+  - airdrop
+  - local send
+- python
+- - casaos
+  - casa os
+- google
+- chorme
+- calculator
+---
+type: entity
+name: person
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.6
+values:
+- eu
+- - mãe
+  - minha mãe
+- - pai
+  - meu pai
+- - irmã
+  - minha irmã
+- gato
+- cão
+- Fibi
+- Voçê
+---
+type: entity
+name: mathoperation
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.8
+values:
+- - times
+  - multiplicado
+  - multiplique por
+  - multiplicar
+  - vezes
+- - over
+  - dividir
+  - sobre
+  - sobre por
+  - dividido
+  - dividido com
+- - plus
+  - e
+  - somado com
+  - mais
+  - com
+- - minus
+  - menos
+  - subtraido
+  - subtraido com
+- - elevated
+  - elevado
+  - elevado com
+---
+type: entity
+name: action
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.8
+values:
+- chame
+- chamar
+- comprar
+- registrar
+- cantar
+- fazer
+- faça
+- crie
+- criar
+- alimentar
+- dar ração
+- gritar
+- correr
+- dançar
+- matar
+- estrangular
+- saltar a corda
+- saltar
+- agachar
+---
+type: entity
+name: playMode
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.8
+values:
+- - random
+  - aleátorio
+- - line
+  - sequencia
+  - em sequencia
+- - order
+  - ordem
+  - por ordem
+---
+type: entity
+name: TrueOrFalse
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 1.0
+values:
+- - \true
+  - verdade
+  - sim
+- - \false
+  - falso
+  - não
+---
+type: entity
+name: musicTrack
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
+values:
+- Forever
+- Mi Amor
+- Golden Hour
+- Home
+- Clouds
+- Rei das maldições
+- Faded
+- Where are U now
+- DaftPunk
+- Playing God
+---
+type: entity
+name: musicArtist
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
+values:
+- 4HIM With Jon Anderson
+- 7 Minutoz
+- Adele
+- Alan Walker
+- Ali Gatie
+- Barak
+- Bethel Music Kids
+- Better is one Day
+- Burlap To Cashmere
+- Chris Rodrigues
+- Cindy Morgan
+- Colde
+- Delirious With Amy Grace
+- IEBM
+- Imagine Dragons
+- - JVKE
+  - JAKE
+- Jaci Velasquez
+- KALEO
+- Lewis Capaldi
+- MHRAP
+- Marcela Gandara
+- Metro Boomin
+- Micah Palace
+- Michael W. Smith
+- Michelle Tumes
+- Myles Smith
+- Máire Brennan
+- Måneskin
+- Park Eun Bin
+- Paulo Cesar Baruk
+- Pentatonix
+- Point Of Grace
+- Post Malone
+- Rita Rocha
+- Sia
+- Sixpence None The Rich
+- Suno Ai
+- TobyMac
+- Adele
+- DaftPunk
+- POLYPHIA
+---
+type: entity
+name: musicAlbum
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
+values:
+- This is what ____ feels like
+- Mi Amor
+- Home
+- Clouds
+- Forever
+---
+type: entity
+name: jokeType
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.8
+values:
+- - all
+  - todos
+  - qualquer
+- - neutral
+  - normal
+  - neutro
+- - chuck
+  - Chuck Norris
+---
+type: entity
+name: word
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.6
+values:
+- água
+- codgo postal
+- teste
+- usuario
+- Alex
+- Over dose
+- Testando
+- Apple
+- musica
+- Computador
+- Etc
+- Apollo 1
+- Apoll0 11
+- Apollo 13
+- Apollo 9
+---
+type: entity
+name: skillMajor
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.6
+values:
+- - math
+  - matématica
+- - play
+  - jogar
+  - tocar
+- - saudation
+  - saudar
+  - comprimentar
+- - set
+  - definir
+  - criar
+- - learn
+  - aprender
+---
+type: entity
+name: skillMinor
+automatically_extensible: true
+use_synonyms: true
+matching_strictness: 0.6
+values:
+- - music
+  - musica
+- - simple
+  - simples
+  - normal
+- - geometry
+  - geometria
+- - even_or_odd
+  - par
+  - impar
+  - primo
+- - music_whats_playing
+  - o que está tocando
+- - music_do
+  - fazer ações
+- timer
+- - reminder
+  - lembrete
+- - skills
+  - habilidades
+- - hi
+  - alguém
+- - tanks
+  - agradecer
+---
+type: entity
+name: mathNumberType
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.95
+values:
+- - even
+  - par
+- - odd
+  - impar
+- - prime
+  - primo
+- real
+- - imaginary
+  - imaginario
+- natural
+---
+type: entity
+name: mathNumberSign
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.7
+values:
+- - positive
+  - positivo
+  - maior que zero
+- - negative
+  - negativo
+  - menor que zero
+---
+type: entity
+name: gender
+automatically_extensible: false
+use_synonyms: true
+matching_strictness: 0.7
+values:
+- - female
+  - femenino
+  - mulher
+  - garota
+  - femea
+- - male
+  - masculino
+  - homem
+  - garoto
+  - macho
+---
+type: entity
+name: mood
+automatically_extensible: false
+use_synonyms: false
+matching_strictness: 0.8
+values:
+- Neutral
+- Afraid
+- Aggravated
+- Angry
+- Anxious
+- Ashamed
+- Assertive
+- Burdened
+- Brave
+- Calm
+- Cautious
+- Challenged
+- Cheerful
+- Cherished
+- Comforted
+- Contented
+- Creative
+- Curious
+- Depressed
+- Embarrassed
+- Energized
+- Envious
+- Excited
+- Furious
+- Guilty
+- Grumpy
+- Happy
+- Hopeful
+- Humiliated
+- Hurt
+- Indifferent
+- Day-dreaming
+- Insecure
+- Irritated
+- Lonely
+- Loved
+- Mad
+- Optimistic
+- Overwhelmed
+- Panicked
+- Peaceful
+- Positive
+- Pessimistic
+- Shameful
+- Prepared
+- Skeptical
+- Proud
+- Sorrowful
+- Suicidal
+- Ready forchange
+- Relieved
+- Renewed
+- Sad
+- Self-confident
+---
+type: entity
+name: contry
+automatically_extensible: false
+matching_strictness: 0.5
+values:
+- Abkhazia
+- Afghanistan
+- Akrotiri
+- Aland
+- Aland Islands
+- Albania
+- Algeria
+- America
+- American Samoa
+- Andorra
+- Angola
+- Anguilla
+- Antigua
+- Antigua and Barbuda
+- Argentina
+- Armenia
+- Aruba
+- Ascension Island
+- Australia
+- Austria
+- Azerbaijan
+- Bahamas
+- Bahrain
+- Bangladesh
+- Barbados
+- Barbuda
+- Belarus
+- Belgium
+- Belize
+- Benin
+- Bermuda
+- Bhutan
+- Bolivia
+- Bosnia
+- Bosnia and Herzegovina
+- Botswana
+- Brazil
+- British Virgin Islands
+- Brunei
+- Bulgaria
+- Burkina Faso
+- Burma
+- Burundi
+- Caicos Islands
+- Cambodia
+- Cameroon
+- Canada
+- Cape Verde
+- Cayman Islands
+- Central African Republic
+- Chad
+- Chile
+- China
+- Christmas Island
+- Cocos
+- Cocos Islands
+- Colombia
+- Comoros
+- Congo
+- Cook Islands
+- Costa Rica
+- Cote d'Ivoire
+- Croatia
+- Cuba
+- Cyprus
+- Czech Republic
+- Democratic Republic of Congo
+- Denmark
+- Dhekelia
+- Djibouti
+- Dominica
+- Dominican Republic
+- East Timor
+- Ecuador
+- Egypt
+- El Salvador
+- England
+- Equatorial Guinea
+- Eritrea
+- Estonia
+- Ethiopia
+- Falkland Islands
+- Faroe Islands
+- Fiji
+- Finland
+- Former Soviet Union
+- Former USSR
+- France
+- French Polynesia
+- Futuna Islands
+- Gabon
+- Gambia
+- Georgia
+- Germany
+- Ghana
+- Gibraltar
+- Greece
+- Greenland
+- Grenada
+- Grenadines
+- Guam
+- Guatemala
+- Guernsey
+- Guinea
+- Guinea-Bissau
+- Guyana
+- Haiti
+- Herzegovina
+- Honduras
+- Hong Kong
+- Hoorn Islands
+- Hungary
+- Iceland
+- India
+- Indonesia
+- Iran
+- Iraq
+- Ireland
+- Isle of Man
+- Israel
+- Italy
+- Jamaica
+- Japan
+- Jersey
+- Jordan
+- Kazakhstan
+- Keeling Islands
+- Kenya
+- Kiribati
+- Korea
+- Kosovo
+- Kuwait
+- Kyrgyzstan
+- Laos
+- Latvia
+- Lebanon
+- Lesotho
+- Liberia
+- Libya
+- Liechtenstein
+- Lithuania
+- Luxembourg
+- Macao
+- Macau
+- Macedonia
+- Madagascar
+- Malawi
+- Malaysia
+- Maldives
+- Mali
+- Malta
+- Marshall Islands
+- Mauritania
+- Mauritius
+- Mayotte
+- Mexico
+- Micronesia
+- Miquelon
+- Moldova
+- Monaco
+- Mongolia
+- Montenegro
+- Montserrat
+- Morocco
+- Mozambique
+- Myanmar
+- Nagorno-Karabakh Republic
+- Namibia
+- Nauru
+- Nepal
+- Netherlands
+- Netherlands Antilles
+- Nevis
+- New Caledonia
+- New Zealand
+- Nicaragua
+- Niger
+- Nigeria
+- Niue
+- Norfolk Island
+- Northern Mariana Islands
+- North Korea
+- Norway
+- Oman
+- Pakistan
+- Palau
+- Palestine
+- Palestinian Territory
+- Panama
+- Papua New Guinea
+- Paraguay
+- People's Republic of China
+- Peru
+- Philippines
+- Pitcairn Islands
+- Poland
+- Portugal
+- Principe
+- Puerto Rico
+- Qatar
+- Romania
+- Russia
+- Rwanda
+- Saint Barthelemy
+- Saint Barts
+- Saint Helena
+- Saint Kitts
+- Saint Kitts and Nevis
+- Saint Lucia
+- Saint Martin
+- Saint Pierre
+- Saint Pierre and Miquelon
+- Saint Vincent
+- Saint Vincent and the Grenadines
+- Samoa
+- San Marino
+- Sao Tome
+- Sao Tome and Principe
+- Saudi Arabia
+- Scotland
+- Senegal
+- Serbia
+- Seychelles
+- Sierra Leone
+- Singapore
+- Slovakia
+- Slovenia
+- Solomon Islands
+- Somalia
+- Somaliland
+- South Africa
+- South Korea
+- South Ossetia
+- Soviet Union
+- Spain
+- Sri Lanka
+- Sudan
+- Suriname
+- Svalbard
+- Swaziland
+- Sweden
+- Switzerland
+- Syria
+- Taiwan
+- Tajikistan
+- Tanzania
+- Thailand
+- Tibet
+- Tobago
+- Togo
+- Tokelau
+- Tonga
+- Transnistria
+- Trinidad
+- Trinidad and Tobago
+- Tristan da Cunha
+- Tunisia
+- Turkey
+- Turkmenistan
+- Turks and Caicos Islands
+- Turks Islands
+- Tuvalu
+- UAE
+- Uganda
+- UK
+- Ukraine
+- United Arab Emirates
+- United Kingdom
+- United States
+- United States Virgin Islands
+- Uruguay
+- US
+- USA
+- USSR
+- US Virgin Islands
+- Uzbekistan
+- Vanuatu
+- Vatican
+- Vatican City
+- Venezuela
+- Vietnam
+- Virgin Islands
+- Wallis and Futuna
+- Wallis Islands
+- Western Sahara
+- Yemen
+- Zambia
+- Zimbabwe

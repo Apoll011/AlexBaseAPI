@@ -2384,6 +2384,45 @@
       "matching_strictness": 1.0,
       "use_synonyms": true
     },
+    "search": {
+      "automatically_extensible": true,
+      "data": [
+        {
+          "synonyms": [],
+          "value": "cats"
+        },
+        {
+          "synonyms": [],
+          "value": "hipogliosemina"
+        },
+        {
+          "synonyms": [],
+          "value": "river dance"
+        },
+        {
+          "synonyms": [],
+          "value": "how to treat candy crush with sugar"
+        },
+        {
+          "synonyms": [],
+          "value": "how can we create a function that receives a gift and return a punch"
+        },
+        {
+          "synonyms": [],
+          "value": "make an airplane"
+        },
+        {
+          "synonyms": [],
+          "value": "youtube musics"
+        },
+        {
+          "synonyms": [],
+          "value": "Songs for sleeping"
+        }
+      ],
+      "matching_strictness": 0.7,
+      "use_synonyms": false
+    },
     "skillMajor": {
       "automatically_extensible": true,
       "data": [
@@ -3402,6 +3441,94 @@
               "entity": "word",
               "slot_name": "word",
               "text": "music"
+            }
+          ]
+        }
+      ]
+    },
+    "dictionary@search.for": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "Search for "
+            },
+            {
+              "entity": "search",
+              "slot_name": "search",
+              "text": "cats"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Search "
+            },
+            {
+              "entity": "search",
+              "slot_name": "search",
+              "text": "hipogliosemina"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Look on the net "
+            },
+            {
+              "entity": "search",
+              "slot_name": "search",
+              "text": "river dance"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Look on the internet for "
+            },
+            {
+              "entity": "search",
+              "slot_name": "search",
+              "text": "how to treat candy crush with sugar"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Look on google for the meaning of "
+            },
+            {
+              "entity": "search",
+              "slot_name": "search",
+              "text": "how can we create a function that receives a gift and return a punch"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Look on google for "
+            },
+            {
+              "entity": "search",
+              "slot_name": "search",
+              "text": "make an airplane"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Get on the net "
+            },
+            {
+              "entity": "search",
+              "slot_name": "search",
+              "text": "youtube musics"
             }
           ]
         }
@@ -5501,12 +5628,102 @@
         {
           "data": [
             {
-              "text": "Start "
+              "text": "Open "
             },
             {
               "entity": "entityName",
               "slot_name": "entityName",
               "text": "firefox"
+            },
+            {
+              "text": " folder"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Open "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "files"
+            },
+            {
+              "text": " site"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Open "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "clion"
+            },
+            {
+              "text": " website"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Open the "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "terminal"
+            },
+            {
+              "text": " folder"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Open the "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "localsend_app"
+            },
+            {
+              "text": " site"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Open the "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "localsend"
+            },
+            {
+              "text": " website"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "Start "
+            },
+            {
+              "entity": "entityName",
+              "slot_name": "entityName",
+              "text": "airdrop"
             }
           ]
         }

@@ -1,3 +1,14 @@
+---
+type: intent
+name: dictionary@search.for
+utterances:
+- Procure por [search]
+- Procure [search]
+- Procure na internete por [search]
+- Google o significado de [search]
+- Pesquise por [search]
+- Pesquise [search]
+---
 type: intent
 name: alex@repeat
 utterances:
@@ -70,7 +81,7 @@ type: intent
 name: eliza@start
 utterances:
 - Ema
-- Atice Ema
+- Ative Ema
 - Mode Ema
 - Podes ativar a Ema
 - Eu quero falar com a Ema
@@ -140,9 +151,16 @@ slots: []
 type: intent
 name: open@app
 utterances:
-- Please, open [entityName]
-- Open [entityName]
-- Start [entityName]
+- Por favor, abra o [entityName]
+- Abra a pasta [entityName]
+- Abra a pasta de [entityName]
+- Abra a pasta [entityName]
+- Abra a pasta dos [entityName]
+- Abra o site de [entityName] site
+- Abra o site [entityName] site
+- Abra o [entityName]
+- Abra o website do [entityName]
+- Abra [entityName]
 ---
 type: intent
 name: close@alex
@@ -730,6 +748,21 @@ values:
 - saltar a corda
 - saltar
 - agachar
+---
+type: entity
+name: search
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.7
+values:
+- gatos
+- hipogliosemina
+- doenca rinal
+- como tratar um cavalo com rinite
+- como fazer trabalho de casa no claude ai
+- criar um aviao
+- youtube musics
+- Musica do françês sem dentes
 ---
 type: entity
 name: playMode

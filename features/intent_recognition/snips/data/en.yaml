@@ -135,6 +135,12 @@ name: open@app
 utterances:
 - Please, open [entityName]
 - Open [entityName]
+- Open [entityName] folder
+- Open [entityName] site
+- Open [entityName] website
+- Open the [entityName] folder
+- Open the [entityName] site
+- Open the [entityName] website
 - Start [entityName]
 ---
 type: intent
@@ -438,6 +444,32 @@ utterances:
   degrees celsius)
 - I want [roomTemperature](75 degrees fahrenheit) in the [room](bathroom) please
 - Can you increase the temperature to [roomTemperature](22 degrees) ?
+---
+type: intent
+name: dictionary@search.for
+utterances:
+- Search for [search]
+- Search [search]
+- Look on the net [search]
+- Look on the internet for [search]
+- Look on google for the meaning of [search]
+- Look on google for [search]
+- Get on the net [search]
+---
+type: entity
+name: search
+automatically_extensible: true
+use_synonyms: false
+matching_strictness: 0.7
+values:
+- cats
+- hipogliosemina
+- river dance
+- how to treat candy crush with sugar
+- how can we create a function that receives a gift and return a punch
+- make an airplane
+- youtube musics
+- Songs for sleeping
 ---
 type: entity
 name: room

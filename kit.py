@@ -50,12 +50,13 @@ class IntentKit:
     engine = None
     loaded = False
     def __init__(self):
-        pass
+        self.lang = None
     
     def reuse(self, lang = "en"):
-    #    if self.engine is None:
-        self.engine = SnipsNLUEngine.from_path(f"./features/intent_recognition/snips/engine/{lang}")
-        self.loaded = True
+        if self.lang != lang:
+            self.lang = lang
+            self.engine = SnipsNLUEngine.from_path(f"./features/intent_recognition/snips/engine/{lang}")
+            self.loaded = True
 
     def train(self, lang = "en"):
         os.system(f"snips-nlu generate-dataset en ./features/intent_recognition/snips/data/{lang}.yaml > ./features/intent_recognition/snips/dataset/dataset_{lang}.json")
@@ -69,6 +70,7 @@ class IntentKit:
         os.system(f"rm -rf ./features/intent_recognition/snips/engine/{lang}/")
         self.engine.persist(f"./features/intent_recognition/snips/engine/{lang}")
         self.loaded = True
+        self.lang = lang
 
     def parse(self, text):
         if isinstance(self.engine, SnipsNLUEngine):

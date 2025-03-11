@@ -1,0 +1,8 @@
+usage: python -m snips_nlu generate-dataset [-h] language files [files ...]
+
+positional arguments:
+  language    Language of the dataset
+  files       List of intent and entity yaml files
+
+optional arguments:
+  -h, --help  show this help message and exit

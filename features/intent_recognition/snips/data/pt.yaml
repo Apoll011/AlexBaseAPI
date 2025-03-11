@@ -4,10 +4,14 @@ name: dictionary@search.for
 utterances:
 - Procure por [search]
 - Procure [search]
+- Procure por [search] na internet
+- Procure [search] na internet
 - Procure na internete por [search]
 - Google o significado de [search]
 - Pesquise por [search]
 - Pesquise [search]
+- Pesquise por [search] na internet
+- Pesquise [search] na internet
 ---
 type: intent
 name: alex@repeat
@@ -19,21 +23,20 @@ utterances:
 - Eu não te ouvi
 - Não pode te ouvir
 - Não consegui te ouvir
-slots: []
 ---
 type: intent
 name: tell@joke
 utterances:
-- Tell me a joke
-- Can you tell me a joke
-- Please tell me a random joke
-- I want to hear a joke
-- Random Joke
-- Tell me a [jokeType] joke
-- Can you tell me a [jokeType] joke
-- Please tell me a random [jokeType] joke
-- I want to hear a [jokeType] joke
-- Random [jokeType] Joke
+- Conta-me uma piada
+- Podes contar-me uma piada
+- Conta-me uma piada aleatória
+- Quero ouvir uma piada
+- Piada aleatória
+- Conta-me [jokeType] piada
+- Podes contar-me uma [jokeType] joke
+- Por favor conta-me uma [jokeType] joke
+- Quero ouvir uma [jokeType] joke
+- Piada [jokeType] aleatória
 ---
 type: intent
 name: alex@recall
@@ -45,8 +48,8 @@ utterances:
 - Outra vez
 - Reconsidere
 - Reconsidere essa escolha
-- Tems a certeza. Faça outro
-- Tems a certeza. Tente outra vez
+- Tens a certeza. Faça outro
+- Tens a certeza. Tente outra vez
 - Faça outro
 - Me faça outro
 - Gere outro
@@ -82,7 +85,7 @@ name: eliza@start
 utterances:
 - Ema
 - Ative Ema
-- Mode Ema
+- Modo Ema
 - Podes ativar a Ema
 - Eu quero falar com a Ema
 - Coloque a Ema no comando
@@ -92,7 +95,6 @@ utterances:
 - Eu quero falar com alguém
 - Modo Eliza
 - Modo de Psicologo
-slots: []
 ---
 type: intent
 name: dictionary@get
@@ -103,41 +105,36 @@ utterances:
 - O que é o [word]
 - Qual é a definição de [word]
 - Quem é [word]
-- '[word] é o que'
+- \[word] é o que
 - Podes me dizer a definição de [word]
 - Sabes a definição de [word]
-slots: []
 ---
 type: intent
 name: saudation@tanks
 utterances:
-- Thanks
-- Thanks you
-- Thank you
-- Apreciated
-- Great
+- Obrigado
+- Valeu
+- Ótimo
+- Muito Obrigado
 ---
 type: intent
 name: saudation@how.are.u
 utterances:
-- How are you
-- How r u
-- How are u
-- How are you Alex
-- Are you [mood]
-- How are you doing
-- How are you doing Alex
-- How are you doing today
-- How r you
-- How are you doing today Alex
+- Como estás
+- Como vais
+- Estás bem
+- Como estás Alex
+- Estás [mood]
+- Como vais
+- Como vais Alex
 ---
 type: intent
 name: saudation@hi
 utterances:
-- Hi Alex
-- Hello Alex
-- Good [timeOfDay] Alex
-- Good [timeOfDay]
+- Oi Alex
+- Olá Alex
+- Bom [timeOfDay] Alex
+- Bom [timeOfDay]
 ---
 type: intent
 name: close@something
@@ -146,7 +143,6 @@ utterances:
 - Por favor feche o [entityName]
 - Feche [entityName]
 - Desligue [entityName]
-slots: []
 ---
 type: intent
 name: open@app
@@ -174,13 +170,14 @@ utterances:
 - Bye Bye
 - Adios
 - Saionara
-slots: []
 ---
 type: intent
 name: money@tranfer
 utterances:
-- Send [person] [snips/amountOfMoney]
-- Pay [person] [snips/amountOfMoney]
+- Envie ao [person] [snips/amountOfMoney]
+- Pague ao [person] [snips/amountOfMoney]
+- Envie [snips/amountOfMoney] ao [person]
+- Pague [snips/amountOfMoney] ao [person]
 ---
 type: intent
 name: math@simple
@@ -193,16 +190,15 @@ slots:
   entity: snips/number
 utterances:
 - \[first_number] [mathoperation] [second_number]
-- How much is [first_number] [mathoperation] [second_number]
-- How much is [first_number] [mathoperation] by [second_number]
-- What is [first_number] [mathoperation] by [second_number]
-- \[mathoperation] by [number]
-- \[mathoperation] dad by [number]
+- Quanto é [first_number] [mathoperation] [second_number]
+- Quanto é [first_number] [mathoperation] por [second_number]
+- O que é [first_number] [mathoperation] por [second_number]
+- Faca [mathoperation] [number]
+- \[mathoperation] por [number]
 - \[mathoperation] [number]
-- \[mathoperation] with [number]
-- \[mathoperation] that with [number]
-- \[mathoperation] dad with [number]
-- \[mathoperation] that by [number]
+- \[mathoperation] com [number]
+- \[mathoperation] esse com [number]
+- \[mathoperation] esse por [number]
 ---
 type: intent
 name: math@geometry
@@ -212,12 +208,12 @@ slots:
 - name: number
   entity: snips/number
 utterances:
-- What is the [func] of [number]
-- \[func] of [number] is what
-- \[func] of it
-- What is it \[func]
-- What is the \[func] of it
-- \[func] of that
+- O que é [func] de [number]
+- \[func] de [number] é o que
+- \[func] disso
+- O que é \[func]
+- O que é de \[func] disso
+- \[func] disso
 - \[func] of dad
 ---
 type: intent
@@ -228,8 +224,8 @@ slots:
 - name: entity
   entity: object
 utterances:
-- Set a timer for [duration]
-- Set a [entity] timer for [duration]
+- Adicione um temporizador de [duration]
+- Adicione temporizador de [duration] para [entity]
 ---
 type: intent
 name: list@add
@@ -257,12 +253,18 @@ slots:
 - name: entity
   entity: object
 utterances:
-- Tell me [list] list
-- Tell me the things in my [list] list
-- Tell me what is on my [list] list
-- What is on my [list] list
-- Is [entity] in my [list] list
-- Is [entity] on the [list] list
+- Diz-me lista [list]
+- Diz-me coisas da minha lista [list]
+- Diz-me o que é na minha lista [list]
+- O que está na minha lista [list]
+- \[entity] está na lista [list]
+- Sabes se [entity] está na lista [list]
+- Diz-me lista de [list]
+- Diz-me coisas da minha lista de [list]
+- Diz-me o que é na minha lista de [list]
+- O que está na minha lista de [list]
+- \[entity] está na lista de [list]
+- Sabes se [entity] está na lista de [list]
 ---
 type: intent
 name: list@clear
@@ -289,8 +291,8 @@ slots:
 - name: new_entity
   entity: object
 utterances:
-- Change [entity] to [new_entity] on my [list] list
-- Change [entity] to [new_entity] in my [list] list
+- Mude [entity] para [new_entity] na minha lista de [list]
+- Mude [entity] para [new_entity] na minha lista de [list]
 ---
 type: intent
 name: set@reminder
@@ -298,19 +300,32 @@ slots:
 - name: time
   entity: snips/datetime
 utterances:
-- Remeber me [time] to do [action]
-- Remeber me [time] to [action]
-- Remeber me [time] to [action] my [person]
-- Remeber me [time] to [action] [person]
-- Remeber me [time] to [action] to my [person]
-- Remeber me [time] to [action] to [person]
-- Remeber me [time] to [action] for [person]
-- Remeber me [time] too [action]
-- Remeber me [time] too [action] my [person]
-- Remeber me [time] too [action] [person]
-- Remeber me [time] too [action] to my [person]
-- Remeber me [time] too [action] to [person]
-- Remeber me [time] too [action] for [person]
+- Lembre-me em [time] de fazer [action]
+- Lembre-me em[time] de [action]
+- Lembre-me em [time] de [action] meu [person]
+- Lembre-me em [time] de [action] [person]
+- Lembre-me em [time] de [action] para [person]
+- Lembre-me em [time] de [action] da [person]
+- Lembre-me em [time] de [action] pela [person]
+- Lembre-me em [time] também de [action]
+- Lembre-me em [time] tambem de [action] meu [person]
+- Lembre-me em [time] também de [action] [person]
+- Lembre-me em [time] tambem de [action] para a [person]
+- Lembre-me em [time] também de [action] para [person]
+- Lembre-me em [time] tambem de [action] pela [person]
+- Lembre-me daqui a [time] de fazer [action]
+- Lembre-me daqui a [time] de [action]
+- Lembre-me daqui a [time] de [action] meu [person]
+- Lembre-me daqui a [time] de [action] [person]
+- Lembre-me daqui a [time] de [action] para [person]
+- Lembre-me daqui a [time] de [action] da [person]
+- Lembre-me daqui a [time] de [action] pela [person]
+- Lembre-me daqui a [time] também de [action]
+- Lembre-me daqui a [time] tambem de [action] meu [person]
+- Lembre-me daqui a [time] também de [action] [person]
+- Lembre-me daqui a [time] tambem de [action] para a [person]
+- Lembre-me daqui a [time] também de [action] para [person]
+- Lembre-me daqui a [time] tambem de [action] pela [person]
 ---
 type: intent
 name: math@even.or.odd
@@ -320,10 +335,13 @@ slots:
 - name: type
   entity: mathNumberType
 utterances:
-- Is [number] even or odd
-- Is [number] [type]
-- \[number] is even or odd
-- \[number] is [type]
+- O [number] par ou impar
+- O [number] [type]
+- \[number] par ou impar
+- \[number] e [type]
+- O [number] par ou ímpar
+- \[number] par ou ímpar
+- \[number] é [type]
 ---
 type: intent
 name: math@random
@@ -337,64 +355,65 @@ slots:
 - name: bigger_number
   entity: snips/number
 utterances:
-- Generate me a random number
-- Create me a random number
-- Make me a random number
-- Generate me a [sign] random number
-- Create me a [sign] random number
-- Make me a [sign] random number
-- Generate me a [sign] random [type] number
-- Create me a [sign] random [type] number
-- Make me a [sign] random [type] number
-- Generate me a random [type] number
-- Create me a random [type] number
-- Make me a random [type] number
-- Generate me a [type] random number
-- Create me a [type] random number
-- Make me a [type] random number
-- Generate me a random number from [smaller_number] to [bigger_number]
-- Create me a random number from [smaller_number] to [bigger_number]
-- Make me a random number from [smaller_number] to [bigger_number]
-- Generate me a [sign] random number from [smaller_number] to [bigger_number]
-- Create me a [sign] random number from [smaller_number] to [bigger_number]
-- Make me a [sign] random number from [smaller_number] to [bigger_number]
-- Generate me a [sign] random [type] number from [smaller_number] to [bigger_number]
-- Create me a [sign] random [type] number from [smaller_number] to [bigger_number]
-- Make me a [sign] random [type] number from [smaller_number] to [bigger_number]
-- Generate me a random [type] number from [smaller_number] to [bigger_number]
-- Create me a random [type] number from [smaller_number] to [bigger_number]
-- Make me a random [type] number from [smaller_number] to [bigger_number]
-- Generate me a [type] random number from [smaller_number] to [bigger_number]
-- Create me a [type] random number from [smaller_number] to [bigger_number]
-- Make me a [type] random number from [smaller_number] to [bigger_number]
+- Gere um número aleatório
+- Crie um número aleatório
+- Faça um número aleatório
+- Gere um [sign] número aleatório
+- Crie um [sign] número aleatório
+- Faça um [sign] número aleatório
+- Gere um [sign] número [type] aleatório
+- Crie um [sign] número [type] aleatório
+- Faça um [sign] número [type] aleatório
+- Gere um número [type] aleatório
+- Crie um número [type] aleatório
+- Faça um número [type] aleatório
+- Gere um [type] número aleatório
+- Crie um [type] número aleatório
+- Faça um [type] número aleatório
+- Gere um número aleatório de [smaller_number] a [bigger_number]
+- Crie um número aleatório de [smaller_number] a [bigger_number]
+- Faça um número aleatório de [smaller_number] a [bigger_number]
+- Gere um [sign] número aleatório de [smaller_number] a [bigger_number]
+- Crie um [sign] número aleatório de [smaller_number] a [bigger_number]
+- Faça um [sign] número aleatório de [smaller_number] a [bigger_number]
+- Gere um [sign] número [type] aleatório de [smaller_number] a [bigger_number]
+- Crie um [sign] número [type] aleatório de [smaller_number] a [bigger_number]
+- Faça um [sign] número [type] aleatório de [smaller_number] a [bigger_number]
+- Gere um número [type] aleatório de [smaller_number] a [bigger_number]
+- Crie um número [type] aleatório de [smaller_number] a [bigger_number]
+- Faça um número [type] aleatório de [smaller_number] a [bigger_number]
+- Gere um [type] número aleatório de [smaller_number] a [bigger_number]
+- Crie um [type] número aleatório de [smaller_number] a [bigger_number]
+- Faça um [type] número aleatório de [smaller_number] a [bigger_number]
 ---
 type: intent
 name: music@play
 slots:
 - name: track
-  entity: musicTrack
+  entity: snips/musicTrack
 - name: artist
-  entity: musicArtist
+  entity: snips/musicArtist
 - name: album
-  entity: musicAlbum
+  entity: snips/musicAlbum
 - name: playlist
-  entity: musicAlbum
+  entity: snips/musicAlbum
 - name: genre
   entity: musicGenre
 utterances:
-- Play [track]
-- Play the album [album]
-- Play the music by [artist]
-- Play all the music of [artist]
-- Play all the songs of [artist]
-- Play the [track] by [artist]
-- Play the playlist [playlist]
-- Play all the [genre] music
-- Play all the [genre] songs
-- Play all the songs
-- Play all my songs
-- Play all my music
-- Play the entire library
+- Tocar [track]
+- Tocar o álbum [album]
+- Tocar a música de [artist]
+- Tocar todas as músicas de [artist]
+- Tocar todas as canções de [artist]
+- Tocar a [track] de [artist]
+- Tocar [track] de [artist]
+- Tocar a playlist [playlist]
+- Tocar todas as músicas de [genre]
+- Tocar todas as canções de [genre]
+- Tocar todas as canções
+- Tocar todas as minhas canções
+- Tocar toda a minha música
+- Tocar toda a biblioteca
 ---
 type: intent
 name: music@do
@@ -402,25 +421,25 @@ slots:
 - name: shuffleEnabled
   entity: TrueOrFalse
 utterances:
-- Please [musicDo]
-- Please [musicDo] the music
-- \[musicTrackAction] track
-- Set song repeat to [musicReapeatOptions]
-- Set repeat mode to [musicReapeatOptions]
-- Set shuffle enabled to [shuffleEnabled]
-- Set shuffle to [shuffleEnabled]
+- Por favor, [musicDo]
+- Por favor, [musicDo] a música
+- \[musicTrackAction] faixa
+- Definir repetição da música para [musicReapeatOptions]
+- Definir modo de repetição para [musicReapeatOptions]
+- Definir embaralhamento ativado para [shuffleEnabled]
+- Definir embaralhamento para [shuffleEnabled]
 ---
 type: intent
 name: music@whats.playing
 utterances:
-- What this song
-- This song
-- Whats the name of this song
-- What is playing
-- What song is this
-- What is this songs
-- What is this song name
-- What is currently playing
+- Que música é essa
+- Esta música
+- Qual é o nome desta música
+- O que está tocando
+- Que música é esta
+- Quais são essas músicas
+- Qual é o nome desta música
+- O que está tocando agora
 ---
 type: intent
 name: alex@presents
@@ -441,7 +460,6 @@ utterances:
 - Qual é a razão para estares aqui
 - Porque é que existes
 - Qual é o teu objetivo
-slots: []
 ---
 type: intent
 name: alex@presents.maker
@@ -449,7 +467,6 @@ utterances:
 - Quem te fez
 - Quem te criou
 - Quem te programou
-slots: []
 ---
 type: entity
 name: room
@@ -626,32 +643,14 @@ type: entity
 name: timeOfDay
 automatically_extensible: false
 values:
-- Morning
-- Affternoon
-- Night
----
-type: entity
-name: region
-automatically_extensible: true
-use_synonyms: true
-matching_strictness: 0.8
-values:
-- Londres
-- Berlin
-- nova york
-- - paris
-  - Cidade das luzes
-- Mindelo
-- Cabo verde
-- São Vicente
-- Casa
-- Igreja
-- Escola
+- Manha
+- Tarde
+- Noite
 ---
 type: entity
 name: entityName
 automatically_extensible: true
-use_synonyms: false
+use_synonyms: true
 matching_strictness: 0.5
 values:
 - youtube
@@ -664,8 +663,7 @@ values:
   - ficheiro
 - clion
 - terminal
-- - localsend_app
-  - localsend
+- - localsend
   - airdrop
   - local send
 - python
@@ -690,6 +688,7 @@ values:
   - minha irmã
 - gato
 - cão
+- Nakito
 - Fibi
 - Voçê
 ---
@@ -791,84 +790,6 @@ values:
 - - \false
   - falso
   - não
----
-type: entity
-name: musicTrack
-automatically_extensible: true
-use_synonyms: true
-matching_strictness: 0.8
-values:
-- Forever
-- Mi Amor
-- Golden Hour
-- Home
-- Clouds
-- Rei das maldições
-- Faded
-- Where are U now
-- DaftPunk
-- Playing God
----
-type: entity
-name: musicArtist
-automatically_extensible: true
-use_synonyms: true
-matching_strictness: 0.8
-values:
-- 4HIM With Jon Anderson
-- 7 Minutoz
-- Adele
-- Alan Walker
-- Ali Gatie
-- Barak
-- Bethel Music Kids
-- Better is one Day
-- Burlap To Cashmere
-- Chris Rodrigues
-- Cindy Morgan
-- Colde
-- Delirious With Amy Grace
-- IEBM
-- Imagine Dragons
-- - JVKE
-  - JAKE
-- Jaci Velasquez
-- KALEO
-- Lewis Capaldi
-- MHRAP
-- Marcela Gandara
-- Metro Boomin
-- Micah Palace
-- Michael W. Smith
-- Michelle Tumes
-- Myles Smith
-- Máire Brennan
-- Måneskin
-- Park Eun Bin
-- Paulo Cesar Baruk
-- Pentatonix
-- Point Of Grace
-- Post Malone
-- Rita Rocha
-- Sia
-- Sixpence None The Rich
-- Suno Ai
-- TobyMac
-- Adele
-- DaftPunk
-- POLYPHIA
----
-type: entity
-name: musicAlbum
-automatically_extensible: true
-use_synonyms: true
-matching_strictness: 0.8
-values:
-- This is what ____ feels like
-- Mi Amor
-- Home
-- Clouds
-- Forever
 ---
 type: entity
 name: jokeType
@@ -1011,351 +932,57 @@ automatically_extensible: false
 use_synonyms: false
 matching_strictness: 0.8
 values:
-- Neutral
-- Afraid
-- Aggravated
-- Angry
-- Anxious
-- Ashamed
-- Assertive
-- Burdened
-- Brave
-- Calm
-- Cautious
-- Challenged
-- Cheerful
-- Cherished
-- Comforted
-- Contented
-- Creative
-- Curious
-- Depressed
-- Embarrassed
-- Energized
-- Envious
-- Excited
-- Furious
-- Guilty
-- Grumpy
-- Happy
-- Hopeful
-- Humiliated
-- Hurt
-- Indifferent
-- Day-dreaming
-- Insecure
-- Irritated
-- Lonely
-- Loved
-- Mad
-- Optimistic
-- Overwhelmed
-- Panicked
-- Peaceful
-- Positive
-- Pessimistic
-- Shameful
-- Prepared
-- Skeptical
-- Proud
-- Sorrowful
-- Suicidal
-- Ready forchange
-- Relieved
-- Renewed
-- Sad
-- Self-confident
----
-type: entity
-name: contry
-automatically_extensible: false
-matching_strictness: 0.5
-values:
-- Abkhazia
-- Afghanistan
-- Akrotiri
-- Aland
-- Aland Islands
-- Albania
-- Algeria
-- America
-- American Samoa
-- Andorra
-- Angola
-- Anguilla
-- Antigua
-- Antigua and Barbuda
-- Argentina
-- Armenia
-- Aruba
-- Ascension Island
-- Australia
-- Austria
-- Azerbaijan
-- Bahamas
-- Bahrain
-- Bangladesh
-- Barbados
-- Barbuda
-- Belarus
-- Belgium
-- Belize
-- Benin
-- Bermuda
-- Bhutan
-- Bolivia
-- Bosnia
-- Bosnia and Herzegovina
-- Botswana
-- Brazil
-- British Virgin Islands
-- Brunei
-- Bulgaria
-- Burkina Faso
-- Burma
-- Burundi
-- Caicos Islands
-- Cambodia
-- Cameroon
-- Canada
-- Cape Verde
-- Cayman Islands
-- Central African Republic
-- Chad
-- Chile
-- China
-- Christmas Island
-- Cocos
-- Cocos Islands
-- Colombia
-- Comoros
-- Congo
-- Cook Islands
-- Costa Rica
-- Cote d'Ivoire
-- Croatia
-- Cuba
-- Cyprus
-- Czech Republic
-- Democratic Republic of Congo
-- Denmark
-- Dhekelia
-- Djibouti
-- Dominica
-- Dominican Republic
-- East Timor
-- Ecuador
-- Egypt
-- El Salvador
-- England
-- Equatorial Guinea
-- Eritrea
-- Estonia
-- Ethiopia
-- Falkland Islands
-- Faroe Islands
-- Fiji
-- Finland
-- Former Soviet Union
-- Former USSR
-- France
-- French Polynesia
-- Futuna Islands
-- Gabon
-- Gambia
-- Georgia
-- Germany
-- Ghana
-- Gibraltar
-- Greece
-- Greenland
-- Grenada
-- Grenadines
-- Guam
-- Guatemala
-- Guernsey
-- Guinea
-- Guinea-Bissau
-- Guyana
-- Haiti
-- Herzegovina
-- Honduras
-- Hong Kong
-- Hoorn Islands
-- Hungary
-- Iceland
-- India
-- Indonesia
-- Iran
-- Iraq
-- Ireland
-- Isle of Man
-- Israel
-- Italy
-- Jamaica
-- Japan
-- Jersey
-- Jordan
-- Kazakhstan
-- Keeling Islands
-- Kenya
-- Kiribati
-- Korea
-- Kosovo
-- Kuwait
-- Kyrgyzstan
-- Laos
-- Latvia
-- Lebanon
-- Lesotho
-- Liberia
-- Libya
-- Liechtenstein
-- Lithuania
-- Luxembourg
-- Macao
-- Macau
-- Macedonia
-- Madagascar
-- Malawi
-- Malaysia
-- Maldives
-- Mali
-- Malta
-- Marshall Islands
-- Mauritania
-- Mauritius
-- Mayotte
-- Mexico
-- Micronesia
-- Miquelon
-- Moldova
-- Monaco
-- Mongolia
-- Montenegro
-- Montserrat
-- Morocco
-- Mozambique
-- Myanmar
-- Nagorno-Karabakh Republic
-- Namibia
-- Nauru
-- Nepal
-- Netherlands
-- Netherlands Antilles
-- Nevis
-- New Caledonia
-- New Zealand
-- Nicaragua
-- Niger
-- Nigeria
-- Niue
-- Norfolk Island
-- Northern Mariana Islands
-- North Korea
-- Norway
-- Oman
-- Pakistan
-- Palau
-- Palestine
-- Palestinian Territory
-- Panama
-- Papua New Guinea
-- Paraguay
-- People's Republic of China
-- Peru
-- Philippines
-- Pitcairn Islands
-- Poland
-- Portugal
-- Principe
-- Puerto Rico
-- Qatar
-- Romania
-- Russia
-- Rwanda
-- Saint Barthelemy
-- Saint Barts
-- Saint Helena
-- Saint Kitts
-- Saint Kitts and Nevis
-- Saint Lucia
-- Saint Martin
-- Saint Pierre
-- Saint Pierre and Miquelon
-- Saint Vincent
-- Saint Vincent and the Grenadines
-- Samoa
-- San Marino
-- Sao Tome
-- Sao Tome and Principe
-- Saudi Arabia
-- Scotland
-- Senegal
-- Serbia
-- Seychelles
-- Sierra Leone
-- Singapore
-- Slovakia
-- Slovenia
-- Solomon Islands
-- Somalia
-- Somaliland
-- South Africa
-- South Korea
-- South Ossetia
-- Soviet Union
-- Spain
-- Sri Lanka
-- Sudan
-- Suriname
-- Svalbard
-- Swaziland
-- Sweden
-- Switzerland
-- Syria
-- Taiwan
-- Tajikistan
-- Tanzania
-- Thailand
-- Tibet
-- Tobago
-- Togo
-- Tokelau
-- Tonga
-- Transnistria
-- Trinidad
-- Trinidad and Tobago
-- Tristan da Cunha
-- Tunisia
-- Turkey
-- Turkmenistan
-- Turks and Caicos Islands
-- Turks Islands
-- Tuvalu
-- UAE
-- Uganda
-- UK
-- Ukraine
-- United Arab Emirates
-- United Kingdom
-- United States
-- United States Virgin Islands
-- Uruguay
-- US
-- USA
-- USSR
-- US Virgin Islands
-- Uzbekistan
-- Vanuatu
-- Vatican
-- Vatican City
-- Venezuela
-- Vietnam
-- Virgin Islands
-- Wallis and Futuna
-- Wallis Islands
-- Western Sahara
-- Yemen
-- Zambia
-- Zimbabwe
+- Neutro
+- Com medo
+- Agitado
+- Bravo
+- Ansioso
+- Envergonhado
+- Assertivo
+- Sobrecarregado
+- Corajoso
+- Calmo
+- Cauteloso
+- Desafiado
+- Alegre
+- Amado
+- Confortado
+- Satisfeito
+- Criativo
+- Curioso
+- Depressivo
+- Envergonhado
+- Energizado
+- Invejoso
+- Animado
+- Furioso
+- Culpado
+- Mal-humorado
+- Feliz
+- Esperançoso
+- Humilhado
+- Machucado
+- Indiferente
+- Sonhador
+- Inseguro
+- Irritado
+- Solitário
+- Amado
+- Irritado
+- Otimista
+- Sobrecarregado
+- Em pânico
+- Pacífico
+- Positivo
+- Pessimista
+- Vergonhoso
+- Preparado
+- Cético
+- Orgulhoso
+- Triste
+- Suicida
+- Pronto para mudança
+- Aliviado
+- Renovado
+- Triste
+- Autoconfiante

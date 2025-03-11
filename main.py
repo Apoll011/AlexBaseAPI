@@ -53,8 +53,8 @@ async def intent_train(type: IntentRecongnitionEngineTrainType = IntentRecongnit
         else:
             intentKit.train(lang)
         return {"responce": True, "action": type.value, "lang": lang}
-    except Exception:
-        return {"responce": False}
+    except Exception as e:
+        return {"responce": False, "error": str(e)}
 
 @app.get("/intent_recognition/", name="Recognize intent from sentence", description="This will recognize the intent from a givin sentence and return the result parsed")
 async def intent_reconize(text: Annotated[str, Query(max_length=250, min_length=2)]):

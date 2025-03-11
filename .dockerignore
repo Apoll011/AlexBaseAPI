@@ -1,0 +1,6 @@
+pyvenv.cfg
+.venv/
+**/__pycache__
+.vscode/
+**/.DS_Store
+features/version_controller/lib/*.zip

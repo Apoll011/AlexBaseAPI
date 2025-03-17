@@ -1,20 +1,20 @@
 # Alex Base API
 
 ## Overview
-The Alex Base API is a high-performance server designed to handle resource-intensive operations for the Alex Home Assistant system. This server functions as the computational backbone for Alex, processing complex requests that would otherwise strain the main system resources.
+Alex Base API is a high-performance server designed to handle resource-intensive natural language processing operations for the Alex Home Assistant system. This server functions as the computational backbone for Alex, processing complex language understanding requests using the Snips NLU engine.
 
 ## Features
-- **Distributed Processing**: Offloads heavy computational tasks from the main Alex Home Assistant
-- **Containerized Architecture**: Runs in a Docker container for easy deployment and scaling
-- **Version Control Integration**: Maintains synchronization with the Alex Home Assistant through the version controller
-- **RESTful API**: Provides standardized endpoints for all Alex services
-- **Low Latency**: Optimized for quick response times even for complex operations
-- **Resource Management**: Efficiently handles CPU and memory-intensive tasks
+- **Natural Language Understanding**: Powered by Snips NLU for intent recognition in multiple languages
+- **Dictionary Services**: Word definition lookup with fuzzy matching capabilities
+- **User Management**: API endpoints for user creation, search, and management
+- **Multi-language Support**: Currently supports English and Portuguese
+- **Containerized Architecture**: Runs in a Docker container for easy deployment
+- **FastAPI Backend**: Modern, high-performance web framework for Python
+- **Low Latency**: Optimized for quick response times even for complex NLP operations
 
 ## Requirements
-- Docker Engine (v20.10.0 or later recommended)
-- 500MB RAM minimum (1GB recommended)
-- 2GB available disk space
+- Docker Engine (v19.03.0 or later recommended)
+- 2GB RAM minimum (4GB recommended for training models)
 - Network access to Alex Home Assistant instance
 
 ## Installation
@@ -34,15 +34,13 @@ cd Alex-Base-API
 
 2. Install dependencies
 ```bash
-npm install
-# or
 pip install -r requirements.txt
 ```
 
-3. Configure environment variables
+3. Download language models
 ```bash
-cp .env.example .env
-# Edit .env file with your configuration
+python -m snips_nlu download-language-entities pt_pt
+python -m snips_nlu download-language-entities en
 ```
 
 ## Usage
@@ -56,34 +54,64 @@ docker run -p 1178:1178 -v ./features/version_controller:/app/features/version_c
 This will:
 - Map port 1178 on your host to port 1178 in the container
 - Mount the local version_controller directory to the container for persistent storage
-- Start the Alex Base API server
+- Start the Alex Base API server with uvicorn
 
-### API Endpoints
-The server exposes the following endpoints:
+### Configuration
+The server configuration is stored in `config.py`:
+- Current version: 2.1.0
+- Default host: 0.0.0.0
+- Default port: 1178
 
-- `GET /alex/alive` - Check server status
+## NLP Components
 
-## Integration with Alex
-To integrate with the Alex Home Assistant:
+### Intent Recognition
+The IntentKit class provides:
+- Intent recognition for user queries
+- Support for English and Portuguese
+- Training capabilities for custom intent recognition models
+- Persistent model storage
 
-1. Add the server URL to your Alex configuration: on the .alex_config file ()
+### Dictionary Services
+The DictionaryKit class provides:
+- Word definition lookup
+- Fuzzy matching for misspelled words
+- Confidence scoring for approximate matches
 
-2. Restart your Alex Home Assistant instance
+### User Management
+The UserKit class provides:
+- User creation, update, and deletion
+- User search by name
+- Tag-based user filtering with complex conditions
 
-### Logs
-Logs are available in the Docker container:
-```bash
-docker logs alex-server
+## Project Structure
+```
+├── features/
+│   ├── dictionary/             # Dictionary data files
+│   │   └── language/           # Language-specific dictionaries
+│   ├── intent_recognition/     # Intent recognition models
+│   │   └── snips/              # Snips NLU models and datasets
+│   └── version_controller/     # Versioning information
+├── main.py                     # FastAPI application
+├── kit.py                      # Core NLP components
+├── config.py                   # Server configuration
+├── Dockerfile                  # Docker configuration
+└── requirements.txt            # Python dependencies
 ```
 
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+## API Endpoints
+The server exposes FastAPI endpoints for:
+- Intent recognition
+- Dictionary lookups
+- User management
+- System status and version information
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## Timezone
+The server operates in Atlantic/Cape_Verde timezone (UTC-1).
+
+## Docker Image
+- Based on Python 3.8-slim
+- Custom patched version of snips_nlu utils
+- Pre-loaded with language models for English and Portuguese
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.

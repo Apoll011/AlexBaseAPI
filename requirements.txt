@@ -2,7 +2,7 @@ beautifulsoup4==4.12.3
 certifi==2024.6.2
 deprecation==2.1.0
 docopt==0.6.2
-future==0.17.1
+future==0.18.3
 idna==3.7
 lingua-franca
 num2words==0.5.13
